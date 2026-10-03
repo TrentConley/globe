@@ -1,0 +1,824 @@
+{
+  "description": "Land-clipped, area-sampled 50-mile footprint on a 3 mm matrix. Alignment at the center of a 305 mm sphere. This is a command pattern, not simulated diffusion.",
+  "rows": [
+    {
+      "col": 0,
+      "row": 0,
+      "xMM": -18,
+      "yMM": 12,
+      "coverage": 0
+    },
+    {
+      "col": 1,
+      "row": 0,
+      "xMM": -15,
+      "yMM": 12,
+      "coverage": 0
+    },
+    {
+      "col": 2,
+      "row": 0,
+      "xMM": -12,
+      "yMM": 12,
+      "coverage": 0
+    },
+    {
+      "col": 3,
+      "row": 0,
+      "xMM": -9,
+      "yMM": 12,
+      "coverage": 0
+    },
+    {
+      "col": 4,
+      "row": 0,
+      "xMM": -6,
+      "yMM": 12,
+      "coverage": 0
+    },
+    {
+      "col": 5,
+      "row": 0,
+      "xMM": -3,
+      "yMM": 12,
+      "coverage": 0
+    },
+    {
+      "col": 6,
+      "row": 0,
+      "xMM": 0,
+      "yMM": 12,
+      "coverage": 0
+    },
+    {
+      "col": 7,
+      "row": 0,
+      "xMM": 3,
+      "yMM": 12,
+      "coverage": 0
+    },
+    {
+      "col": 8,
+      "row": 0,
+      "xMM": 6,
+      "yMM": 12,
+      "coverage": 0
+    },
+    {
+      "col": 9,
+      "row": 0,
+      "xMM": 9,
+      "yMM": 12,
+      "coverage": 0
+    },
+    {
+      "col": 10,
+      "row": 0,
+      "xMM": 12,
+      "yMM": 12,
+      "coverage": 0
+    },
+    {
+      "col": 11,
+      "row": 0,
+      "xMM": 15,
+      "yMM": 12,
+      "coverage": 0
+    },
+    {
+      "col": 12,
+      "row": 0,
+      "xMM": 18,
+      "yMM": 12,
+      "coverage": 0
+    },
+    {
+      "col": 0,
+      "row": 1,
+      "xMM": -18,
+      "yMM": 9,
+      "coverage": 0
+    },
+    {
+      "col": 1,
+      "row": 1,
+      "xMM": -15,
+      "yMM": 9,
+      "coverage": 0
+    },
+    {
+      "col": 2,
+      "row": 1,
+      "xMM": -12,
+      "yMM": 9,
+      "coverage": 0
+    },
+    {
+      "col": 3,
+      "row": 1,
+      "xMM": -9,
+      "yMM": 9,
+      "coverage": 0
+    },
+    {
+      "col": 4,
+      "row": 1,
+      "xMM": -6,
+      "yMM": 9,
+      "coverage": 0
+    },
+    {
+      "col": 5,
+      "row": 1,
+      "xMM": -3,
+      "yMM": 9,
+      "coverage": 0
+    },
+    {
+      "col": 6,
+      "row": 1,
+      "xMM": 0,
+      "yMM": 9,
+      "coverage": 0
+    },
+    {
+      "col": 7,
+      "row": 1,
+      "xMM": 3,
+      "yMM": 9,
+      "coverage": 0
+    },
+    {
+      "col": 8,
+      "row": 1,
+      "xMM": 6,
+      "yMM": 9,
+      "coverage": 0
+    },
+    {
+      "col": 9,
+      "row": 1,
+      "xMM": 9,
+      "yMM": 9,
+      "coverage": 0
+    },
+    {
+      "col": 10,
+      "row": 1,
+      "xMM": 12,
+      "yMM": 9,
+      "coverage": 0
+    },
+    {
+      "col": 11,
+      "row": 1,
+      "xMM": 15,
+      "yMM": 9,
+      "coverage": 0
+    },
+    {
+      "col": 12,
+      "row": 1,
+      "xMM": 18,
+      "yMM": 9,
+      "coverage": 0
+    },
+    {
+      "col": 0,
+      "row": 2,
+      "xMM": -18,
+      "yMM": 6,
+      "coverage": 0
+    },
+    {
+      "col": 1,
+      "row": 2,
+      "xMM": -15,
+      "yMM": 6,
+      "coverage": 0
+    },
+    {
+      "col": 2,
+      "row": 2,
+      "xMM": -12,
+      "yMM": 6,
+      "coverage": 0
+    },
+    {
+      "col": 3,
+      "row": 2,
+      "xMM": -9,
+      "yMM": 6,
+      "coverage": 0
+    },
+    {
+      "col": 4,
+      "row": 2,
+      "xMM": -6,
+      "yMM": 6,
+      "coverage": 0
+    },
+    {
+      "col": 5,
+      "row": 2,
+      "xMM": -3,
+      "yMM": 6,
+      "coverage": 0
+    },
+    {
+      "col": 6,
+      "row": 2,
+      "xMM": 0,
+      "yMM": 6,
+      "coverage": 0
+    },
+    {
+      "col": 7,
+      "row": 2,
+      "xMM": 3,
+      "yMM": 6,
+      "coverage": 0
+    },
+    {
+      "col": 8,
+      "row": 2,
+      "xMM": 6,
+      "yMM": 6,
+      "coverage": 0
+    },
+    {
+      "col": 9,
+      "row": 2,
+      "xMM": 9,
+      "yMM": 6,
+      "coverage": 0
+    },
+    {
+      "col": 10,
+      "row": 2,
+      "xMM": 12,
+      "yMM": 6,
+      "coverage": 0
+    },
+    {
+      "col": 11,
+      "row": 2,
+      "xMM": 15,
+      "yMM": 6,
+      "coverage": 0
+    },
+    {
+      "col": 12,
+      "row": 2,
+      "xMM": 18,
+      "yMM": 6,
+      "coverage": 0
+    },
+    {
+      "col": 0,
+      "row": 3,
+      "xMM": -18,
+      "yMM": 3,
+      "coverage": 0
+    },
+    {
+      "col": 1,
+      "row": 3,
+      "xMM": -15,
+      "yMM": 3,
+      "coverage": 0
+    },
+    {
+      "col": 2,
+      "row": 3,
+      "xMM": -12,
+      "yMM": 3,
+      "coverage": 0
+    },
+    {
+      "col": 3,
+      "row": 3,
+      "xMM": -9,
+      "yMM": 3,
+      "coverage": 0
+    },
+    {
+      "col": 4,
+      "row": 3,
+      "xMM": -6,
+      "yMM": 3,
+      "coverage": 0
+    },
+    {
+      "col": 5,
+      "row": 3,
+      "xMM": -3,
+      "yMM": 3,
+      "coverage": 0
+    },
+    {
+      "col": 6,
+      "row": 3,
+      "xMM": 0,
+      "yMM": 3,
+      "coverage": 0.01809
+    },
+    {
+      "col": 7,
+      "row": 3,
+      "xMM": 3,
+      "yMM": 3,
+      "coverage": 0
+    },
+    {
+      "col": 8,
+      "row": 3,
+      "xMM": 6,
+      "yMM": 3,
+      "coverage": 0
+    },
+    {
+      "col": 9,
+      "row": 3,
+      "xMM": 9,
+      "yMM": 3,
+      "coverage": 0
+    },
+    {
+      "col": 10,
+      "row": 3,
+      "xMM": 12,
+      "yMM": 3,
+      "coverage": 0
+    },
+    {
+      "col": 11,
+      "row": 3,
+      "xMM": 15,
+      "yMM": 3,
+      "coverage": 0
+    },
+    {
+      "col": 12,
+      "row": 3,
+      "xMM": 18,
+      "yMM": 3,
+      "coverage": 0
+    },
+    {
+      "col": 0,
+      "row": 4,
+      "xMM": -18,
+      "yMM": 0,
+      "coverage": 0
+    },
+    {
+      "col": 1,
+      "row": 4,
+      "xMM": -15,
+      "yMM": 0,
+      "coverage": 0
+    },
+    {
+      "col": 2,
+      "row": 4,
+      "xMM": -12,
+      "yMM": 0,
+      "coverage": 0
+    },
+    {
+      "col": 3,
+      "row": 4,
+      "xMM": -9,
+      "yMM": 0,
+      "coverage": 0
+    },
+    {
+      "col": 4,
+      "row": 4,
+      "xMM": -6,
+      "yMM": 0,
+      "coverage": 0
+    },
+    {
+      "col": 5,
+      "row": 4,
+      "xMM": -3,
+      "yMM": 0,
+      "coverage": 0.00113
+    },
+    {
+      "col": 6,
+      "row": 4,
+      "xMM": 0,
+      "yMM": 0,
+      "coverage": 0.69673
+    },
+    {
+      "col": 7,
+      "row": 4,
+      "xMM": 3,
+      "yMM": 0,
+      "coverage": 0.01809
+    },
+    {
+      "col": 8,
+      "row": 4,
+      "xMM": 6,
+      "yMM": 0,
+      "coverage": 0
+    },
+    {
+      "col": 9,
+      "row": 4,
+      "xMM": 9,
+      "yMM": 0,
+      "coverage": 0
+    },
+    {
+      "col": 10,
+      "row": 4,
+      "xMM": 12,
+      "yMM": 0,
+      "coverage": 0
+    },
+    {
+      "col": 11,
+      "row": 4,
+      "xMM": 15,
+      "yMM": 0,
+      "coverage": 0
+    },
+    {
+      "col": 12,
+      "row": 4,
+      "xMM": 18,
+      "yMM": 0,
+      "coverage": 0
+    },
+    {
+      "col": 0,
+      "row": 5,
+      "xMM": -18,
+      "yMM": -3,
+      "coverage": 0
+    },
+    {
+      "col": 1,
+      "row": 5,
+      "xMM": -15,
+      "yMM": -3,
+      "coverage": 0
+    },
+    {
+      "col": 2,
+      "row": 5,
+      "xMM": -12,
+      "yMM": -3,
+      "coverage": 0
+    },
+    {
+      "col": 3,
+      "row": 5,
+      "xMM": -9,
+      "yMM": -3,
+      "coverage": 0
+    },
+    {
+      "col": 4,
+      "row": 5,
+      "xMM": -6,
+      "yMM": -3,
+      "coverage": 0
+    },
+    {
+      "col": 5,
+      "row": 5,
+      "xMM": -3,
+      "yMM": -3,
+      "coverage": 0
+    },
+    {
+      "col": 6,
+      "row": 5,
+      "xMM": 0,
+      "yMM": -3,
+      "coverage": 0
+    },
+    {
+      "col": 7,
+      "row": 5,
+      "xMM": 3,
+      "yMM": -3,
+      "coverage": 0
+    },
+    {
+      "col": 8,
+      "row": 5,
+      "xMM": 6,
+      "yMM": -3,
+      "coverage": 0
+    },
+    {
+      "col": 9,
+      "row": 5,
+      "xMM": 9,
+      "yMM": -3,
+      "coverage": 0
+    },
+    {
+      "col": 10,
+      "row": 5,
+      "xMM": 12,
+      "yMM": -3,
+      "coverage": 0
+    },
+    {
+      "col": 11,
+      "row": 5,
+      "xMM": 15,
+      "yMM": -3,
+      "coverage": 0
+    },
+    {
+      "col": 12,
+      "row": 5,
+      "xMM": 18,
+      "yMM": -3,
+      "coverage": 0
+    },
+    {
+      "col": 0,
+      "row": 6,
+      "xMM": -18,
+      "yMM": -6,
+      "coverage": 0
+    },
+    {
+      "col": 1,
+      "row": 6,
+      "xMM": -15,
+      "yMM": -6,
+      "coverage": 0
+    },
+    {
+      "col": 2,
+      "row": 6,
+      "xMM": -12,
+      "yMM": -6,
+      "coverage": 0
+    },
+    {
+      "col": 3,
+      "row": 6,
+      "xMM": -9,
+      "yMM": -6,
+      "coverage": 0
+    },
+    {
+      "col": 4,
+      "row": 6,
+      "xMM": -6,
+      "yMM": -6,
+      "coverage": 0
+    },
+    {
+      "col": 5,
+      "row": 6,
+      "xMM": -3,
+      "yMM": -6,
+      "coverage": 0
+    },
+    {
+      "col": 6,
+      "row": 6,
+      "xMM": 0,
+      "yMM": -6,
+      "coverage": 0
+    },
+    {
+      "col": 7,
+      "row": 6,
+      "xMM": 3,
+      "yMM": -6,
+      "coverage": 0
+    },
+    {
+      "col": 8,
+      "row": 6,
+      "xMM": 6,
+      "yMM": -6,
+      "coverage": 0
+    },
+    {
+      "col": 9,
+      "row": 6,
+      "xMM": 9,
+      "yMM": -6,
+      "coverage": 0
+    },
+    {
+      "col": 10,
+      "row": 6,
+      "xMM": 12,
+      "yMM": -6,
+      "coverage": 0
+    },
+    {
+      "col": 11,
+      "row": 6,
+      "xMM": 15,
+      "yMM": -6,
+      "coverage": 0
+    },
+    {
+      "col": 12,
+      "row": 6,
+      "xMM": 18,
+      "yMM": -6,
+      "coverage": 0
+    },
+    {
+      "col": 0,
+      "row": 7,
+      "xMM": -18,
+      "yMM": -9,
+      "coverage": 0
+    },
+    {
+      "col": 1,
+      "row": 7,
+      "xMM": -15,
+      "yMM": -9,
+      "coverage": 0
+    },
+    {
+      "col": 2,
+      "row": 7,
+      "xMM": -12,
+      "yMM": -9,
+      "coverage": 0
+    },
+    {
+      "col": 3,
+      "row": 7,
+      "xMM": -9,
+      "yMM": -9,
+      "coverage": 0
+    },
+    {
+      "col": 4,
+      "row": 7,
+      "xMM": -6,
+      "yMM": -9,
+      "coverage": 0
+    },
+    {
+      "col": 5,
+      "row": 7,
+      "xMM": -3,
+      "yMM": -9,
+      "coverage": 0
+    },
+    {
+      "col": 6,
+      "row": 7,
+      "xMM": 0,
+      "yMM": -9,
+      "coverage": 0
+    },
+    {
+      "col": 7,
+      "row": 7,
+      "xMM": 3,
+      "yMM": -9,
+      "coverage": 0
+    },
+    {
+      "col": 8,
+      "row": 7,
+      "xMM": 6,
+      "yMM": -9,
+      "coverage": 0
+    },
+    {
+      "col": 9,
+      "row": 7,
+      "xMM": 9,
+      "yMM": -9,
+      "coverage": 0
+    },
+    {
+      "col": 10,
+      "row": 7,
+      "xMM": 12,
+      "yMM": -9,
+      "coverage": 0
+    },
+    {
+      "col": 11,
+      "row": 7,
+      "xMM": 15,
+      "yMM": -9,
+      "coverage": 0
+    },
+    {
+      "col": 12,
+      "row": 7,
+      "xMM": 18,
+      "yMM": -9,
+      "coverage": 0
+    },
+    {
+      "col": 0,
+      "row": 8,
+      "xMM": -18,
+      "yMM": -12,
+      "coverage": 0
+    },
+    {
+      "col": 1,
+      "row": 8,
+      "xMM": -15,
+      "yMM": -12,
+      "coverage": 0
+    },
+    {
+      "col": 2,
+      "row": 8,
+      "xMM": -12,
+      "yMM": -12,
+      "coverage": 0
+    },
+    {
+      "col": 3,
+      "row": 8,
+      "xMM": -9,
+      "yMM": -12,
+      "coverage": 0
+    },
+    {
+      "col": 4,
+      "row": 8,
+      "xMM": -6,
+      "yMM": -12,
+      "coverage": 0
+    },
+    {
+      "col": 5,
+      "row": 8,
+      "xMM": -3,
+      "yMM": -12,
+      "coverage": 0
+    },
+    {
+      "col": 6,
+      "row": 8,
+      "xMM": 0,
+      "yMM": -12,
+      "coverage": 0
+    },
+    {
+      "col": 7,
+      "row": 8,
+      "xMM": 3,
+      "yMM": -12,
+      "coverage": 0
+    },
+    {
+      "col": 8,
+      "row": 8,
+      "xMM": 6,
+      "yMM": -12,
+      "coverage": 0
+    },
+    {
+      "col": 9,
+      "row": 8,
+      "xMM": 9,
+      "yMM": -12,
+      "coverage": 0
+    },
+    {
+      "col": 10,
+      "row": 8,
+      "xMM": 12,
+      "yMM": -12,
+      "coverage": 0
+    },
+    {
+      "col": 11,
+      "row": 8,
+      "xMM": 15,
+      "yMM": -12,
+      "coverage": 0
+    },
+    {
+      "col": 12,
+      "row": 8,
+      "xMM": 18,
+      "yMM": -12,
+      "coverage": 0
+    }
+  ]
+}

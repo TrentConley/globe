@@ -1,0 +1,164 @@
+{
+  "status": "Engineering study, not a released full-globe manufacturing design",
+  "diameterAtSeaLevelMM": 305,
+  "terrainExaggeration": 25,
+  "radiusMiles": 50,
+  "footprintRadiusMM": 1.9261075263308383,
+  "footprintDiameterMM": 3.8522150526616765,
+  "highestGridElevationM": 6229,
+  "highestGridReliefMM": 3.7275199651270303,
+  "solidBackShellMaximumRadialWallMM": 4.72751996512703,
+  "areaMM2": 292246.6566001905,
+  "pitchStudy": [
+    {
+      "pitchMM": 2,
+      "footprintPixelsAcross": 1.9261075263308383,
+      "wholeSphereSquareCellEstimate": 73061.66415004763,
+      "landAreaLowerBoundEstimate": 21187.882603513808,
+      "nearestCenterWorstCaseMM": 1.414213562373095
+    },
+    {
+      "pitchMM": 2.5,
+      "footprintPixelsAcross": 1.5408860210646707,
+      "wholeSphereSquareCellEstimate": 46759.46505603048,
+      "landAreaLowerBoundEstimate": 13560.244866248837,
+      "nearestCenterWorstCaseMM": 1.7677669529663687
+    },
+    {
+      "pitchMM": 3,
+      "footprintPixelsAcross": 1.2840716842205588,
+      "wholeSphereSquareCellEstimate": 32471.8507333545,
+      "landAreaLowerBoundEstimate": 9416.836712672804,
+      "nearestCenterWorstCaseMM": 2.1213203435596424
+    },
+    {
+      "pitchMM": 6.944444,
+      "footprintPixelsAcross": 0.5547190030852976,
+      "wholeSphereSquareCellEstimate": 6060.027446945039,
+      "landAreaLowerBoundEstimate": 1757.4079596140612,
+      "nearestCenterWorstCaseMM": 4.910463443970232
+    },
+    {
+      "pitchMM": 10,
+      "footprintPixelsAcross": 0.38522150526616766,
+      "wholeSphereSquareCellEstimate": 2922.466566001905,
+      "landAreaLowerBoundEstimate": 847.5153041405523,
+      "nearestCenterWorstCaseMM": 7.071067811865475
+    }
+  ],
+  "prototype": {
+    "matrixPitchMM": 3,
+    "columns": 13,
+    "rows": 9,
+    "nominalActiveCellBoundsMM": [
+      39,
+      27
+    ],
+    "boardOutlineMM": [
+      39,
+      51.08
+    ],
+    "flatSourceToSphericalShellCornerSagMM": 1.8555510481717192
+  },
+  "powerExamples": [
+    {
+      "activePixels": 20000,
+      "averageCurrentPerLEDmA": 0.05,
+      "ledBranchCurrentA": 1,
+      "railPowerAt3V3W": 3.3
+    },
+    {
+      "activePixels": 20000,
+      "averageCurrentPerLEDmA": 0.1,
+      "ledBranchCurrentA": 2,
+      "railPowerAt3V3W": 6.6
+    },
+    {
+      "activePixels": 20000,
+      "averageCurrentPerLEDmA": 0.2,
+      "ledBranchCurrentA": 4,
+      "railPowerAt3V3W": 13.2
+    },
+    {
+      "activePixels": 20000,
+      "averageCurrentPerLEDmA": 0.5,
+      "ledBranchCurrentA": 10,
+      "railPowerAt3V3W": 33
+    }
+  ],
+  "exports": [
+    {
+      "file": "matrix-shell-vancouver-25x-mm.stl",
+      "triangles": 21312,
+      "boundsMM": [
+        39.1371,
+        27.2162,
+        3.9803
+      ],
+      "volumeMM3": 1499.4605,
+      "description": "Closed optical test shell; nominal 39 x 27 mm projected sea-level bounds; supports and finish not included."
+    },
+    {
+      "file": "matrix-shell-himalayas-25x-mm.stl",
+      "triangles": 21312,
+      "boundsMM": [
+        39.6356,
+        27.3687,
+        6.5016
+      ],
+      "volumeMM3": 2612.1059,
+      "description": "Closed optical test shell; nominal 39 x 27 mm projected sea-level bounds; supports and finish not included."
+    },
+    {
+      "file": "matrix-shell-smooth-mm.stl",
+      "triangles": 21312,
+      "boundsMM": [
+        39,
+        27,
+        2.8336
+      ],
+      "volumeMM3": 1048.9783,
+      "description": "Closed optical test shell; nominal 39 x 27 mm projected sea-level bounds; supports and finish not included."
+    },
+    {
+      "file": "flat-coupon-0.6mm.stl",
+      "triangles": 12,
+      "boundsMM": [
+        30,
+        30,
+        0.6
+      ],
+      "volumeMM3": 540
+    },
+    {
+      "file": "flat-coupon-0.8mm.stl",
+      "triangles": 12,
+      "boundsMM": [
+        30,
+        30,
+        0.8
+      ],
+      "volumeMM3": 720
+    },
+    {
+      "file": "flat-coupon-1.0mm.stl",
+      "triangles": 12,
+      "boundsMM": [
+        30,
+        30,
+        1
+      ],
+      "volumeMM3": 900
+    },
+    {
+      "file": "flat-coupon-1.2mm.stl",
+      "triangles": 12,
+      "boundsMM": [
+        30,
+        30,
+        1.2
+      ],
+      "volumeMM3": 1080
+    }
+  ]
+}

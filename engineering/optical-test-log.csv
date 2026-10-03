@@ -1,0 +1,7 @@
+sample_id,material,process_layer_mm,cure,wall_mm,tint_product_coats,diffuser,minimum_gap_mm,center_gap_mm,pattern,global_current_code,scaling_code,voltage_V,measured_current_A,room_C,surface_C,footprint_halfmax_mm,spill_at_6mm_percent,dark_gap_pass,terrain_pass,notes
+flat-0.6,,,,,,,,,,,,,,,,,,,,
+flat-0.8,,,,,,,,,,,,,,,,,,,,
+flat-1.0,,,,,,,,,,,,,,,,,,,,
+flat-1.2,,,,,,,,,,,,,,,,,,,,
+curved-smooth,,,,,,,,,,,,,,,,,,,,
+curved-25x,,,,,,,,,,,,,,,,,,,,

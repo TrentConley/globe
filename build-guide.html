@@ -1,0 +1,615 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101619"><title>Travel Globe — Physical Build Guide</title><style>
+:root{color-scheme:dark;--bg:#101619;--paper:#172023;--text:#e7e7dc;--muted:#aab6b0;--gold:#e0b875}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:17px/1.75 system-ui,sans-serif}
+header{border-bottom:1px solid #ffffff20;padding:18px max(22px,calc((100vw - 1120px)/2))}
+header a{margin-right:24px}main{max-width:1120px;margin:auto;padding:35px 24px 100px}
+h1{font:normal clamp(36px,5vw,62px)/1.13 Georgia,serif;color:#f5eedf;margin:15px 0 30px}
+h2{font:normal 30px/1.3 Georgia,serif;color:var(--gold);margin:65px 0 20px;scroll-margin-top:25px}
+h3{font-size:21px;margin:32px 0 12px}p,li{max-width:90ch}a{color:var(--gold);text-underline-offset:3px}
+table{border-collapse:collapse;min-width:590px;width:100%;font-size:14px;line-height:1.55}
+.table-scroll{overflow-x:auto;margin:25px 0;border:1px solid #ffffff20;border-radius:8px}
+th,td{padding:14px;text-align:left;vertical-align:top;border-bottom:1px solid #ffffff15}
+th{background:#263033;color:#f0d4a2}tr:nth-child(even){background:#ffffff04}
+blockquote{margin:25px 0;border-left:3px solid var(--gold);padding:12px 24px;background:var(--paper);color:#ccd5cd}
+img{max-width:100%;height:auto;display:block;margin:30px auto;border-radius:12px}
+code{font-size:.85em;background:#ffffff08;padding:2px 5px}pre{overflow-x:auto}.toc{background:var(--paper);padding:20px 28px;border:1px solid #ffffff12;border-radius:12px;font-size:14px}.toc>ul{list-style:none;padding:0}.toc ul ul{display:none}
+footer{border-top:1px solid #ffffff20;margin-top:60px;padding-top:20px;color:var(--muted);font-size:13px}
+@media(max-width:650px){body{font-size:16px}main{padding:25px 20px 60px}h2{font-size:26px}table{min-width:530px}}
+@media print{:root{color-scheme:light}body{background:white;color:#171717;font-size:10pt}main{padding:0;max-width:none}header,.toc{display:none}a,h1,h2,h3{color:#111}a{text-decoration:none}h2{break-after:avoid;margin-top:25px}table{min-width:0;font-size:8pt}th,td{padding:5px;border-color:#bbb}th,blockquote,tr:nth-child(even){background:#eee;color:#111}img{max-height:350px;object-fit:contain}.table-scroll{overflow:visible;break-inside:avoid}footer{color:#333}}
+</style></head><body><header><a href="index.html">← Globe simulator</a><a href="build-guide.html">Build guide</a><a href="https://trentconley.github.io/globe/prototype-kit.zip">Download package</a></header><main><h1 id="building-the-travel-globe">Building the travel globe</h1>
+<p><strong>Design brief: 305 mm sea-level diameter · 25× real terrain · 50-mile visited-area radius · dark charcoal surface · warm amber light.</strong></p>
+<p>The recommended route is a serviceable, internally illuminated globe with a thin terrain shell, separate optical cells to limit light spill, and dense LED boards. Store the visited places independently of the physical LED layout. Start with a small illuminated sample; release the full shell and custom electronics only after it passes the tests below.</p>
+<p>This package provides a detailed design and checked prototype test files. Full-globe production CAD, custom electronics and device firmware will follow the measured sample results; print material and supports need the service’s review.</p>
+<p><a href="index.html">Open the simulator</a> · <a href="build-guide.pdf">Save the PDF guide</a> · <a href="https://trentconley.github.io/globe/prototype-kit.zip">Download the build package</a> · <a href="engineering/calculations.json">Design calculations</a> · <a href="engineering/prototype-bom.csv">Parts and quote checklist</a></p>
+<div class="toc">
+<ul>
+<li><a href="#1-what-we-are-designing-for">1. What we are designing for</a></li>
+<li><a href="#2-the-architecture-i-recommend">2. The architecture I recommend</a></li>
+<li><a href="#3-lighting-resolution-and-full-globe-complexity">3. Lighting resolution and full-globe complexity</a></li>
+<li><a href="#4-build-the-optical-prototype-first">4. Build the optical prototype first</a></li>
+<li><a href="#5-qualify-the-surface-and-optical-stack">5. Qualify the surface and optical stack</a></li>
+<li><a href="#6-full-shell-frame-and-mechanical-design">6. Full shell, frame and mechanical design</a></li>
+<li><a href="#7-full-globe-electronics">7. Full-globe electronics</a></li>
+<li><a href="#8-phone-updates-storage-and-software">8. Phone updates, storage and software</a></li>
+<li><a href="#9-calibration-and-geography">9. Calibration and geography</a></li>
+<li><a href="#10-assembly-sequence-and-release-gates">10. Assembly sequence and release gates</a></li>
+<li><a href="#11-budget-and-who-does-what">11. Budget and who does what</a></li>
+<li><a href="#12-print-service-request-you-can-copy">12. Print-service request you can copy</a></li>
+<li><a href="#13-evidence-files-and-honest-limits">13. Evidence, files and honest limits</a></li>
+</ul>
+</div>
+<h2 id="1-what-we-are-designing-for">1. What we are designing for</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Design target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Globe size</td>
+<td>305 mm diameter at sea level; room for the exaggerated mountains outside that sphere</td>
+</tr>
+<tr>
+<td>Surface</td>
+<td>Real ETOPO-derived terrain, 25× vertical exaggeration; smooth oceans</td>
+</tr>
+<tr>
+<td>Travel display</td>
+<td>Union of approximate 50-mile-radius footprints around saved places; no inferred routes or country fills</td>
+</tr>
+<tr>
+<td>Appearance</td>
+<td>Charcoal matte when off; warm amber/gold visited regions; mountains remain recognizable</td>
+</tr>
+<tr>
+<td>Geographic resolution</td>
+<td>Small regions within countries remain distinct; nearby visits may merge</td>
+</tr>
+<tr>
+<td>Persistence</td>
+<td>A successfully saved destination survives loss of power; a interrupted save recovers the last valid history</td>
+</tr>
+<tr>
+<td>Updates</td>
+<td>Local phone/computer interface, plus documented JSON upload/export; no subscription</td>
+</tr>
+<tr>
+<td>Longevity</td>
+<td>Replaceable lighting modules, removable shell sections, replaceable external supply, offline backups</td>
+</tr>
+<tr>
+<td>First acceptance distance</td>
+<td>Judge appearance at 0.5–1 m, then inspect close up; use normal room lighting as well as a dim room</td>
+</tr>
+<tr>
+<td>Initial fabrication</td>
+<td>Print service, preassembled boards, basic soldering and mechanical assembly</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The 50-mile preference stays the command radius.</strong> We will measure the actual illuminated patch after printing. We will not conceal poor resolution by silently changing the stored visit radius.</p>
+<h3 id="the-two-dimensions-that-matter-most">The two dimensions that matter most</h3>
+<p>At this scale, 50 miles corresponds to <strong>1.926 mm radius</strong>, or <strong>3.852 mm diameter</strong>. A nearby pair of cities can legitimately merge into one small patch.</p>
+<p>The current elevation grid's highest sample is 6,229 m. At 25×, it becomes <strong>3.728 mm of raised terrain</strong>. A shell with a smooth inside and a 1 mm base wall can therefore become <strong>4.728 mm thick radially</strong> under its highest sampled mountains. That thickness is an optical problem worth testing before a large print order.</p>
+<p>The full geometric envelope is bounded by about <strong>312.5 mm</strong>, although opposite points do not both sit at the highest elevation. Allow this envelope in the stand and packaging. If we later change to finer terrain data, we must recalculate it: a preserved 8,849 m summit would rise about 5.30 mm at 25×. Do not change terrain datasets halfway through manufacturing.</p>
+<h2 id="2-the-architecture-i-recommend">2. The architecture I recommend</h2>
+<p>A modular, rear-lit shell is the leading architecture. The full-globe lighting needs custom preassembled boards; the first optical experiment can use an existing assembled matrix.</p>
+<p>From outside to inside:</p>
+<ol>
+<li>A thin, compatible matte clear finish.</li>
+<li>A controlled translucent charcoal tint over land; an opaque ocean mask where desired.</li>
+<li>A printed translucent terrain shell.</li>
+<li>A very small, measured gap or replaceable soft sealing interface.</li>
+<li>Opaque light cells/baffles that keep one lit area from flooding its neighbors.</li>
+<li>Small LED boards, mapped to actual geographic positions.</li>
+<li>A separate structural frame carrying boards, wiring and shell mounts.</li>
+</ol>
+<p><img src="build-assets/section.svg" alt="Proposed cross-section with raised translucent terrain, optical cells, LED tile and frame; dimensions require prototype qualification." width="960"></p>
+<p><strong>The terrain shell does not carry the globe's weight.</strong> Mounts and a frame do that. The electrical and optical assemblies should come apart without destroying the finished exterior.</p>
+<p>For the final light source, prefer <strong>monochrome amber LEDs</strong> if one tested amber wavelength gives the desired appearance. They avoid paying for and powering three channels at every location. Buy enough of one optical bin/lot for the whole globe plus spares. If the coating makes monochrome amber too orange, or adjustable gold is important, use a tested two-color amber/warm-white or RGB implementation and recalculate every channel, power, and cost estimate.</p>
+<p>A monochrome driver bank does not require a tiny controller inside every LED. That matters: thousands of addressable RGB packages can consume substantial power even when their colors are set to black. Measure idle current rather than assuming sparse visits make the whole globe low power.</p>
+<h3 id="why-not-use-the-earlier-strips">Why not use the earlier strips?</h3>
+<p>A 144-LED/m strip has roughly 6.94 mm longitudinal spacing, already larger than a 3.85 mm footprint. The earlier six-strip layout is coarser still in its other direction. It is useful for trying color or tint, but it is <strong>not the recommended resolution test or final construction</strong>.</p>
+<h3 id="why-not-wrap-a-large-flexible-matrix-around-it">Why not wrap a large flexible matrix around it?</h3>
+<p>A sphere curves in two directions. A flexible rectangular PCB generally bends easily in one direction but cannot cover a sphere without stretching, wrinkling, cuts, or segmentation. Narrow flex gores are an alternative development project, not something to assume will fit because a vendor calls a panel flexible.</p>
+<h3 id="why-not-put-one-projector-inside">Why not put one projector inside?</h3>
+<p>Projection is attractive for resolution, but a full sphere needs suitable optical coverage, focus over different distances, alignment, and management of supports and shadows. The raised translucent surface adds another optical variable. It is not the simplest route to a quiet, repairable, one-foot object. Revisit projection if dense LEDs fail the optical test; do not promise a one-projector solution now.</p>
+<h2 id="3-lighting-resolution-and-full-globe-complexity">3. Lighting resolution and full-globe complexity</h2>
+<p>These are equal-area square-cell estimates, not a finished PCB layout. Oceans occupy roughly 71% of Earth, but coastline margins, board packing, seams and small islands prevent the land-area column from being a final purchasing quantity.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Nominal cell pitch</th>
+<th style="text-align: right;">Cells across one 50-mile footprint</th>
+<th style="text-align: right;">Whole-sphere area / pitch²</th>
+<th style="text-align: right;">Land-area lower-bound estimate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.0 mm</td>
+<td style="text-align: right;">1.93</td>
+<td style="text-align: right;">73,062</td>
+<td style="text-align: right;">21,188</td>
+</tr>
+<tr>
+<td>2.5 mm</td>
+<td style="text-align: right;">1.54</td>
+<td style="text-align: right;">46,759</td>
+<td style="text-align: right;">13,560</td>
+</tr>
+<tr>
+<td>3.0 mm</td>
+<td style="text-align: right;">1.28</td>
+<td style="text-align: right;">32,472</td>
+<td style="text-align: right;">9,417</td>
+</tr>
+<tr>
+<td>6.94 mm</td>
+<td style="text-align: right;">0.55</td>
+<td style="text-align: right;">6,060</td>
+<td style="text-align: right;">1,757</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Design toward 2.0–2.5 mm effective surface pitch.</strong> Treat 3 mm as a readily available first test and a possible compromise only if the physical result is satisfying. Even 2 mm gives only about two samples across an isolated footprint; this is an approximate regional display, not a sharp little geographic screen.</p>
+<p>A 3 mm matrix that looks good is useful evidence. It does not establish that a lower-density strip will look equally good. Conversely, if one isolated visit disappears between 3 mm emitters, it is a reason to test finer pitch—not to light the entire country.</p>
+<p>The mapping must sample coverage over each cell's area, rather than checking only its center. Otherwise a small footprint can vanish between emitters. Store the geographic footprint first, then calculate light levels for the installed layout. Neighboring footprints combine by maximum/union, so overlapping visits do not become artificially brighter.</p>
+<h3 id="provisional-full-globe-segmentation">Provisional full-globe segmentation</h3>
+<p>Use small, approximately planar electronics tiles on a spherical internal frame, with individually shaped optical baffles between each tile and the shell. An icosphere with 320 triangular faces is a useful mechanical starting study because its facets are small; it is <strong>not a released 320-board shopping list</strong>.</p>
+<p>Populate land-bearing areas and coastal margins; use structural blanks over deep ocean. The final tessellation, LED placement, coastline margins, small-island coverage and mechanical shadows must be computed together. About 25,000–40,000 monochrome emitters is a planning range for a fine land-focused implementation, not a verified final count. Cost the all-surface alternative as an upper comparison.</p>
+<p>The custom-board designer should aim for repeated PCB shapes, modest numbers of distinct assembly variants, and connectors accessible from the inside. Avoid a different unique PCB design for every geographic patch. Geography belongs in the mapping file and optical shell.</p>
+<p>Require an <strong>actual pixel-to-surface map</strong> before releasing electronics: panel ID, driver ID, electrical channel, LED center, surface intersection, latitude/longitude, optical-cell boundary, calibration gain, and valid/blocked status. Include seams, mounting ribs and coastline masks in the coverage audit. Software cannot illuminate an island for which no physical light path exists.</p>
+<h2 id="4-build-the-optical-prototype-first">4. Build the optical prototype first</h2>
+<p>The most useful first purchase is one assembled dense matrix, not enough LEDs for the whole globe.</p>
+<h3 id="reference-prototype-electronics">Reference prototype electronics</h3>
+<p><strong>Adafruit IS31FL3741 13×9 RGB matrix, product 5201</strong>, is a verified starting board. Its open hardware documentation specifies 117 RGB LEDs at <strong>3 mm pitch</strong>, with 8-bit PWM per color element, adjustable global current, I²C, and a 3.3–5 V supply.</p>
+<p>The checked PCB revision has a <strong>39 × 51.08 mm board outline</strong>. The nominal active cell area is <strong>39 × 27 mm</strong>, with LED centers spanning <strong>36 × 24 mm</strong>. Do not confuse the board outline with its illuminated area or order a 39 × 27 mm enclosure for the entire board.</p>
+<p>Use an <strong>Adafruit QT Py ESP32-S3, product 5426</strong>, as a compact prototype controller. The checked board documentation describes Wi-Fi, native USB, 8 MB flash and 512 KB SRAM, without PSRAM. It is sufficient for a small matrix experiment and a modest local update interface; it is not yet the full globe's final electronics design.</p>
+<p>These are actual identified parts. Availability and delivered prices have not been verified. The electrical reference design, rather than a shop description alone, determines the wiring.</p>
+<h3 id="a-crucial-wiring-detail">A crucial wiring detail</h3>
+<p>The checked matrix schematic connects SDA and SCL pull-ups to the matrix supply. <strong>If the matrix is powered at 5 V, its I²C lines must not connect directly to ESP32 GPIO.</strong> This is why the recommended 5 V bench arrangement includes a bidirectional I²C level shifter.</p>
+<p>Use an <a href="https://www.adafruit.com/product/757">Adafruit 757</a> BSS138 I²C level-shifter breakout with separate LV/HV references and pull-ups; confirm its supplier documentation. A 74AHCT125 strip-data buffer is not a replacement for a bidirectional I²C shifter.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Connection</th>
+<th>Bench arrangement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Controller power</td>
+<td>USB from the programming computer</td>
+</tr>
+<tr>
+<td>Matrix VCC</td>
+<td>Separate regulated, enclosed 5 V supply, initially current-limited where possible</td>
+</tr>
+<tr>
+<td>Matrix GND</td>
+<td>Supply ground and controller ground</td>
+</tr>
+<tr>
+<td>Level shifter LV</td>
+<td>Controller 3.3 V</td>
+</tr>
+<tr>
+<td>Level shifter HV</td>
+<td>Matrix 5 V</td>
+</tr>
+<tr>
+<td>Level shifter GND</td>
+<td>Shared ground</td>
+</tr>
+<tr>
+<td>Controller SDA/SCL</td>
+<td>Low-voltage side of the two I²C channels</td>
+</tr>
+<tr>
+<td>Matrix SDA/SCL</td>
+<td>Corresponding high-voltage side</td>
+</tr>
+<tr>
+<td>Optional matrix shutdown</td>
+<td>Leave as the documented board default initially; add a properly level-compatible hardware blanking control later</td>
+</tr>
+<tr>
+<td>Power positives</td>
+<td>Do not join the external matrix 5 V to the controller's USB supply</td>
+</tr>
+</tbody>
+</table></div>
+<p>Use the board's documented STEMMA/QT I²C port in firmware and verify the actual pin labels. Do not assume the controller's edge-header I²C pins and QT connector use the same bus. A normal four-wire plug-to-plug cable bypasses the needed level shifting in this 5 V arrangement; use breakout leads or an interposer.</p>
+<p>Keep bench I²C leads around 100 mm where practical and begin at 100 kHz. With power applied and no bus traffic, measure about 3.3 V on the controller-side SDA/SCL and about 5 V on the matrix side before connecting the controller.</p>
+<p>Start with low global current and one dim pixel. A protected 5 V, 2 A adapter is a reasonable bench supply class, <strong>not a statement that this board may safely consume 2 A</strong>. Use a temporary 0.5 A branch fuse or a current-limited bench supply, and verify actual board current/temperature before increasing brightness. Resolve repeated fuse trips rather than substituting a larger fuse.</p>
+<h3 id="prototype-shopping-and-quote-list">Prototype shopping and quote list</h3>
+<p>Planning allowances in USD, not live prices:</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align: right;">Quantity</th>
+<th style="text-align: right;">Allowance</th>
+<th>Release condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Adafruit 5201, assembled 13×9 matrix</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$25–45</td>
+<td>Confirm exact board and revision</td>
+</tr>
+<tr>
+<td>Adafruit 5426, QT Py ESP32-S3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$15–30</td>
+<td>Confirm matching USB cable</td>
+</tr>
+<tr>
+<td>Adafruit 757 I²C level-shifter breakout</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$5–12</td>
+<td>Verify LV/HV topology and pull-ups</td>
+</tr>
+<tr>
+<td>Enclosed regulated 5 V supply, leads, fuse holder/fuse</td>
+<td style="text-align: right;">1 set</td>
+<td style="text-align: right;">$20–40</td>
+<td>Correct polarity; no exposed mains</td>
+</tr>
+<tr>
+<td>Breakout leads, spacers, screws, temporary clamps</td>
+<td style="text-align: right;">1 set</td>
+<td style="text-align: right;">$15–35</td>
+<td>No load on USB/QT connectors</td>
+</tr>
+<tr>
+<td>Translucent coupon and curved-shell print batch</td>
+<td style="text-align: right;">1 batch</td>
+<td style="text-align: right;">$50–150</td>
+<td>Quote approved material and supports</td>
+</tr>
+<tr>
+<td>Compatible smoke tint, matte clear, diffuser samples</td>
+<td style="text-align: right;">Small samples</td>
+<td style="text-align: right;">$15–35</td>
+<td>Service confirms compatibility</td>
+</tr>
+<tr>
+<td>Calipers, multimeter, contact temperature probe</td>
+<td style="text-align: right;">Borrow if possible</td>
+<td style="text-align: right;">$0–80</td>
+<td>Needed for measurements</td>
+</tr>
+</tbody>
+</table></div>
+<p>The table totals roughly <strong>$145–427</strong> before tax/shipping. A sensible first-stage allowance is <strong>$200–400</strong>, depending on tools and print-service minimums. Do not buy full-globe quantities yet.</p>
+<h3 id="printable-test-pieces-included">Printable test pieces included</h3>
+<p>The build package's engineering folder contains:</p>
+<ul>
+<li>Four 30 × 30 mm flat coupons, at 0.6, 0.8, 1.0 and 1.2 mm thickness.</li>
+<li>A smooth curved shell at the globe's real radius, nominal 39 × 27 mm.</li>
+<li>A Vancouver terrain shell over the same area, at 25× elevation, with a 1 mm radial base wall.</li>
+<li>A second terrain shell centered on the Himalayas, to challenge the stack with much taller land.</li>
+<li>A land-clipped, area-sampled 13×9 Vancouver test pattern and scale calculations.</li>
+<li>A dim, manually selected CircuitPython bench-pattern utility with setup instructions; it is not the final device firmware and has not run on physical hardware.</li>
+</ul>
+<p>The terrain coupon's actual bounding box is about <strong>39.14 × 27.22 × 3.98 mm</strong>. The smooth coupon is <strong>39.00 × 27.00 × 2.83 mm</strong>. Both are closed meshes; they have no fitted mounts, supports or baffles. They are optical test pieces, not released pieces of the final enclosure. STL units must be interpreted as millimetres.</p>
+<p>The smooth sphere drops about <strong>1.86 mm</strong> between the center and the 39 × 27 mm rectangle's corners. A flat display cannot therefore sit the same distance from every point of this curved shell. Hold the shell with adjustable edge spacers; begin around 0.5–1.0 mm clearance at its closest inside point, measure the resulting center gap, and avoid contact with LED packages.</p>
+<p>Cover unused board regions with a removable opaque mask, keep vents and electronics unobstructed, and center the matrix's active region under the shell. Do not glue the coupon to the LEDs.</p>
+<h2 id="5-qualify-the-surface-and-optical-stack">5. Qualify the surface and optical stack</h2>
+<h3 id="material-recommendation">Material recommendation</h3>
+<p>Use a print service experienced with <strong>translucent SLA/MSLA parts and optical appearance samples</strong>. Ask for a tough, dimensionally stable resin with documented cure, finishing compatibility and indoor aging behavior. Do not choose ordinary brittle clear hobby resin solely because it is transparent.</p>
+<p>The preferred surface is lightly diffusing, not crystal-clear. A clear window can reveal the individual LEDs; too much white pigment or diffusion can turn a small footprint into a large fuzzy blob.</p>
+<p>FDM natural PETG is a cheaper comparison sample, but visible layer texture and inconsistent scattering may fall short of the desired object. Do not order the light-transmitting land surface in opaque black. Painting an opaque white print black does not create a good backlit display.</p>
+<h3 id="run-the-flat-coupon-experiment-first">Run the flat-coupon experiment first</h3>
+<p>For each practical thickness, compare:</p>
+<ol>
+<li>Uncoated printed material.</li>
+<li>A light translucent smoke coat.</li>
+<li>A second controlled tint level.</li>
+<li>The best tint with a thin compatible matte clear.</li>
+</ol>
+<p>Label samples on removable tabs or their backs. Record print material, printer/process, layer height, orientation, cure, sanding, tint product, coat count and drying time. Keep one uncoated control.</p>
+<p>If neutral-density film samples are available, 0.3/0.6/0.9 optical density corresponds nominally to about 50%/25%/12.5% transmission. They are useful controls, not a prediction that a charcoal coating will transmit amber the same way.</p>
+<p>Try the screen's desired amber by eye under the final coating. A computer RGB value is not a physical wavelength specification. Later compare nominal 590–595 nm amber LED samples from a supplier against the RGB prototype. Commit to one color/bin only after that comparison.</p>
+<h3 id="then-compare-the-curved-pieces">Then compare the curved pieces</h3>
+<p>Run identical patterns through the smooth and terrain shells at identical current and exposure. Compare mountain peaks with nearby valleys. Include the supplied Himalayan sample: a Vancouver-only test cannot establish performance under the globe’s highest terrain.</p>
+<p>The supplied terrain shell has a smooth inside, so its raised land adds material. It is intentionally a useful test of the simple construction. If peaks go dark while valleys bloom, increasing every LED's current will not solve the underlying mismatch.</p>
+<p>The preferred production investigation is a <strong>terrain-following inner surface</strong> that keeps optical wall thickness closer to constant. It needs proper CAD work: simply subtracting 1 mm from every radius does not guarantee a 1 mm wall measured perpendicular to a steep slope. A normal-offset surface can self-intersect in tight valleys. Smooth/filter only features that cannot satisfy a verified minimum wall, and show that revised geometry in the simulator before approval.</p>
+<p>A production CAD release must include a thickness map and interference checks. A thinner shell is not automatically better if it is fragile, warps after curing, or produces visible LED dots.</p>
+<h3 id="light-isolation">Light isolation</h3>
+<p>Test three conditions in order:</p>
+<ol>
+<li>Bare matrix behind the coupon.</li>
+<li>A thin diffuser at a measured location.</li>
+<li>Opaque cell dividers between sources, with the diffuser close to the emitting surface.</li>
+</ol>
+<p>For the 3 mm matrix, a starting divider-wall study is about <strong>0.3–0.5 mm wall thickness</strong> with apertures around <strong>2.5–2.7 mm</strong>. These are fabrication trial dimensions, not a released baffle STL. A service must confirm that the chosen opaque process produces continuous light-tight walls at those dimensions.</p>
+<p>Baffle tops should follow the shell underside. A gap that leaks laterally defeats their purpose; hard contact that point-loads a fragile terrain shell is also undesirable. Investigate a thin compliant seal or controlled contact lands, while keeping the active aperture clear. Measure and prototype the actual assembled gap.</p>
+<p>Avoid deep narrow tubes if possible: they discard light, make alignment harder and produce a visible honeycomb. If a flat board requires very long cells near a curved shell, use smaller boards or a different segmentation instead of making every tube longer.</p>
+<h3 id="acceptance-tests-before-full-globe-cad">Acceptance tests before full-globe CAD</h3>
+<p>Use a fixed camera exposure for comparisons and a ruler in the same plane. Phone auto exposure can make two different stacks look equally bright.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Target or decision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Off-state appearance</td>
+<td>Satisfying dark charcoal at normal room illumination, without obvious white plastic, pixels or grid</td>
+</tr>
+<tr>
+<td>One visited place</td>
+<td>Clearly visible local amber area, not a country fill</td>
+</tr>
+<tr>
+<td>Isolated footprint size</td>
+<td>Aim for roughly 3.5–6 mm apparent diameter; measure at half-maximum brightness where practical</td>
+</tr>
+<tr>
+<td>Dark separation</td>
+<td>Two commanded 50-mile footprints 8 mm apart should retain a visible dark gap</td>
+</tr>
+<tr>
+<td>Spill</td>
+<td>At a point about 6 mm from an isolated visit's center, aim for less than 10% of the patch's peak signal above background</td>
+</tr>
+<tr>
+<td>Overlap</td>
+<td>Nearby visits merge without a brighter seam or a connecting route</td>
+</tr>
+<tr>
+<td>Terrain</td>
+<td>The Rockies/coastal ranges read as terrain; peaks do not disappear because they are too opaque</td>
+</tr>
+<tr>
+<td>Tint/current</td>
+<td>Good color at a modest measured current, without a glowing white haze</td>
+</tr>
+<tr>
+<td>Thermal trial</td>
+<td>Surface below 40°C in a 25°C room as an initial comfort target; no material distortion</td>
+</tr>
+<tr>
+<td>Repeatability</td>
+<td>A second piece with the same process gives similar finish and transmission</td>
+</tr>
+</tbody>
+</table></div>
+<p>The numerical optical targets are <strong>design acceptance targets, not measured results</strong>. If the apparent footprint is consistently 7–10 mm, that represents a noticeably broader area than the simulator. Record it and decide explicitly whether it is acceptable before changing hardware density or the preview.</p>
+<p>If 3 mm pitch passes the look test but an isolated place is poorly placed or disappears, commission one finer-pitch tile. If 2–2.5 mm pitch still fails through the chosen shell, fix the optics before scaling up.</p>
+<h2 id="6-full-shell-frame-and-mechanical-design">6. Full shell, frame and mechanical design</h2>
+<h3 id="exterior">Exterior</h3>
+<p>Keep the approved 25× elevation mesh and the lighting map under revision control. The displayed coastlines and grid are simplified; they are adequate for a first regional object, but small-island completeness needs a deliberate check before final manufacture.</p>
+<p>Ask for a finish sample in the exact final material. Specify outer surface quality before an invisible internal dimensional detail. Prefer support placement on inward surfaces or sacrificial mounting tabs, not mountain ridges.</p>
+<p>Divide the exterior into removable sections sized for the selected printer and assembly access. Let the fabrication service and mechanical designer choose the final count after orientation, shrinkage, frame support and seam studies. <strong>Eight to twelve external sections is a starting packaging concept</strong>, not a frozen geometry; their boundaries need not match the smaller electronics tiles.</p>
+<p>Place seams primarily in ocean regions where possible. Use a light-blocking internal overlap/labyrinth and registration features. Do not permanently bond every seam shut. Test a 0.15–0.30 mm visible joint study with the actual process rather than specifying an impossible zero-width seam.</p>
+<p>Keep fasteners and locating features on hidden inward flanges. Small screws into separate inserts or nuts are preferable to repeated tightening into thin resin. Insert installation must not crack or distort the optical shell. Use one locating datum and allowances for expansion rather than over-constraining every edge.</p>
+<h3 id="frame-and-service-access">Frame and service access</h3>
+<p>Use an internal spine and removable carriers. The shell should locate onto these carriers while the frame supports gravity and handling. Route wiring along members and leave a service loop at each removable section.</p>
+<p>Use keyed, labeled connectors and panel IDs that match the mapping file. Make it possible to replace one failed module without desoldering neighboring modules or removing every shell segment.</p>
+<p>Maintain a keep-out envelope between the tallest component, connectors, baffles and shell. Include fastener heads, wire bend radius and strain relief, not just the PCB outline. Audit every mechanical obstruction against the light map.</p>
+<h3 id="stand">Stand</h3>
+<p>Use a weighted base, roughly 180–220 mm in diameter as a starting layout, with non-slip feet and a replaceable power connector. A charcoal body with restrained brass/amber details fits the visual direction.</p>
+<p>Design tilt and service access before routing the cable. A fixed globe is the lowest-risk first build. If hand rotation is desired, use bearings with a controlled rotation range, mechanical stops and a protected cable loop. Unlimited rotation needs a properly rated slip ring and introduces another wear component; a motor is unnecessary for the first version.</p>
+<p>Account explicitly for any support opening near the south pole. It is a real non-display region and should appear in the physical coverage map rather than being hidden by software claims.</p>
+<p>Stability must be calculated from the measured completed mass and center of gravity. As an initial check, a 2.2 kg object on a 200 mm diameter base resists roughly 5.4 N of horizontal force applied 400 mm above the support plane before idealized tipping. This ignores sliding and mounting compliance. Test the actual assembly with a controlled gentle force; do not rely on that example if the globe or base weights change.</p>
+<h2 id="7-full-globe-electronics">7. Full-globe electronics</h2>
+<h3 id="led-boards">LED boards</h3>
+<p>A custom monochrome matrix around an <strong>IS31FL3741-class driver</strong> is a credible starting point. The checked Adafruit implementation addresses 351 monochrome channels and provides global current, per-channel scaling, PWM, reset and output enable. Those capabilities suit a slowly updated travel display.</p>
+<p>This is <strong>not approval to copy a board and substitute amber LEDs blindly</strong>. The PCB engineer must verify the manufacturer's current datasheet: scan arrangement, peak versus average LED current, current-setting resistor, compliance voltage, LED pulse rating, thermal limits, decoupling, reset behavior and failure states. The direct datasheet was inaccessible in this research environment, so those details remain procurement/release checks.</p>
+<p>The prototype board's RGB channel mapping and current resistor values are not automatically correct for a full amber panel. Order assembled boards; thousands of tiny LED joints are not an appropriate hand-soldering task.</p>
+<p>Freeze LED orientation, bin, resistor values, driver revision, connector orientation and test points before a production lot. Supply a factory test pattern that lights each channel in turn, tests all-off leakage, verifies communication and records panel current.</p>
+<h3 id="control-network">Control network</h3>
+<p>One Wi-Fi controller owns the travel history and exposes the user interface. For the production main board, prefer an ESP32-S3 variant with external PSRAM and enough flash for A/B firmware plus separate history, mapping and calibration partitions; 8 MB PSRAM and 16 MB flash are useful design targets to verify against the selected module. The no-PSRAM QT Py is the bench controller, not a frozen full-globe memory configuration. For the finished globe, use several local sector controllers so long wiring runs do not turn a large I²C bus into an intermittent display.</p>
+<p>A practical starting topology is one main ESP32-S3 plus four sector controllers. Connect sectors using a properly designed differential link such as RS-485, with addressed packets, CRC, acknowledgments and retry limits. Select a transceiver compatible with the logic rail; the final schematic must specify termination, biasing, ESD protection and grounding.</p>
+<p>Each sector has short local I²C branches to its driver boards. Address multiplexers can separate repeated driver addresses and reduce connected capacitance. The reference matrix supports four addresses; an eight-channel multiplexer can select branches containing up to four distinct addresses, subject to actual board electrical loading. A multiplexer is not a magic cure for long wires or excessive pull-ups.</p>
+<p>The complete network must be checked with an oscilloscope for rise time, logic levels, noise and recovery at the selected bus rate. Start conservatively. This display changes when travel history or brightness changes; it does not require video bandwidth.</p>
+<p>A transfer of 25,000 one-byte brightness values takes at least 2.25 s at 100 kbit/s I²C before register/page/branch overhead. Sectoring and selective updates help. Target an acknowledged update within about five seconds; do not advertise instantaneous full-frame changes before measuring the actual topology.</p>
+<h3 id="power-distribution">Power distribution</h3>
+<p>Keep mains outside the object in a certified enclosed adapter. Distribute a higher low voltage, provisionally <strong>12 V</strong>, through separately protected branches, and regulate locally near LED sectors. The final supply size follows measurement; an adjustable 30–60 W class architecture provides development headroom but is not permission to dissipate that much continuously inside a closed globe.</p>
+<p>With 20,000 active amber LEDs, average current per LED gives the following lower-order rail estimates:</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Average current per LED</th>
+<th style="text-align: right;">LED rail current</th>
+<th style="text-align: right;">Power at a 3.3 V LED rail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.05 mA</td>
+<td style="text-align: right;">1 A</td>
+<td style="text-align: right;">3.3 W</td>
+</tr>
+<tr>
+<td>0.10 mA</td>
+<td style="text-align: right;">2 A</td>
+<td style="text-align: right;">6.6 W</td>
+</tr>
+<tr>
+<td>0.20 mA</td>
+<td style="text-align: right;">4 A</td>
+<td style="text-align: right;">13.2 W</td>
+</tr>
+<tr>
+<td>0.50 mA</td>
+<td style="text-align: right;">10 A</td>
+<td style="text-align: right;">33 W</td>
+</tr>
+</tbody>
+</table></div>
+<p>For 40,000 active emitters, double the LED figures above. These exclude controller/driver idle current, regulators and wiring losses. They are <strong>average currents through LEDs</strong>, not the multiplexed driver's instantaneous setting. Include scan duty cycle, PWM and worst-case enabled channels when specifying peak current.</p>
+<p>Aim for roughly 10–15 W or less in the eventual normal indoor display, then measure whether the optics make that feasible. Full-land service-test mode must be subject to a measured power cap. Do not base wire sizing on the optimistic assumption that only Vancouver will ever be illuminated.</p>
+<p>Use branch protection and connectors rated for the actual worst-case current. Calculate voltage drop using the complete outgoing and return path: voltage loss is current times total resistance. Keep LED power out of development-board USB traces and small signal connectors.</p>
+<p>Provide hardware blanking/current limiting and sensible protection independent of ordinary brightness software. If firmware crashes or a driver powers up incorrectly, the result should not be an unbounded full-current display.</p>
+<h3 id="thermal-design">Thermal design</h3>
+<p>Design for passive cooling first: low operating power, a conductive support path, and discreet ventilation where it does not create light leaks. Add temperature sensing near a representative warm LED region and near the power conversion electronics.</p>
+<p>Measure at least all-off, typical travel history, a dense visited region and a current-limited all-land test. Log supply current and temperatures for at least two hours or until stable. Test the finished tinted shell, not an open frame only.</p>
+<p>Use the actual resin/coating's service temperature and component derating curves. A comfort target of 40°C at the outer surface is not the only limit. Program a lower brightness ceiling or thermal shutdown well below the lowest material/component limit after measuring the warmest locations. Avoid rapid thermal on/off oscillation.</p>
+<p>A fan is a fallback, not the default aesthetic. If the desired finish demands too much power, improve transmission or lower internal losses before hiding the problem with a fan.</p>
+<h2 id="8-phone-updates-storage-and-software">8. Phone updates, storage and software</h2>
+<h3 id="what-the-user-should-experience">What the user should experience</h3>
+<ol>
+<li>Power on: the globe shows the last saved places without requiring internet.</li>
+<li>Open its local page on a phone/computer on the same network.</li>
+<li>Add a named location, using latitude/longitude or a deliberate map/geocoder selection.</li>
+<li>Preview its approximate footprint; save.</li>
+<li>The globe acknowledges the saved revision and updates its light map.</li>
+<li>Export a backup whenever desired.</li>
+</ol>
+<p>The public GitHub Pages simulator is a design tool. It is not currently connected to a globe. The device will serve its own interface, for example at a local hostname with an IP-address fallback. A public HTTPS page cannot simply be assumed to control an HTTP device on a private LAN; browser security and discovery need deliberate handling.</p>
+<h3 id="data-model">Data model</h3>
+<p>Preserve the existing version-2 travel import/export format: version, radiusMiles, and an array of named latitude/longitude places. Internally add stable IDs, a revision counter, schema version and checksum. Keep hardware panel mapping and brightness calibration in separate versioned files.</p>
+<p>Terrain exaggeration is a <strong>manufacturing setting</strong> once the shell exists. Changing a screen slider does not change a printed mountain. The device's actual shell revision should identify the 25× terrain dataset and geometry.</p>
+<p>Do not silently change the meaning of existing visits when installing new LED boards. Re-render the same stored geographic footprints through the replacement board's mapping.</p>
+<h3 id="persistence-that-actually-survives-unplugging">Persistence that actually survives unplugging</h3>
+<p>Use a transactional two-slot record scheme:</p>
+<ol>
+<li>Validate the complete proposed history and size limits in RAM.</li>
+<li>Write it to the inactive slot with its revision, length and checksum.</li>
+<li>Commit/flush and read it back.</li>
+<li>Only then acknowledge success to the phone.</li>
+<li>On boot, choose the newest complete, valid slot; retain the older slot until a later successful write.</li>
+</ol>
+<p>The precise implementation may use an appropriate flash filesystem plus a small NVS manifest, or bounded NVS blobs after checking partition and RAM limits. Do not treat two sequential ordinary file writes as automatically atomic.</p>
+<p>Espressif documents NVS recovery under power interruption, with the newly written key/value potentially lost if power is removed during its write. An application-level validated previous record and read-back acknowledgment are still valuable. Write flash on changes, not every display refresh.</p>
+<p>Test interruption during each save phase and during firmware update. A save that was acknowledged must remain present after unplugging. An interrupted, unacknowledged save may recover either the old or new complete revision, but never a half-parsed history.</p>
+<h3 id="network-and-maintenance">Network and maintenance</h3>
+<p>Use a physical setup action and a unique setup/edit credential. Provision onto the home network, then stop exposing an indefinite open setup access point. Keep updates local by default; do not require port forwarding, cloud accounts or a subscription.</p>
+<p>Validate input sizes and coordinate ranges, reject malformed data without erasing current history, and require deliberate confirmation for clearing history. Protect write endpoints against unauthenticated or cross-site requests. Keep a USB recovery path.</p>
+<p>Use firmware A/B updates with rollback where supported. Do not put travel data in a partition overwritten by firmware flashing. Test upgrade and downgrade handling of stored schema versions before handing over the finished device.</p>
+<p>An illustrative eventual API is GET /api/project for export and authenticated PUT /api/project for a complete validated replacement. Its response should include the committed revision/checksum. This API and the device firmware are design requirements, not implemented functionality in the current simulator.</p>
+<h2 id="9-calibration-and-geography">9. Calibration and geography</h2>
+<p>Assemble and calibrate by panel ID, not by guessing LED order.</p>
+<ol>
+<li>Photograph or inspect each tile's sequential single-pixel test.</li>
+<li>Record its installed transform relative to the globe coordinate frame.</li>
+<li>Map each emitter's effective surface cell into latitude/longitude.</li>
+<li>Apply the land/ocean and mechanical-obstruction masks.</li>
+<li>Render known calibration locations near the equator, mid-latitudes and high latitudes.</li>
+<li>Check hemispheres, longitude sign, pole handling and the date line.</li>
+<li>Measure cell brightness/color through the actual finished shell.</li>
+<li>Apply bounded gain corrections; reduce bright cells rather than driving weak ones past current/thermal limits.</li>
+</ol>
+<p>Calibrate the geographic frame using at least three well-separated recognizable features, and verify additional features. The axes must remain consistent after a shell section is removed and reinstalled.</p>
+<p>Include Vancouver alone, separated western North American visits, overlapping Bay Area visits and a date-line case in acceptance tests. Montreal, Edmonton and South Dakota must remain dark for a Vancouver-only history. Add small islands to the final hardware coverage audit; a simplified land polygon can otherwise erase them even if the electronics are dense enough.</p>
+<p>The baffle and diffusion stack creates an optical point-spread function. Measure it with a single lit cell. Use that measurement when predicting isolated footprints; the simulator's current coarse-LED comparison is not an optical model.</p>
+<h2 id="10-assembly-sequence-and-release-gates">10. Assembly sequence and release gates</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Build</th>
+<th>Evidence needed to continue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Flat material/tint coupons and the reference matrix</td>
+<td>Dark off-state, acceptable amber transmission, known current</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Smooth and 25× curved coupons, spacing and baffle trials</td>
+<td>Recognizable footprint, controlled spill, acceptable terrain brightness</td>
+</tr>
+<tr>
+<td>C</td>
+<td>One custom fine-pitch tile with its actual baffle and shell mount</td>
+<td>Real driver/current behavior, reliable mapping, factory assembly quality</td>
+</tr>
+<tr>
+<td>D</td>
+<td>Two adjacent tiles and one shell joint</td>
+<td>Seam appearance, no shadow band, no bright seam, repeatable reassembly</td>
+</tr>
+<tr>
+<td>E</td>
+<td>One complete serviceable sector with local controller</td>
+<td>Power distribution, noise, temperature, update and power-loss tests</td>
+</tr>
+<tr>
+<td>F</td>
+<td>Full frame, limited initial population, then remaining sectors</td>
+<td>Stable mechanics, correct geographic registration, accessible repair paths</td>
+</tr>
+<tr>
+<td>G</td>
+<td>Final finish, calibration and endurance testing</td>
+<td>Appearance and reliability accepted together</td>
+</tr>
+</tbody>
+</table></div>
+<p>Do not finish-paint all shell sections before the two-section test. Do not buy a full LED lot before confirming optical bin, pitch, driver settings and the factory test process. Do not glue the final shell closed before the endurance and serviceability tests.</p>
+<p>A plausible personal-project sequence is several prototype/quote iterations over weeks to months, not a weekend build. Supplier lead time and access to PCB/CAD expertise dominate. The elapsed time is uncertain until the optical result and budget are known.</p>
+<h2 id="11-budget-and-who-does-what">11. Budget and who does what</h2>
+<p>No budget was available when this package was drafted. The following is a planning envelope, not a quote or authorization to purchase.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Full-globe work/material</th>
+<th style="text-align: right;">Planning allowance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shell printing, samples, finishing iterations</td>
+<td style="text-align: right;">$300–900</td>
+</tr>
+<tr>
+<td>Custom preassembled LED/driver tiles and spares</td>
+<td style="text-align: right;">$500–1,500</td>
+</tr>
+<tr>
+<td>Frame, baffles, mounts and weighted base</td>
+<td style="text-align: right;">$200–700</td>
+</tr>
+<tr>
+<td>Controller/sector electronics, power, harnesses, connectors</td>
+<td style="text-align: right;">$200–500</td>
+</tr>
+<tr>
+<td>Contingency and failed iterations</td>
+<td style="text-align: right;">$300–900</td>
+</tr>
+<tr>
+<td><strong>Materials/services subtotal</strong></td>
+<td style="text-align: right;"><strong>$1,500–4,500</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Professional mechanical/optical/PCB design labor is additional and can add several thousand dollars. That work is not included in a print quote. Prices could move substantially after the tile count and fabrication process are frozen.</p>
+<p>For a much lower budget, keep the same 50-mile data model but explicitly reconsider optical pitch, finish, display coverage or assembly ambition after the sample. Do not describe a coarse display as equivalent to the accepted simulator.</p>
+<p>Your practical role can be selecting the finish, running sample tests, plugging in preassembled modules, basic soldering, mechanical assembly and maintaining the history. The service should handle high-quality thin-wall printing and finishing. A PCB assembly provider should handle fine-pitch soldering. A qualified electronics/CAD designer should release the custom circuit and production geometry.</p>
+<h3 id="what-remains-before-a-full-globe-order">What remains before a full-globe order</h3>
+<ul>
+<li>Accepted material, tint, diffuser and measured light spread.</li>
+<li>Final pitch, LED color/bin, peak/average current and power limits.</li>
+<li>Full surface-to-panel mapping, including small islands and support shadows.</li>
+<li>Production CAD, wall-thickness analysis, seam/mount details and tolerances.</li>
+<li>Reviewed schematics, PCB files, BOM, harness drawings and factory test procedure.</li>
+<li>Device firmware, local update interface, power-loss recovery and recovery flashing procedure.</li>
+<li>A measured thermal and stability result from the assembled sector.</li>
+</ul>
+<p>Those are concrete deliverables, not details to leave to chance during final assembly.</p>
+<h2 id="12-print-service-request-you-can-copy">12. Print-service request you can copy</h2>
+<blockquote>
+<p>I am developing a 305 mm illuminated terrain globe and want a small optical/material test batch first. Please quote the included 30 × 30 mm coupons at 0.6/0.8/1.0/1.2 mm, plus the smooth, Vancouver and Himalayan curved shells. STL units are millimetres; do not resize. The terrain sample uses 25× elevation and has roughly 39.14 × 27.22 × 3.98 mm bounds.</p>
+<p>I need a lightly translucent, tough, stable material suitable for indoor backlighting, with a pleasing matte charcoal-tinted off-state and amber transmission when illuminated. Please recommend a resin/process and provide its material data, minimum reliable wall, cure/post-process requirements, dimensional tolerance, expected warping and coating compatibility.</p>
+<p>Please keep support marks off the outward display surface where practical, document orientation/layer height/cure, and leave samples uncoated unless we separately agree on a labeled finish trial. These are optical test pieces, not a structural enclosure. Please flag unsupported thin features or damage risks before manufacture and quote a repeat batch using the same process.</p>
+</blockquote>
+<h2 id="13-evidence-files-and-honest-limits">13. Evidence, files and honest limits</h2>
+<p>Reference hardware facts were checked against Adafruit's open schematics, board files and library code. Controller storage/update behavior was checked against Espressif documentation. Manufacturer shop pages and several direct datasheet URLs were blocked by the research environment, so current availability/prices, selected resin performance, and the final driver's electrical limits are not independently verified here.</p>
+<p>See <a href="hardware-sources.html">the hardware source record</a> for exact references and checked facts. The reproducible calculations and coupon generator live in the project source; the ZIP includes their outputs. Prototype mesh checks establish geometry closure and dimensions, not successful printing or measured optical performance.</p>
+<p>The next physical action is to obtain <strong>one dense matrix and the small sample batch</strong>, run the recorded tests, and use those measurements to release one custom tile. That is the shortest responsible path from the look you chose to an excellent object that can be maintained for years.</p><footer>Travel Globe · Engineering design and prototype package · 25× terrain / 50-mile radius · Print this page to save a PDF.</footer></main></body></html>

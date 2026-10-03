@@ -1,0 +1,66 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101619"><title>Travel Globe — Hardware References</title><style>
+:root{color-scheme:dark;--bg:#101619;--paper:#172023;--text:#e7e7dc;--muted:#aab6b0;--gold:#e0b875}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:17px/1.75 system-ui,sans-serif}
+header{border-bottom:1px solid #ffffff20;padding:18px max(22px,calc((100vw - 1120px)/2))}
+header a{margin-right:24px}main{max-width:1120px;margin:auto;padding:35px 24px 100px}
+h1{font:normal clamp(36px,5vw,62px)/1.13 Georgia,serif;color:#f5eedf;margin:15px 0 30px}
+h2{font:normal 30px/1.3 Georgia,serif;color:var(--gold);margin:65px 0 20px;scroll-margin-top:25px}
+h3{font-size:21px;margin:32px 0 12px}p,li{max-width:90ch}a{color:var(--gold);text-underline-offset:3px}
+table{border-collapse:collapse;min-width:590px;width:100%;font-size:14px;line-height:1.55}
+.table-scroll{overflow-x:auto;margin:25px 0;border:1px solid #ffffff20;border-radius:8px}
+th,td{padding:14px;text-align:left;vertical-align:top;border-bottom:1px solid #ffffff15}
+th{background:#263033;color:#f0d4a2}tr:nth-child(even){background:#ffffff04}
+blockquote{margin:25px 0;border-left:3px solid var(--gold);padding:12px 24px;background:var(--paper);color:#ccd5cd}
+img{max-width:100%;height:auto;display:block;margin:30px auto;border-radius:12px}
+code{font-size:.85em;background:#ffffff08;padding:2px 5px}pre{overflow-x:auto}.toc{background:var(--paper);padding:20px 28px;border:1px solid #ffffff12;border-radius:12px;font-size:14px}.toc>ul{list-style:none;padding:0}.toc ul ul{display:none}
+footer{border-top:1px solid #ffffff20;margin-top:60px;padding-top:20px;color:var(--muted);font-size:13px}
+@media(max-width:650px){body{font-size:16px}main{padding:25px 20px 60px}h2{font-size:26px}table{min-width:530px}}
+@media print{:root{color-scheme:light}body{background:white;color:#171717;font-size:10pt}main{padding:0;max-width:none}header,.toc{display:none}a,h1,h2,h3{color:#111}a{text-decoration:none}h2{break-after:avoid;margin-top:25px}table{min-width:0;font-size:8pt}th,td{padding:5px;border-color:#bbb}th,blockquote,tr:nth-child(even){background:#eee;color:#111}img{max-height:350px;object-fit:contain}.table-scroll{overflow:visible;break-inside:avoid}footer{color:#333}}
+</style></head><body><header><a href="index.html">← Globe simulator</a><a href="build-guide.html">Build guide</a><a href="https://trentconley.github.io/globe/prototype-kit.zip">Download package</a></header><main><h1 id="hardware-evidence-and-references">Hardware evidence and references</h1>
+<p>Checked for the 25× terrain / 50-mile build design on 2026-10-03. Facts below distinguish verified references from unqualified procurement choices. CAD files are linked rather than redistributed.</p>
+<h2 id="assembled-prototype-matrix">Assembled prototype matrix</h2>
+<ul>
+<li>Product: <a href="https://www.adafruit.com/product/5201">Adafruit 5201</a>, IS31FL3741 13×9 RGB matrix.</li>
+<li><a href="https://github.com/adafruit/Adafruit-IS31FL3741-PCB/tree/07d4cb6a19e65be56da4a96736c2335b714ff82b">Open hardware at 07d4cb6a19e65be56da4a96736c2335b714ff82b</a>.</li>
+<li>Checked README, Eagle schematic and board XML.</li>
+<li>Verified: 117 RGB pixels, 3 mm pitch, nominal 39 × 27 mm active cells, board outline 39 × 51.08 mm, 3.3–5 V stated supply, four I²C addresses.</li>
+<li>SDA/SCL pull-ups connect through R7 to VCC. A 5 V matrix needs level translation to ESP32 3.3 V pins.</li>
+<li>The RGB resistor network and multiplexing are not automatically suitable for a custom monochrome panel.</li>
+<li>The README has one “IS32FL3741” spelling; the schematic/library and product title identify IS31FL3741.</li>
+<li>Open hardware license: Creative Commons Attribution/Share-Alike as specified in its repository. No board CAD is included here.</li>
+</ul>
+<h2 id="matrix-driver-software">Matrix driver software</h2>
+<ul>
+<li><a href="https://github.com/adafruit/Adafruit_IS31FL3741/tree/43fbdcf44e754df9ff432bfbbecc2dd65f69c6e2">Adafruit C++ at 43fbdcf44e754df9ff432bfbbecc2dd65f69c6e2</a>.</li>
+<li>Checked source/header and qtmatrix-rgbswirl example.</li>
+<li>Verified interface: 351 channels, default address 0x30, global current, per-channel scaling/PWM and enable/reset.</li>
+<li><a href="https://github.com/adafruit/Adafruit_CircuitPython_IS31FL3741">CircuitPython driver</a> and Adafruit_RGBMatrixQT were checked for the bench utility. The class implements this board's non-linear RGB/row mapping.</li>
+<li>Upstream examples with current/scaling at 255 are demonstrations, not a qualified starting power configuration for this fixture.</li>
+<li>Direct manufacturer datasheet retrieval was blocked. Peak current, scan duty, compliance, external resistor, IC dissipation and LED pulse limits remain required custom-PCB release checks.</li>
+</ul>
+<h2 id="controller">Controller</h2>
+<ul>
+<li>Product: <a href="https://www.adafruit.com/product/5426">Adafruit 5426</a>, QT Py ESP32-S3.</li>
+<li><a href="https://github.com/adafruit/Adafruit-QT-Py-ESP32-S3-PCB/tree/333b35f9c77338d69816e542e7c6aa4db271d432">Board at 333b35f9c77338d69816e542e7c6aa4db271d432</a>.</li>
+<li>Verified from README and pinout: 8 MB flash, 512 KB SRAM, no PSRAM, native USB, Wi-Fi, separate I²C interfaces including QT.</li>
+<li>Do not draw the matrix's full LED current through the controller's regulator or signal connectors.</li>
+</ul>
+<h2 id="level-shifting-and-bus-expansion">Level shifting and bus expansion</h2>
+<ul>
+<li><a href="https://www.adafruit.com/product/757">Adafruit BSS138 level shifter, 757</a>; <a href="https://github.com/adafruit/4-Channel-Level-Shifter-PCB">open reference</a>.</li>
+<li>Verified: four BSS138 FETs, 10 kΩ pull-ups, I²C-compatible bidirectional design; account for its slower edges.</li>
+<li><a href="https://www.adafruit.com/product/2717">Adafruit TCA9548A, 2717</a>; <a href="https://github.com/adafruit/Adafruit-TCA9548A-I2C-Multiplexer-PCB">open reference</a>.</li>
+<li>Verified: eight branches, address 0x70 configurable through 0x77.</li>
+<li>Bus capacitance, combined pull-ups and installed wiring require review and measurement.</li>
+</ul>
+<h2 id="persistence-local-server-and-firmware-updates">Persistence, local server and firmware updates</h2>
+<p>Checked in Espressif's official ESP-IDF repository:</p>
+<ul>
+<li><a href="https://github.com/espressif/esp-idf/blob/4d59230ddff16327812782151ef0afef202dc6d7/docs/en/api-reference/storage/nvs_flash.rst">NVS</a>.</li>
+<li><a href="https://github.com/espressif/esp-idf/blob/4d59230ddff16327812782151ef0afef202dc6d7/docs/en/api-reference/protocols/esp_http_server.rst">HTTP server</a>.</li>
+<li><a href="https://github.com/espressif/esp-idf/blob/4d59230ddff16327812782151ef0afef202dc6d7/docs/en/api-reference/system/ota.rst">OTA/rollback</a>.</li>
+</ul>
+<p>NVS documents power-interruption recovery, with the new key/value potentially lost if interrupted during its write. This supports committed records and a previous valid history; it does not certify a complete application's multi-record transaction.</p>
+<h2 id="not-verified">Not verified</h2>
+<p>No live inventory/quote, final resin/coating, measured optical spread, final amber LED/bin, reviewed custom PCB, full-globe thermal/stability result, or hardware execution of bench code.</p>
+<p>Several manufacturer/shop and direct datasheet URLs were blocked by this environment's network policy. Official open repositories supplied the checked references above. Treat architectural part families as candidates until current datasheets and supplied revisions are reviewed.</p><footer>Travel Globe · Engineering design and prototype package · 25× terrain / 50-mile radius · Print this page to save a PDF.</footer></main></body></html>

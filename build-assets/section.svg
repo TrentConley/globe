@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="600" viewBox="0 0 1100 600" role="img" aria-labelledby="title desc">
+<title id="title">Proposed globe optical stack</title><desc id="desc">A dark, terrain-shaped translucent shell over opaque optical cells and a dense LED tile. The terrain-following inner wall is a production investigation; the supplied test shell has a smooth inside. Drawing is not to scale.</desc>
+<defs><linearGradient id="shell" x2="0" y2="1"><stop stop-color="#696d66"/><stop offset="1" stop-color="#333d3b"/></linearGradient><radialGradient id="glow"><stop stop-color="#ffbc42" stop-opacity=".65"/><stop offset="1" stop-color="#ffbc42" stop-opacity=".04"/></radialGradient></defs>
+<rect width="1100" height="600" rx="14" fill="#1b2529"/>
+<g font-family="system-ui,sans-serif" fill="#e9eadf">
+<text x="40" y="45" font-size="25">From warm light to raised terrain</text><text x="40" y="74" font-size="14" fill="#aab7b0">Proposed production stack · schematic, not to scale</text>
+<path d="M40 245 Q90 240 125 207 L145 172 L160 196 L185 148 L207 185 L240 177 Q277 162 306 175 L340 220 L369 172 L390 145 L413 175 L435 210 L470 190 Q515 168 555 192 L590 225 L620 212 L650 230 L650 258 L620 240 L590 253 L555 220 Q515 196 470 218 L435 238 L413 203 L390 173 L369 200 L340 248 L306 203 Q277 190 240 205 L207 213 L185 176 L160 224 L145 200 L125 235 Q90 268 40 273Z" fill="url(#shell)" stroke="#8b9387" stroke-width="2"/>
+<path d="M40 244 Q90 239 125 206 L145 171 L160 195 L185 147 L207 184 L240 176 Q277 161 306 174 L340 219 L369 171 L390 144 L413 174 L435 209 L470 189 Q515 167 555 191 L590 224 L620 211 L650 229" fill="none" stroke="#202322" stroke-width="7"/>
+<path d="M308 357 L313 211 L335 242 L340 254 L374 205 L374 357Z" fill="url(#glow)"/>
+<path d="M40 362 H650 V385 H40Z" fill="#273a38" stroke="#6b8174"/>
+<g fill="#4a5351"><rect x="84" y="276" width="8" height="86"/><rect x="156" y="234" width="8" height="128"/><rect x="228" y="219" width="8" height="143"/><rect x="300" y="217" width="8" height="145"/><rect x="374" y="214" width="8" height="148"/><rect x="446" y="246" width="8" height="116"/><rect x="518" y="236" width="8" height="126"/><rect x="590" y="265" width="8" height="97"/></g>
+<g fill="#817044"><rect x="111" y="353" width="24" height="9"/><rect x="183" y="353" width="24" height="9"/><rect x="255" y="353" width="24" height="9"/><rect x="327" y="353" width="24" height="9" fill="#ffc04b"/><rect x="399" y="353" width="24" height="9"/><rect x="471" y="353" width="24" height="9"/><rect x="543" y="353" width="24" height="9"/></g>
+<rect x="40" y="440" width="610" height="20" rx="3" fill="#63716b"/><path d="M72 385V440M612 385V440" stroke="#63716b" stroke-width="14"/>
+<g stroke="#c8ab79" stroke-width="1.5" fill="none"><path d="M555 193H690V118H720"/><path d="M435 232H680V205H720"/><path d="M522 300H700V292H720"/><path d="M600 375H690V382H720"/><path d="M650 450H720"/></g>
+<g font-size="17" fill="#e4bf81"><text x="735" y="120">Matte charcoal finish</text><text x="735" y="207">Translucent terrain shell</text><text x="735" y="294">Opaque light cells</text><text x="735" y="384">Dense amber LED tile</text><text x="735" y="452">Independent support frame</text></g>
+<g font-size="13" fill="#b2bfb7"><text x="735" y="143">Tint and clear coat chosen by sample</text><text x="735" y="230">Inner wall needs thickness validation</text><text x="735" y="317">Fit to underside; control spill and gaps</text><text x="735" y="407">Map each cell to a geographic area</text><text x="735" y="475">Removable mounts, wiring and service access</text></g>
+<text x="40" y="520" font-size="15" fill="#e4bf81">25× terrain: up to 3.73 mm raised in the current grid.</text>
+<text x="40" y="548" font-size="14" fill="#b2bfb7">50-mile footprint: 3.85 mm diameter. Target final cell pitch: 2.0–2.5 mm.</text>
+<text x="40" y="576" font-size="13" fill="#b2bfb7">The supplied curved samples use a smooth inner wall; the illustrated terrain-following wall is not yet production CAD.</text>
+</g></svg>
