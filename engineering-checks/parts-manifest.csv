@@ -1,0 +1,88 @@
+part,quantity,material,process,volume_each_mm3,STL,STEP
+base-cup,1,PA12,SLS/MJF PA12,155674.178,True,True
+base-lid,1,PA12,SLS/MJF PA12,93879.082,True,True
+ballast-150D-6T,1,mild steel,machined purchased metal,104284.037,True,True
+base-collar-half--1,1,PA12,SLS/MJF PA12,9475.325,True,True
+base-collar-half-+1,1,PA12,SLS/MJF PA12,9475.332,True,True
+controller-carrier-01,1,PA12,SLS/MJF PA12,4494.488,True,True
+controller-carrier-02,1,PA12,SLS/MJF PA12,4487.642,True,True
+controller-carrier-03,1,PA12,SLS/MJF PA12,4593.947,True,True
+controller-carrier-04,1,PA12,SLS/MJF PA12,4593.942,True,True
+controller-carrier-05,1,PA12,SLS/MJF PA12,4593.961,True,True
+controller-carrier-06,1,PA12,SLS/MJF PA12,4487.66,True,True
+controller-carrier-07,1,PA12,SLS/MJF PA12,4593.97,True,True
+controller-carrier-08,1,PA12,SLS/MJF PA12,4494.481,True,True
+controller-carrier-09,1,PA12,SLS/MJF PA12,4487.627,True,True
+controller-carrier-10,1,PA12,SLS/MJF PA12,4487.576,True,True
+controller-carrier-11,1,PA12,SLS/MJF PA12,4494.474,True,True
+controller-carrier-12,1,PA12,SLS/MJF PA12,4494.526,True,True
+controller-carrier-13,1,PA12,SLS/MJF PA12,4494.494,True,True
+controller-carrier-14,1,PA12,SLS/MJF PA12,4494.51,True,True
+controller-carrier-15,1,PA12,SLS/MJF PA12,4527.423,True,True
+controller-carrier-16,1,PA12,SLS/MJF PA12,4487.625,True,True
+controller-carrier-17,1,PA12,SLS/MJF PA12,4487.546,True,True
+controller-carrier-18,1,PA12,SLS/MJF PA12,4487.599,True,True
+controller-carrier-19,1,PA12,SLS/MJF PA12,4487.632,True,True
+controller-carrier-20,1,PA12,SLS/MJF PA12,4593.933,True,True
+base-electronics-carrier,1,PA12,SLS/MJF PA12,8332.03,True,True
+cage-octant-01,1,PA12,SLS/MJF PA12,36962.817,True,True
+cage-octant-02,1,PA12,SLS/MJF PA12,48171.61,True,True
+cage-octant-03,1,PA12,SLS/MJF PA12,46904.017,True,True
+cage-octant-04,1,PA12,SLS/MJF PA12,44211.393,True,False
+cage-octant-05,1,PA12,SLS/MJF PA12,47317.387,True,True
+cage-octant-06,1,PA12,SLS/MJF PA12,49257.593,True,True
+cage-octant-07,1,PA12,SLS/MJF PA12,52569.025,True,True
+cage-octant-08,1,PA12,SLS/MJF PA12,52850.507,True,True
+prototype-cradle-type-02,1,PA12,SLS/MJF PA12,6199.282,True,True
+spine-12OD-8ID-314L,1,6061 aluminum; deburr 6 mm cable exit,machined purchased metal,19669.484,True,True
+spoke--1-1,1,6061 aluminum,machined purchased metal,3824.248,True,True
+spoke--1-2,1,6061 aluminum,machined purchased metal,3824.233,True,True
+spoke--1-3,1,6061 aluminum,machined purchased metal,3824.252,True,True
+spoke--1-4,1,6061 aluminum,machined purchased metal,3824.25,True,True
+spoke--1-5,1,6061 aluminum,machined purchased metal,3824.252,True,True
+hub--1-half--1,1,PA12,SLS/MJF PA12,5365.933,True,True
+hub--1-half-+1,1,PA12,SLS/MJF PA12,5829.991,True,True
+spoke-+1-1,1,6061 aluminum,machined purchased metal,3824.244,True,True
+spoke-+1-2,1,6061 aluminum,machined purchased metal,3824.248,True,True
+spoke-+1-3,1,6061 aluminum,machined purchased metal,3824.252,True,True
+spoke-+1-4,1,6061 aluminum,machined purchased metal,3824.262,True,True
+spoke-+1-5,1,6061 aluminum,machined purchased metal,3824.249,True,True
+hub-+1-half--1,1,PA12,SLS/MJF PA12,5830.0,True,True
+hub-+1-half-+1,1,PA12,SLS/MJF PA12,5365.839,True,True
+pcb-outline-type-00,1,FR4 1 mm,PCB / reference geometry,560.515,False,True
+pcb-outline-type-01,1,FR4 1 mm,PCB / reference geometry,705.476,False,True
+pcb-outline-type-02,1,FR4 1 mm,PCB / reference geometry,741.046,False,True
+pcb-outline-type-03,1,FR4 1 mm,PCB / reference geometry,821.634,False,True
+pcb-outline-type-04,1,FR4 1 mm,PCB / reference geometry,741.046,False,True
+pcb-outline-type-05,1,FR4 1 mm,PCB / reference geometry,867.226,False,True
+baffle-type-00,36,opaque black resin; qualify 0.4 mm walls,SLA/DLP resin,1583.728,True,False
+baffle-type-01,43,opaque black resin; qualify 0.4 mm walls,SLA/DLP resin,2227.002,True,False
+baffle-type-02,48,opaque black resin; qualify 0.4 mm walls,SLA/DLP resin,2380.745,True,False
+baffle-type-03,42,opaque black resin; qualify 0.4 mm walls,SLA/DLP resin,2775.031,True,False
+baffle-type-04,42,opaque black resin; qualify 0.4 mm walls,SLA/DLP resin,2380.551,True,False
+baffle-type-05,15,opaque black resin; qualify 0.4 mm walls,SLA/DLP resin,2766.904,True,False
+magnet-seat-M2-4mm,60,PA12; magnet pocket 4.2 mm,SLS/MJF PA12,100.662,True,False
+pcb-head-spacer-M2,652,PA12 or purchased nylon; lifts screw head above LEDs,PCB / reference geometry,5.805,True,False
+magnet-fit-coupon,1,same process as magnet seats,PCB / reference geometry,1686.762,True,False
+terrain-shell-01-25x,1,translucent optical resin with qualified charcoal finish,SLA/DLP resin,23016.997,True,False
+terrain-shell-02-25x,1,translucent optical resin with qualified charcoal finish,SLA/DLP resin,17179.828,True,False
+terrain-shell-03-25x,1,translucent optical resin with qualified charcoal finish,SLA/DLP resin,15320.159,True,False
+terrain-shell-04-25x,1,translucent optical resin with qualified charcoal finish,SLA/DLP resin,14929.144,True,False
+terrain-shell-05-25x,1,translucent optical resin with qualified charcoal finish,SLA/DLP resin,16718.421,True,False
+terrain-shell-06-25x,1,translucent optical resin with qualified charcoal finish,SLA/DLP resin,18837.464,True,False
+terrain-shell-07-25x,1,translucent optical resin with qualified charcoal finish,SLA/DLP resin,16027.184,True,False
+terrain-shell-08-25x,1,translucent optical resin with qualified charcoal finish,SLA/DLP resin,16919.226,True,False
+terrain-shell-09-25x,1,translucent optical resin with qualified charcoal finish,SLA/DLP resin,14645.936,True,False
+terrain-shell-10-25x,1,translucent optical resin with qualified charcoal finish,SLA/DLP resin,18329.549,True,False
+terrain-shell-11-25x,1,translucent optical resin with qualified charcoal finish,SLA/DLP resin,15996.289,True,False
+terrain-shell-12-25x,1,translucent optical resin with qualified charcoal finish,SLA/DLP resin,16779.455,True,False
+terrain-shell-13-25x,1,translucent optical resin with qualified charcoal finish,SLA/DLP resin,14641.987,True,False
+terrain-shell-14-25x,1,translucent optical resin with qualified charcoal finish,SLA/DLP resin,15404.431,True,False
+terrain-shell-15-25x,1,translucent optical resin with qualified charcoal finish,SLA/DLP resin,15921.795,True,False
+terrain-shell-16-25x,1,translucent optical resin with qualified charcoal finish,SLA/DLP resin,16682.905,True,False
+terrain-shell-17-25x,1,translucent optical resin with qualified charcoal finish,SLA/DLP resin,17307.263,True,False
+terrain-shell-18-25x,1,translucent optical resin with qualified charcoal finish,SLA/DLP resin,14610.817,True,False
+terrain-shell-19-25x,1,translucent optical resin with qualified charcoal finish,SLA/DLP resin,15403.629,True,False
+terrain-shell-20-25x,1,translucent optical resin with qualified charcoal finish,SLA/DLP resin,17644.12,True,False
+prototype-shell-vancouver-25x,1,translucent resin; local PCB coordinates,SLA/DLP resin,1758.709,True,False
+prototype-shell-himalaya-25x,1,translucent resin; local PCB coordinates,SLA/DLP resin,2530.607,True,False

@@ -1,0 +1,77 @@
+{
+  "items": [
+    {
+      "item": "cage",
+      "kg": 0.38202679249000004,
+      "basis": "CAD volume \u00d7 assumed density"
+    },
+    {
+      "item": "terrain",
+      "kg": 0.38216408884999997,
+      "basis": "CAD volume \u00d7 assumed density"
+    },
+    {
+      "item": "baffles",
+      "kg": 0.6038524167,
+      "basis": "CAD volume \u00d7 assumed density"
+    },
+    {
+      "item": "carriers",
+      "kg": 0.09126870656000001,
+      "basis": "CAD volume \u00d7 assumed density"
+    },
+    {
+      "item": "spokes",
+      "kg": 0.103254723,
+      "basis": "CAD volume \u00d7 assumed density"
+    },
+    {
+      "item": "spine",
+      "kg": 0.0531076068,
+      "basis": "CAD volume \u00d7 assumed density"
+    },
+    {
+      "item": "hubs",
+      "kg": 0.022615680630000003,
+      "basis": "CAD volume \u00d7 assumed density"
+    },
+    {
+      "item": "magnet seats",
+      "kg": 0.0061001172000000005,
+      "basis": "CAD volume \u00d7 assumed density"
+    },
+    {
+      "item": "head spacers",
+      "kg": 0.0038227086,
+      "basis": "CAD volume \u00d7 assumed density"
+    },
+    {
+      "item": "tile FR4",
+      "kg": 0.3047415612062855,
+      "basis": "1 mm FR4; density 1.85 g/cm3"
+    },
+    {
+      "item": "tile components and solder",
+      "kg": 0.2938,
+      "basis": "1.3 g allowance per tile"
+    },
+    {
+      "item": "complete sector electronics",
+      "kg": 0.4,
+      "basis": "20 g per carrier including perfboard"
+    },
+    {
+      "item": "magnets and screws",
+      "kg": 0.25,
+      "basis": "120 magnets, PCB screws/nuts, split joints and clamps"
+    },
+    {
+      "item": "internal harness",
+      "kg": 0.25,
+      "basis": "Crimp leads, trunk, ties and slack"
+    }
+  ],
+  "supportedMassEstimateKg": 3.1467544020362856,
+  "structuralScreeningMassKg": 3.5,
+  "status": "Estimate, not a measured assembled mass"
+}

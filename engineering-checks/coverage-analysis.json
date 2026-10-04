@@ -1,0 +1,237 @@
+{
+  "status": "GEOMETRIC SAMPLING ONLY; material optics unmeasured",
+  "leds": 33406,
+  "apertureWidthAtBoardMM": 1.6,
+  "pitchAtBoardMM": 2,
+  "footprintDiameterMM": 3.8522150526616765,
+  "hardwareShadowedSampleFraction": 0.006881664637756413,
+  "landGridSamples": 85719,
+  "landWeightedSamplesWithin50MilesOfOpenSample": 0.8845200784067978,
+  "landNearestOpenSampleDistanceMilesPercentiles": {
+    "50": 11.985444532769074,
+    "90": 488.5814903069762,
+    "95": 680.3338392657167,
+    "99": 826.4024352751665,
+    "100": 862.0319189864147
+  },
+  "cityExamples": [
+    {
+      "place": "Vancouver",
+      "lat": 49.2827,
+      "lon": -123.1207,
+      "litChannels": 5,
+      "pwmSum": 1.8352941176470587,
+      "commandLimitScale": 1,
+      "radiusMiles": 50,
+      "approximatedPlaces": [],
+      "unrepresentedPlaces": [],
+      "sumFullPixelEquivalent": 1.8352941176470587,
+      "maximumPWM": 255,
+      "populatedTileIds": [
+        124
+      ]
+    },
+    {
+      "place": "Seattle",
+      "lat": 47.6062,
+      "lon": -122.3321,
+      "litChannels": 4,
+      "pwmSum": 1.9450980392156862,
+      "commandLimitScale": 1,
+      "radiusMiles": 50,
+      "approximatedPlaces": [],
+      "unrepresentedPlaces": [],
+      "sumFullPixelEquivalent": 1.9450980392156862,
+      "maximumPWM": 255,
+      "populatedTileIds": [
+        124
+      ]
+    },
+    {
+      "place": "New York",
+      "lat": 40.7128,
+      "lon": -74.006,
+      "litChannels": 4,
+      "pwmSum": 2.149019607843137,
+      "commandLimitScale": 1,
+      "radiusMiles": 50,
+      "approximatedPlaces": [],
+      "unrepresentedPlaces": [],
+      "sumFullPixelEquivalent": 2.149019607843137,
+      "maximumPWM": 170,
+      "populatedTileIds": [
+        259
+      ]
+    },
+    {
+      "place": "Chicago",
+      "lat": 41.8781,
+      "lon": -87.6298,
+      "litChannels": 1,
+      "pwmSum": 0.6509803921568628,
+      "commandLimitScale": 1,
+      "radiusMiles": 50,
+      "approximatedPlaces": [
+        "unnamed place"
+      ],
+      "unrepresentedPlaces": [],
+      "sumFullPixelEquivalent": 0.6509803921568628,
+      "maximumPWM": 166,
+      "populatedTileIds": [
+        258
+      ]
+    },
+    {
+      "place": "Los Angeles",
+      "lat": 34.0522,
+      "lon": -118.2437,
+      "litChannels": 2,
+      "pwmSum": 1.4627450980392156,
+      "commandLimitScale": 1,
+      "radiusMiles": 50,
+      "approximatedPlaces": [],
+      "unrepresentedPlaces": [],
+      "sumFullPixelEquivalent": 1.4627450980392158,
+      "maximumPWM": 238,
+      "populatedTileIds": [
+        127
+      ]
+    },
+    {
+      "place": "Sioux Falls",
+      "lat": 43.546,
+      "lon": -96.7313,
+      "litChannels": 4,
+      "pwmSum": 2.019607843137255,
+      "commandLimitScale": 1,
+      "radiusMiles": 50,
+      "approximatedPlaces": [],
+      "unrepresentedPlaces": [],
+      "sumFullPixelEquivalent": 2.019607843137255,
+      "maximumPWM": 255,
+      "populatedTileIds": [
+        257
+      ]
+    },
+    {
+      "place": "London",
+      "lat": 51.5074,
+      "lon": -0.1278,
+      "litChannels": 4,
+      "pwmSum": 2.168627450980392,
+      "commandLimitScale": 1,
+      "radiusMiles": 50,
+      "approximatedPlaces": [],
+      "unrepresentedPlaces": [],
+      "sumFullPixelEquivalent": 2.168627450980392,
+      "maximumPWM": 233,
+      "populatedTileIds": [
+        105
+      ]
+    },
+    {
+      "place": "Tokyo",
+      "lat": 35.6762,
+      "lon": 139.6503,
+      "litChannels": 4,
+      "pwmSum": 1.768627450980392,
+      "commandLimitScale": 1,
+      "radiusMiles": 50,
+      "approximatedPlaces": [],
+      "unrepresentedPlaces": [],
+      "sumFullPixelEquivalent": 1.768627450980392,
+      "maximumPWM": 255,
+      "populatedTileIds": [
+        66
+      ]
+    },
+    {
+      "place": "Sydney",
+      "lat": -33.8688,
+      "lon": 151.2093,
+      "litChannels": 4,
+      "pwmSum": 1.3450980392156864,
+      "commandLimitScale": 1,
+      "radiusMiles": 50,
+      "approximatedPlaces": [],
+      "unrepresentedPlaces": [],
+      "sumFullPixelEquivalent": 1.3450980392156862,
+      "maximumPWM": 255,
+      "populatedTileIds": [
+        303
+      ]
+    },
+    {
+      "place": "Reykjavik",
+      "lat": 64.1466,
+      "lon": -21.9426,
+      "litChannels": 4,
+      "pwmSum": 1.6549019607843136,
+      "commandLimitScale": 1,
+      "radiusMiles": 50,
+      "approximatedPlaces": [],
+      "unrepresentedPlaces": [],
+      "sumFullPixelEquivalent": 1.6549019607843138,
+      "maximumPWM": 255,
+      "populatedTileIds": [
+        107
+      ]
+    },
+    {
+      "place": "Honolulu",
+      "lat": 21.3099,
+      "lon": -157.8581,
+      "litChannels": 1,
+      "pwmSum": 0.6509803921568628,
+      "commandLimitScale": 1,
+      "radiusMiles": 50,
+      "approximatedPlaces": [
+        "unnamed place"
+      ],
+      "unrepresentedPlaces": [],
+      "sumFullPixelEquivalent": 0.6509803921568628,
+      "maximumPWM": 166,
+      "populatedTileIds": [
+        285
+      ]
+    },
+    {
+      "place": "Singapore",
+      "lat": 1.3521,
+      "lon": 103.8198,
+      "litChannels": 4,
+      "pwmSum": 2.3254901960784315,
+      "commandLimitScale": 1,
+      "radiusMiles": 50,
+      "approximatedPlaces": [],
+      "unrepresentedPlaces": [],
+      "sumFullPixelEquivalent": 2.3254901960784315,
+      "maximumPWM": 216,
+      "populatedTileIds": [
+        34
+      ]
+    },
+    {
+      "place": "Kathmandu",
+      "lat": 27.7172,
+      "lon": 85.324,
+      "litChannels": 4,
+      "pwmSum": 2.168627450980392,
+      "commandLimitScale": 1,
+      "radiusMiles": 50,
+      "approximatedPlaces": [],
+      "unrepresentedPlaces": [],
+      "sumFullPixelEquivalent": 2.168627450980392,
+      "maximumPWM": 217,
+      "populatedTileIds": [
+        18
+      ]
+    }
+  ],
+  "limits": [
+    "Natural Earth 1:10m coastlines use a 0.6 mm sampling allowance for narrow islands; this admits some water near shores.",
+    "A nearest-cell visibility floor approximates small footprints within 90 miles at the 50-mile setting; unsupported places are reported. The south support region remains unpopulated in A0.",
+    "Scattering, pigment transmission, LED angular output and perceived brightness are not calibrated.",
+    "Do not interpret land coverage diagnostics as the percentage of Earth visited."
+  ]
+}

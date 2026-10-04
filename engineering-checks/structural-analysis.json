@@ -1,0 +1,66 @@
+{
+  "model": "3-D linear Euler-Bernoulli beam screening; joints assumed rigid",
+  "supported_mass_kg": 3.5,
+  "benchmark": {
+    "case": "100 mm aluminum tube cantilever, 1 N tip load",
+    "analytical_mm": -0.09462947192383224,
+    "solver_mm": -0.09462947192383224,
+    "relative_error": 0.0
+  },
+  "cases": [
+    {
+      "case": "gravity",
+      "max_displacement_mm": 0.1605583384999325,
+      "nylon_max_nominal_beam_stress_MPa": 0.49986056847649,
+      "aluminum_max_nominal_beam_stress_MPa": 8.554743068338682,
+      "nylon_yield_factor": 50.01394704166553,
+      "aluminum_yield_factor": 16.94966159026431,
+      "spine_nominal_stress_MPa": 0.5462718879371832,
+      "equilibrium_relative_residual": 3.4287008012773423e-11
+    },
+    {
+      "case": "3g handling",
+      "max_displacement_mm": 0.48167501549979813,
+      "nylon_max_nominal_beam_stress_MPa": 1.4995817054294678,
+      "aluminum_max_nominal_beam_stress_MPa": 25.664229205013466,
+      "nylon_yield_factor": 16.671315680555203,
+      "aluminum_yield_factor": 5.649887196755338,
+      "spine_nominal_stress_MPa": 1.6388156638112732,
+      "equilibrium_relative_residual": 8.645076922999489e-11
+    },
+    {
+      "case": "gravity, half nylon stiffness",
+      "max_displacement_mm": 0.17834562081446304,
+      "nylon_max_nominal_beam_stress_MPa": 0.3211657311307412,
+      "aluminum_max_nominal_beam_stress_MPa": 8.60628826826686,
+      "nylon_yield_factor": 77.84143069057052,
+      "aluminum_yield_factor": 16.848145853380785,
+      "spine_nominal_stress_MPa": 0.54627188793588,
+      "equilibrium_relative_residual": 5.53289671136004e-11
+    },
+    {
+      "case": "gravity plus 5 N lateral at north pole",
+      "max_displacement_mm": 0.8985811416918857,
+      "nylon_max_nominal_beam_stress_MPa": 0.6454607048652358,
+      "aluminum_max_nominal_beam_stress_MPa": 12.225796173267364,
+      "equilibrium_relative_residual": 1.5125062325347918e-10
+    }
+  ],
+  "stability": {
+    "base_mass_assumption_kg": 1.2186296917260793,
+    "ballast_mass_kg": 0.8186296917260792,
+    "total_mass_kg": 4.718629691726079,
+    "center_of_gravity_above_table_mm": 170.7985977081956,
+    "support_foot_radius_mm": 94,
+    "ideal_tipping_angle_deg": 28.82644299510852,
+    "ideal_horizontal_force_at_top_to_tip_N": 11.553124269424599,
+    "sliding_coefficient_needed_at_5N": 0.10805215492603269
+  },
+  "limits": [
+    "No local stress concentration at bolt holes or molded joints",
+    "No bolt preload/contact/slip solution; socket torque and pull tests required",
+    "No nonlinear drop/impact or long-term creep prediction",
+    "Rigid base attachment assumed; actual base/collar must be checked",
+    "PA12 properties are conservative assumptions, not certified print-process values"
+  ]
+}

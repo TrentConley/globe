@@ -1,0 +1,212 @@
+{
+  "model": "Two-node steady-state enclosure heat balance with nonlinear radiation",
+  "globe_area_m2": 0.2922466566001905,
+  "assumptions": {
+    "shell_conduction": "neglected in homogenized network; add local material/terrain resistance during test",
+    "inside_h_W_m2K": 2,
+    "outside_h_W_m2K": 3,
+    "emissivity": 0.85,
+    "ambient_design_C": 30,
+    "globe_heat_design_W": 12,
+    "base_electronics_allowance_W": 3,
+    "total_command_target_W": 15
+  },
+  "scenarios": [
+    {
+      "ambient_C": 20,
+      "globe_heat_W": 5,
+      "interior_C": 24.597431837966667,
+      "surface_C": 22.162684537709424
+    },
+    {
+      "ambient_C": 20,
+      "globe_heat_W": 10,
+      "interior_C": 29.050883676071805,
+      "surface_C": 24.29615048790623
+    },
+    {
+      "ambient_C": 20,
+      "globe_heat_W": 12,
+      "interior_C": 30.79401518437612,
+      "surface_C": 25.141525479009033
+    },
+    {
+      "ambient_C": 20,
+      "globe_heat_W": 15,
+      "interior_C": 33.369449913958306,
+      "surface_C": 26.401152095798352
+    },
+    {
+      "ambient_C": 20,
+      "globe_heat_W": 20,
+      "interior_C": 37.56142019843185,
+      "surface_C": 28.478418166014194
+    },
+    {
+      "ambient_C": 25,
+      "globe_heat_W": 5,
+      "interior_C": 29.44587103783749,
+      "surface_C": 27.095689142776507
+    },
+    {
+      "ambient_C": 25,
+      "globe_heat_W": 10,
+      "interior_C": 33.75721447892232,
+      "surface_C": 29.163879874586996
+    },
+    {
+      "ambient_C": 25,
+      "globe_heat_W": 12,
+      "interior_C": 35.44596009276529,
+      "surface_C": 29.983613377459164
+    },
+    {
+      "ambient_C": 25,
+      "globe_heat_W": 15,
+      "interior_C": 37.94229397628828,
+      "surface_C": 31.205268496013332
+    },
+    {
+      "ambient_C": 25,
+      "globe_heat_W": 20,
+      "interior_C": 42.008657697701665,
+      "surface_C": 33.2205279514186
+    },
+    {
+      "ambient_C": 30,
+      "globe_heat_W": 5,
+      "interior_C": 34.29937190686201,
+      "surface_C": 32.030647495555456
+    },
+    {
+      "ambient_C": 30,
+      "globe_heat_W": 10,
+      "interior_C": 38.47310141000139,
+      "surface_C": 34.03543389321169
+    },
+    {
+      "ambient_C": 30,
+      "globe_heat_W": 12,
+      "interior_C": 40.10911531417918,
+      "surface_C": 34.83025176723828
+    },
+    {
+      "ambient_C": 30,
+      "globe_heat_W": 15,
+      "interior_C": 42.5286880696292,
+      "surface_C": 36.01500069548416
+    },
+    {
+      "ambient_C": 30,
+      "globe_heat_W": 20,
+      "interior_C": 46.472996934461776,
+      "surface_C": 37.96996805938113
+    },
+    {
+      "ambient_C": 35,
+      "globe_heat_W": 5,
+      "interior_C": 39.15783053748095,
+      "surface_C": 36.96754294987551
+    },
+    {
+      "ambient_C": 35,
+      "globe_heat_W": 10,
+      "interior_C": 43.1983598820255,
+      "surface_C": 38.91078021907839
+    },
+    {
+      "ambient_C": 35,
+      "globe_heat_W": 12,
+      "interior_C": 44.78326970093332,
+      "surface_C": 39.68140233817502
+    },
+    {
+      "ambient_C": 35,
+      "globe_heat_W": 15,
+      "interior_C": 47.12838667308341,
+      "surface_C": 40.83030172532102
+    },
+    {
+      "ambient_C": 35,
+      "globe_heat_W": 20,
+      "interior_C": 50.95414805771816,
+      "surface_C": 42.72667799610804
+    }
+  ],
+  "sensitivity_at_12W_30C": [
+    {
+      "inside_h_W_m2K": 2,
+      "outside_h_W_m2K": 3,
+      "emissivity": 0.85,
+      "interior_C": 40.10911531417918,
+      "surface_C": 34.83025176723828
+    },
+    {
+      "inside_h_W_m2K": 1,
+      "outside_h_W_m2K": 2,
+      "emissivity": 0.7,
+      "interior_C": 43.25850159342326,
+      "surface_C": 36.2573219600236
+    },
+    {
+      "inside_h_W_m2K": 0.5,
+      "outside_h_W_m2K": 1,
+      "emissivity": 0.6,
+      "interior_C": 46.877966858878835,
+      "surface_C": 38.29545160764229
+    }
+  ],
+  "local_hotspot_sensitivity": [
+    {
+      "chip_dissipation_W": 0.05,
+      "theta_JA_C_W": 40,
+      "junction_rise_above_local_board_C": 2.0
+    },
+    {
+      "chip_dissipation_W": 0.05,
+      "theta_JA_C_W": 80,
+      "junction_rise_above_local_board_C": 4.0
+    },
+    {
+      "chip_dissipation_W": 0.05,
+      "theta_JA_C_W": 120,
+      "junction_rise_above_local_board_C": 6.0
+    },
+    {
+      "chip_dissipation_W": 0.1,
+      "theta_JA_C_W": 40,
+      "junction_rise_above_local_board_C": 4.0
+    },
+    {
+      "chip_dissipation_W": 0.1,
+      "theta_JA_C_W": 80,
+      "junction_rise_above_local_board_C": 8.0
+    },
+    {
+      "chip_dissipation_W": 0.1,
+      "theta_JA_C_W": 120,
+      "junction_rise_above_local_board_C": 12.0
+    },
+    {
+      "chip_dissipation_W": 0.2,
+      "theta_JA_C_W": 40,
+      "junction_rise_above_local_board_C": 8.0
+    },
+    {
+      "chip_dissipation_W": 0.2,
+      "theta_JA_C_W": 80,
+      "junction_rise_above_local_board_C": 16.0
+    },
+    {
+      "chip_dissipation_W": 0.2,
+      "theta_JA_C_W": 120,
+      "junction_rise_above_local_board_C": 24.0
+    }
+  ],
+  "limits": [
+    "No resolved air circulation, board hot spots or direct sunlight",
+    "Surface coating emissivity, resin conductivity and LED currents are unmeasured",
+    "Sensor trip is 50 C; firmware must blank if sensor becomes invalid",
+    "Power monitor and per-sector thermal tests remain mandatory; software PWM is not a calibrated watt limit"
+  ]
+}

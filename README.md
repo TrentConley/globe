@@ -1,12 +1,12 @@
-# Travel Globe
+# Travel Globe · Engineering prototype A0
 
-A 305 mm programmable travel globe design: 25× raised terrain and local 50-mile visited-area footprints.
+- [Travel appearance simulator](https://trentconley.github.io/globe/)
+- [Actual CAD assembly](https://trentconley.github.io/globe/engineering.html)
+- [Engineering report](https://trentconley.github.io/globe/engineering-report.html)
+- [CAD/source package](https://trentconley.github.io/globe/engineering-package.zip)
+- [Small optical prototype package](https://trentconley.github.io/globe/optical-prototype-A0.zip)
+- [Engineering source](https://github.com/TrentConley/globe/tree/master)
 
-- Simulator: https://trentconley.github.io/globe/
-- Detailed physical build guide: https://trentconley.github.io/globe/build-guide.html
-- Printable PDF: https://trentconley.github.io/globe/build-guide.pdf
-- Prototype package and source: https://trentconley.github.io/globe/prototype-kit.zip
+The full globe is not yet fabrication-ready. Matrix-board routing, polar coverage and physical optical/electrical/mechanical qualification remain on hold. The ten-cell optical test board is routed and independently checked; supplier qualification of its candidate LED is still required. No physical globe has been built or tested.
 
-The static simulator stores travel edits in the visitor's browser. It does not upload personal history or control hardware.
-
-The build guide covers the proposed shell, dense lighting, power, electronics, persistence, calibration, assembly and acceptance tests. The package contains small print samples, a prototype BOM, a bench utility and reproducible source. It is a design/prototype package; production CAD, custom PCB layouts, full device firmware and physical optical/thermal validation are still required.
+This branch contains the public static build. Phone edits on the appearance simulator stay in browser storage; this site is not connected to a hardware globe.

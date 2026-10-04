@@ -1,0 +1,11 @@
+{
+  "geometryTests": 16,
+  "geometryFailed": 0,
+  "deviceTests": 14,
+  "deviceFailed": 0,
+  "commands": [
+    "npm test",
+    "python3 -m unittest discover -s tests -p test_firmware.py -v"
+  ],
+  "deviceScope": "Host software, mocked drivers/interlocks, simulated sectors and interrupted-write models; no actual Pico/Pi hardware execution"
+}

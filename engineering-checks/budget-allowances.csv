@@ -1,0 +1,8 @@
+category,maximum_allowance_USD,basis,supplier_quote_received
+226 complete LED tile assemblies,1700,"Includes LEDs, matrix ICs, PCB fabrication and SMT; supplier quote required",False
+All printed structural and optical parts,1000,Batch print PA12 frame/base/carriers and clear/black resin optical parts,False
+20 sector controller assemblies,500,"Pico, mux, 3V3 RS485, buck, sensor, diode, PTC, perfboard, passives",False
+"Base controller, protection and supply",170,"Pi, endurance SD, 5V buck, FRAM, INA260, relay, external certified 12V supply",False
+"Metal, magnets, fasteners and wiring",330,"Cut/drill aluminum and steel; precrimp cables, M2/M3 hardware, magnets",False
+Optical qualification prototype,250,"Small PCB batch, print samples, Pico and finish consumables",False
+Contingency,550,"Shipping, tax, failed samples and rework",False

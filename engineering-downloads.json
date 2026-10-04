@@ -1,0 +1,55 @@
+{
+  "release": "A0",
+  "downloads": [
+    {
+      "file": "engineering-package.zip",
+      "bytes": 67342588,
+      "sha256": "1226d29f106b5f27457234e0c53c55aa37f3babcb5075c27080353b5e36bcf1b"
+    },
+    {
+      "file": "optical-prototype-A0.zip",
+      "bytes": 5936473,
+      "sha256": "60713c6c117ecca7014e7ac736b07602b9e3ec87e072b6e685a8d6e3be31fa96"
+    },
+    {
+      "file": "engineering-report.pdf",
+      "bytes": 1530840,
+      "sha256": "63a426ea45f153b5faeb7bde4e603feebc8dcbdd39230a577fda8662ccff0a01"
+    },
+    {
+      "file": "cad-step/cage-octant-01.step.zip",
+      "bytes": 13865286,
+      "sha256": "7160cbdc4b494e96bc5bf1fa1025b9233116e0a25ba1da5ccaddf13e63ae7818"
+    },
+    {
+      "file": "cad-step/cage-octant-02.step.zip",
+      "bytes": 21917614,
+      "sha256": "af57bda5b25d6277d3cde0919ab6ec5f24ecff8fa19c0da7f36041621f6c58d3"
+    },
+    {
+      "file": "cad-step/cage-octant-03.step.zip",
+      "bytes": 21091033,
+      "sha256": "7fd9322166f62b0a84edf3a3f6e0479f4a714aba941f97fa02c8d11596a1e329"
+    },
+    {
+      "file": "cad-step/cage-octant-05.step.zip",
+      "bytes": 21172713,
+      "sha256": "da3b4a4e6c108c99ac3c5841b054445035e647b85b25ea165336b48cc3669f0d"
+    },
+    {
+      "file": "cad-step/cage-octant-06.step.zip",
+      "bytes": 22778135,
+      "sha256": "8aea17845ae2f2b02ff5e7b863408252aac1101808f929ee686c24d1b913e53c"
+    },
+    {
+      "file": "cad-step/cage-octant-07.step.zip",
+      "bytes": 25100964,
+      "sha256": "bb62c9e2b23d1659124f992d2ae3638c42de6406de502d5366dc20afdc5ed1ac"
+    },
+    {
+      "file": "cad-step/cage-octant-08.step.zip",
+      "bytes": 25476059,
+      "sha256": "110ee924a8d28ef2666036953559f1895a36b6ac9e2a09cfd2d62b21cea9bfdf"
+    }
+  ]
+}

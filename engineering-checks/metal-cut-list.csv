@@ -1,0 +1,4 @@
+part,quantity,stock,length_mm,features,drawing
+Spine,1,6061 aluminum tube 12 OD / 8 ID,314,6 mm side port centered 46 mm from lower end; ONE wall only; deburr and protect cable,mechanical-dimensions.svg
+Spoke,10,6061 aluminum tube 8 OD / 4 ID,102.264,Two 2.2 mm through cross-holes: 3.000 mm from hub end; 3.200 mm from cage end; aligned axes,mechanical-dimensions.svg
+Ballast,1,Mild steel plate 6 mm,,"Diameter 150; center hole diameter 14; four clearance holes diameter 6.6 at (6,+/-11.5),(64,+/-11.5) relative disk center, mm",ballast-150D-6T.step

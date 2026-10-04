@@ -1,0 +1,698 @@
+[
+  {
+    "file": "baffle-type-00.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 1583.728338333931,
+    "sha256": "f463a36e46d0bac97fb27948e7143bec5302346d3fffbcb1ae4eeb32250e818c"
+  },
+  {
+    "file": "baffle-type-01.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 2227.002365623072,
+    "sha256": "3bbc9cfd900b0ce5ee940278f06ba0d76a95b7b5df6de296a10b1d02685b555e"
+  },
+  {
+    "file": "baffle-type-02.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 2380.745281181023,
+    "sha256": "a8081685ab665cd5e26e9c5d540b7a6b9e8eba488aea2a59a91135273d810aab"
+  },
+  {
+    "file": "baffle-type-03.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 2775.030750197635,
+    "sha256": "4e0cbe5f14a5450106300861a1a81e71692115a4ff0741f05a47feb634e6b74a"
+  },
+  {
+    "file": "baffle-type-04.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 2380.551356782331,
+    "sha256": "88c72e998c221300f065459c25ba6bcb390d3dabf82cdbd2f9f5b859707fd4aa"
+  },
+  {
+    "file": "baffle-type-05.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 2766.904196337678,
+    "sha256": "6b9d2eda4a5c6757be32bfdd12639c72ead7bf31607bf98fbb986f0e02088ac0"
+  },
+  {
+    "file": "ballast-150D-6T.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 104186.81655284324,
+    "sha256": "ceee49b9f3ef754f79da023a8ff2ba4615646db38b58ef5270146791c6715cfc"
+  },
+  {
+    "file": "base-collar-half-+1.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 9466.829256394101,
+    "sha256": "37c941cccc5b9de3df5d214b7322891d94a3d625556982cc57595e8211913ef0"
+  },
+  {
+    "file": "base-collar-half--1.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 9466.788543348235,
+    "sha256": "23898f2afb51114913394c4da8be4344fdc2a7957816f4bbd2ddf50329cb04cc"
+  },
+  {
+    "file": "base-cup.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 155538.25258569987,
+    "sha256": "3a30d62cf757f156487e511754b2f14226c501193061b79200e079ed515df0fa"
+  },
+  {
+    "file": "base-electronics-carrier.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 8331.91439759431,
+    "sha256": "b4a5aab67f9d34d7cc33958abd2a195e415644877c95503c662ba133850c325d"
+  },
+  {
+    "file": "base-lid.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 93791.5633115036,
+    "sha256": "627f4bd5b006ab3f9fa584890fe7322efb975e53742df9a5bdb085a5725b279a"
+  },
+  {
+    "file": "cage-octant-01.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 36962.816616824675,
+    "sha256": "3079d3a780ea4e27a17cb5fbb9e2af6c0524539652d9b45972ca6821a4033f68"
+  },
+  {
+    "file": "cage-octant-02.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 48171.60980044463,
+    "sha256": "33fa53e84dfc642e9199995d8f509b0f063313b6f8bd6b804605733d9a410bb9"
+  },
+  {
+    "file": "cage-octant-03.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 46904.01678543348,
+    "sha256": "01533b8f96b61d048d6c3eeaeb5ad7f6a28889a88d996c5da48aece9be240734"
+  },
+  {
+    "file": "cage-octant-04.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 44211.39264172577,
+    "sha256": "4d842891c7ae5ca617fac70f61aa3cd2bd11f53e13656e28db7231359da50143"
+  },
+  {
+    "file": "cage-octant-05.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 47317.386840753665,
+    "sha256": "7bd9395807fc12f14ea9a8b12e152d6a7f7162bac253f867eb21cda8269e85ad"
+  },
+  {
+    "file": "cage-octant-06.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 49257.59298772961,
+    "sha256": "0ebebc73a07f43351cdc338d33ae033131df68e7baa3f58d6b5a45ef16ffb21e"
+  },
+  {
+    "file": "cage-octant-07.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 52569.02451348294,
+    "sha256": "aebbdc20e953cd0bbff367c9dff446668d287de8e0f27cd79951da5ba85176e8"
+  },
+  {
+    "file": "cage-octant-08.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 52850.506755927556,
+    "sha256": "78a62843a2d6bf80446651ffa28a641c526fcbe38c3a992c90025cd3690d2939"
+  },
+  {
+    "file": "controller-carrier-01.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 4492.986116628103,
+    "sha256": "7b5531ade9996c82b8254a6fb5462792e4a6dbe114ea56e071f498f407f3620e"
+  },
+  {
+    "file": "controller-carrier-02.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 4486.106243565271,
+    "sha256": "84e98ab73e47d93b34ddae7cd7d366857e5c69be67130e0bf88a9c618b963050"
+  },
+  {
+    "file": "controller-carrier-03.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 4591.38846574692,
+    "sha256": "da37f6d19be923b586a4db03eba70e4ac7145ec6c561d78338fbd43a0bc48b27"
+  },
+  {
+    "file": "controller-carrier-04.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 4591.679962334611,
+    "sha256": "8c476caa754cae0224938a8c9f1f2ba3165dc5f18c7744a92f74f8f47b5fe0b1"
+  },
+  {
+    "file": "controller-carrier-05.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 4591.397280580086,
+    "sha256": "1e4d8b655a98f4b0684ff94e84991b45dab70da7b261333dd358e3c277eddff6"
+  },
+  {
+    "file": "controller-carrier-06.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 4486.099671584942,
+    "sha256": "5aed9e6bf0979ae43c02425ec5c381c5b06ebf6c909c53d3ac8400fc2f87dfba"
+  },
+  {
+    "file": "controller-carrier-07.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 4591.374710032431,
+    "sha256": "da1a994441e0b3cf4df3fd5fce033ab661b6ad3f9cf4d37fcbcd817531f70ba4"
+  },
+  {
+    "file": "controller-carrier-08.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 4492.981714500974,
+    "sha256": "d76d54fa80bf2e496bacb4081b5c54d3cf6d52a3de4bee25b4478b6bf4fd9289"
+  },
+  {
+    "file": "controller-carrier-09.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 4486.092876799601,
+    "sha256": "9ec7aae0d317cfbcd8631726edf79554f2a65c45bdb77a4799605c8a107041d0"
+  },
+  {
+    "file": "controller-carrier-10.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 4486.075999545174,
+    "sha256": "ffb5d5ca5e704762f03fea42f54502271e2acf8dca4d3d4735e425e58bde0fd8"
+  },
+  {
+    "file": "controller-carrier-11.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 4492.964520932877,
+    "sha256": "09c85e86bd8f0ca107fa558e3cfa9a3f2845175c8f7278c74cd2788228084802"
+  },
+  {
+    "file": "controller-carrier-12.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 4493.00058306572,
+    "sha256": "fdf7697dc64928405d06cda2b6144e698cc10d83ddeca289129d9afaaadcb863"
+  },
+  {
+    "file": "controller-carrier-13.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 4492.997409261055,
+    "sha256": "c80d81b5fe62478bc95cf948f7b938166201bd7b58583a7da462ce9f3499c622"
+  },
+  {
+    "file": "controller-carrier-14.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 4492.9665782585225,
+    "sha256": "33bdeeb09b4201d6e7a157b847a053bca832a9f6ca5f74b8615d89b4fbdbdc54"
+  },
+  {
+    "file": "controller-carrier-15.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 4525.904627076533,
+    "sha256": "797804f49f5dac7f92a432a94c80fe04ba4d0e17d0f2b43e55470ce3da3edbe6"
+  },
+  {
+    "file": "controller-carrier-16.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 4486.1200971477665,
+    "sha256": "b62ddb4c2f1f34309db5e9c4a49998b58369c114d046856aa12872913736cbc1"
+  },
+  {
+    "file": "controller-carrier-17.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 4486.0949829626325,
+    "sha256": "ce9a3616b78da67acadbd15dbc69bbbe8ae02a0acf0b30ecd33cacc31afe7ebd"
+  },
+  {
+    "file": "controller-carrier-18.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 4486.04991600634,
+    "sha256": "bae0b110cb3e8efc195d6f3da559f97d3b2bc38d14d8b51c1a3a276c88a366b2"
+  },
+  {
+    "file": "controller-carrier-19.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 4486.066506591499,
+    "sha256": "05955ff9e8f7be5f495804fff5150e0de92f4bf6523b6c8442fada80e9e82b82"
+  },
+  {
+    "file": "controller-carrier-20.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 4591.356807721618,
+    "sha256": "47d049d4c434f4422a4bfabbd9f3a9016768b38f1ee115b6e7d8ccf99017492c"
+  },
+  {
+    "file": "hub-+1-half-+1.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 5362.676765492753,
+    "sha256": "d4af059889724b08fec60d1619c70edcb97dc9abb6ae3098b843be73d3f857ff"
+  },
+  {
+    "file": "hub-+1-half--1.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 5828.257027939704,
+    "sha256": "e2329d34a2937beb143b5b3ff31b3fc26977a52bb5dec4fafcdc25f02a2982f1"
+  },
+  {
+    "file": "hub--1-half-+1.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 5828.2727558842635,
+    "sha256": "827007c978fed82d733016e6db01710c6f593c4c09208ccb7f6af336b9a68401"
+  },
+  {
+    "file": "hub--1-half--1.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 5362.678045140749,
+    "sha256": "c10822b64bba71360b81215068916bbffc3530eca7d6789e497b95e8a85dd4f7"
+  },
+  {
+    "file": "magnet-fit-coupon.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 1686.7617811856683,
+    "sha256": "50e2f015df90de17aab1319feece7a388200733d9a78f066aa88b3ea4376d5a9"
+  },
+  {
+    "file": "magnet-seat-M2-4mm.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 100.66177222234118,
+    "sha256": "0e5d8dbed31463221b63d0d1f943b4e7cb6f8b76812c542756405d287ab390ee"
+  },
+  {
+    "file": "pcb-head-spacer-M2.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 5.804662228528592,
+    "sha256": "70ced8f4f5b183b29f22cc78be83450f7a3bbb62ec709a244ca06844d6c04d64"
+  },
+  {
+    "file": "pcb-type-00.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 560.5341602316488,
+    "sha256": "d2a9b80c8604bb3d9e80042e349c601116f048c462f4dcc53d85c7cf10076eb7"
+  },
+  {
+    "file": "pcb-type-01.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 705.4946552561355,
+    "sha256": "94c10959203ca817680c47cde0ac0a391ec5609926fb5eaa136748aed7b18b28"
+  },
+  {
+    "file": "pcb-type-02.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 741.0650066607095,
+    "sha256": "b074be38b6ad11664a5e8c7bdb8dfb44678976aa470082cb049f338371296a75"
+  },
+  {
+    "file": "pcb-type-03.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 821.6525802454262,
+    "sha256": "7fcca8a884e677804a09a64dd1b99fd86b08ab65cbee232b1882189fff73f91b"
+  },
+  {
+    "file": "pcb-type-04.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 741.0649996530456,
+    "sha256": "6953207eedff9d58b944dabc077d1d4abd76d8c5576763e7c30cf871b6fd744a"
+  },
+  {
+    "file": "pcb-type-05.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 867.2451662577636,
+    "sha256": "5b80a8e0e93542a9d99bd810f7c2a49bcbb66d2d0b677a06d454be6997a1f3cf"
+  },
+  {
+    "file": "prototype-cradle-type-02.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 6198.157972668895,
+    "sha256": "a0339e59f3dd06ab832889a8b90fcde06ba04ecdac36d783b485f98e69a3240d"
+  },
+  {
+    "file": "prototype-shell-himalaya-25x.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 2530.607137707802,
+    "sha256": "0c1e2250b286423e64dbf58b6f5d47cbfea509c63f93adf7d5eff07148e26f07"
+  },
+  {
+    "file": "prototype-shell-vancouver-25x.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 1758.7090653679609,
+    "sha256": "2deeb07b2ccd225ad8c3e81c8a3a7c6efa3376c226623aae39f1689fc2da92a5"
+  },
+  {
+    "file": "spine-12OD-8ID-314L.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 19652.12746277183,
+    "sha256": "d30b199d5810eaf071ae41d91d01f8726680f1c7015e3045cf78f90a89379afa"
+  },
+  {
+    "file": "spoke-+1-1.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 3821.140353760657,
+    "sha256": "1ca2e59a436575665b7c257702ca76faa0b04fb914b74b85e1ba14b78e0a70bb"
+  },
+  {
+    "file": "spoke-+1-2.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 3821.135250832145,
+    "sha256": "ed89be09eba09e7f0e8f62783c5b682b6e67d7b781a536393c4bf0841a4e7567"
+  },
+  {
+    "file": "spoke-+1-3.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 3821.1385587079894,
+    "sha256": "0925eea071e7d3a7d9a6f45e62c9c52758c3bee788bf1d39af6e5a56c4c43d33"
+  },
+  {
+    "file": "spoke-+1-4.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 3821.1267229710097,
+    "sha256": "8945e93dae464fa7e692dc3617046f7553b664e0527d6d7799955938d2b10299"
+  },
+  {
+    "file": "spoke-+1-5.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 3821.1344654161953,
+    "sha256": "6ec4baa4ab0b63405987b5bb4e9731c9c93c119f0e8002e2eb7b2aba57d4a933"
+  },
+  {
+    "file": "spoke--1-1.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 3821.1343706702537,
+    "sha256": "e8f7c7bf25a2fe45a0790de7c8bc87cd1fdb483471ad5649507173e6ee786f98"
+  },
+  {
+    "file": "spoke--1-2.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 3821.126685428026,
+    "sha256": "7f612d7e5a98bac6ac314007e5259d31ac8420eee64e24f10cc0d96123b6715d"
+  },
+  {
+    "file": "spoke--1-3.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 3821.138568105506,
+    "sha256": "215289229a58270aab3e50c96a8f044439f440e97da0af7039315e185365f896"
+  },
+  {
+    "file": "spoke--1-4.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 3821.1351838423047,
+    "sha256": "fa608997bfddac25d05bd7b17c6585b8f8b5489a649d6d4cda53bc1b06daa304"
+  },
+  {
+    "file": "spoke--1-5.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 3821.1403034963864,
+    "sha256": "b115477a93cb13a31a76e5fb234503caa69a54f207125ab70c0264925d17a49d"
+  },
+  {
+    "file": "terrain-shell-01-25x.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 23016.997369212364,
+    "sha256": "e6fb5a8d74f4ae17149c28d717ef09f7c45ca703118c429b9e7446201dbdfe28"
+  },
+  {
+    "file": "terrain-shell-02-25x.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 17179.827504962395,
+    "sha256": "ae814d16a935a7ac9e599e43f4387a6b51b8211e26fb9ad35e496c6a8200eb9f"
+  },
+  {
+    "file": "terrain-shell-03-25x.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 15320.159472569632,
+    "sha256": "7e3b43495c0b9e3ea7f86f529a2f5b06ec638d53f5fb936593fc7234eb8d7e51"
+  },
+  {
+    "file": "terrain-shell-04-25x.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 14929.144490740831,
+    "sha256": "2220cffb29bf718a5463eb56da1320ed2ef292167edc02db4681eb9cac30349f"
+  },
+  {
+    "file": "terrain-shell-05-25x.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 16718.421373971127,
+    "sha256": "577d0da07fdb36c43957aac4630e73514f0a77d72dfe2a28f5994edb354c3327"
+  },
+  {
+    "file": "terrain-shell-06-25x.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 18837.464279682215,
+    "sha256": "9d2aa51ed811bf18aed35f348f475b9163826ce38a79a044d1da1dedae81fe5d"
+  },
+  {
+    "file": "terrain-shell-07-25x.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 16027.183531128781,
+    "sha256": "3c3267c54d58d738d4b68b3b1cee819cd617dee9c70e3521cb8799c20bbcf504"
+  },
+  {
+    "file": "terrain-shell-08-25x.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 16919.226074774884,
+    "sha256": "17bfb380395de86e9341d781a8cb1860332d6b717a2bfb966737cde7b7a1abae"
+  },
+  {
+    "file": "terrain-shell-09-25x.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 14645.936157151096,
+    "sha256": "47eeecb98e68a05aaadcde691e8ef0d9752fc884e807c349a36c27740a61550f"
+  },
+  {
+    "file": "terrain-shell-10-25x.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 18329.548854329674,
+    "sha256": "063f9c5f42af15525e7df48934342708f77316692a7f4a7d742b974a13226b23"
+  },
+  {
+    "file": "terrain-shell-11-25x.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 15996.28869758026,
+    "sha256": "a1a5629cc7cad63bf08ea76786df8a89c5e6f37f4f725d826785f21ae5dfb6f3"
+  },
+  {
+    "file": "terrain-shell-12-25x.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 16779.454872210274,
+    "sha256": "f0ea06fe5c6133c49650011c28e3978f396f78cc82e747d5fff482031d60e0d6"
+  },
+  {
+    "file": "terrain-shell-13-25x.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 14641.986547518012,
+    "sha256": "76fc83d70f686262c1b799238b25ba41c6754e208084a3f13afb293d251ea45e"
+  },
+  {
+    "file": "terrain-shell-14-25x.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 15404.430569045537,
+    "sha256": "a046aa8c7faa76fa4913f68ce6c26df095e83848956ab5075e988b7423ed3999"
+  },
+  {
+    "file": "terrain-shell-15-25x.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 15921.794582406757,
+    "sha256": "c290c39c2bcf7e2836fba763c8e9c8be28522f8481170a8731de21be9eb25280"
+  },
+  {
+    "file": "terrain-shell-16-25x.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 16682.90473870054,
+    "sha256": "7ae8da9c7aecaed614f42ffefdd0104814a75bda6a550e7407fb3689d321f1c3"
+  },
+  {
+    "file": "terrain-shell-17-25x.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 17307.262739777823,
+    "sha256": "0b293ed259490c0719b3f0cf37f6fa1c994f9e74039c537649fcb68803e53158"
+  },
+  {
+    "file": "terrain-shell-18-25x.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 14610.816631727233,
+    "sha256": "23bdd5aada643adc2ad3060ffcfac16b916e94aa30b8fda93c7b5a9a1e735823"
+  },
+  {
+    "file": "terrain-shell-19-25x.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 15403.629336067495,
+    "sha256": "bffd2feac70d6ccc68265a63811afc1014a86d489bbfc8debea5f8aac6830d85"
+  },
+  {
+    "file": "terrain-shell-20-25x.stl",
+    "watertight": true,
+    "outwardWinding": true,
+    "connectedSolids": 1,
+    "volumeMM3": 17644.119701094605,
+    "sha256": "651555d44322720a2fb0e1a75914abe5f89bcabdeff70d07748e17220461eec4"
+  }
+]
