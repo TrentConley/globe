@@ -1,0 +1,8 @@
+{
+  "drcViolations": 0,
+  "unconnectedItems": 0,
+  "assemblyComponents": 20,
+  "channelsAudited": 10,
+  "physicalTested": false,
+  "scope": "10-cell optical bench only; full globe matrix boards are not released"
+}

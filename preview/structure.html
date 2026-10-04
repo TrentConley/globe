@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101619"><link rel="icon" href="data:,"><title>Travel Globe — Inside the object</title><!-- APP_STYLE --></head>
+<body>
+<header><a class="brand" href="index.html">◎ &nbsp; TRAVEL GLOBE</a><nav aria-label="Project"><a href="index.html">Exterior simulator</a><a href="engineering.html">Actual CAD assembly ↗</a><a href="engineering-report.html">Engineering results ↗</a></nav></header>
+<main>
+<section class="stage" aria-label="Interactive structural model">
+ <div class="intro"><p class="eyebrow">STRUCTURAL DESIGN STUDY / 01</p><h1>Inside the object.</h1><p>Explore the shell, light, and structure beneath it.</p></div>
+ <div class="views" role="group" aria-label="Assembly view"><button data-view="cutaway" aria-pressed="true">Cutaway</button><button data-view="assembled" aria-pressed="false">Assembled</button><button data-view="exploded" aria-pressed="false">Exploded</button><button data-view="frame" aria-pressed="false">Frame</button><button data-view="prototype" aria-pressed="false">Small prototype</button></div>
+ <div id="scene" aria-label="Drag to rotate the model. Scroll or pinch to zoom. Click a component to read about it."></div>
+ <div id="loading" role="status">Building the structural model…</div>
+ <div class="stage-footer"><div><strong id="scale-title">305 mm nominal diameter</strong><span id="scale-note">25× terrain · dimensions in millimetres</span></div><button id="reset">Reset camera</button></div>
+ <div class="gesture">DRAG TO ROTATE · PINCH / SCROLL TO ZOOM · SELECT A PART</div>
+</section>
+<aside>
+ <div class="status"><i></i> Concept assembly · not production CAD</div>
+ <h2 id="view-title">A look beneath the surface</h2><p id="view-copy"></p>
+ <div id="explode-control" class="control" hidden><label for="spread">Separate the layers <output id="spread-value">60%</output></label><input id="spread" type="range" min="0" max="100" step="1" value="60"></div>
+ <section class="layers"><h3>Visible components</h3><div id="layers"></div></section>
+ <section class="inspector" aria-live="polite"><p class="eyebrow">COMPONENT NOTES</p><h3 id="part-title"></h3><p id="part-copy"></p><dl id="part-specs"></dl></section>
+ <section class="readiness"><h3>What exists today</h3><p><b>Printable:</b> the curved terrain test shells and thickness samples in the build package.</p><p><b>Modeled here:</b> a proposed frame, shell sections, LED carrier envelopes, base and wiring paths.</p><p><b>Still to engineer:</b> fitted joints, fasteners, shell mounts, complete optical cells, final PCBs and verified wiring. No physical assembly has been built or tested.</p></section>
+ <a class="primary" href="build-guide.html">Read the full build design ↗</a>
+ <button class="secondary" id="save-image">Save this view as an image ↓</button>
+ <p class="fine"><a href="build-assets/structure-cutaway.png">View a static cutaway image ↗</a></p>
+ <p class="fine">One Vancouver visit demonstrates a 50-mile footprint. This viewer leaves your saved travel history untouched. Lighting is illustrative; no optical or strength simulation is implied.</p>
+ <details><summary>Dimensions and model assumptions</summary><p>Sea-level radius 152.5 mm; smooth shell underside 151.5 mm. Relief is the same sampled geographic elevation at 25× used in the simulator. The radial base wall is 1 mm; mountain areas are thicker.</p><p>The 12 outer sections and 320 triangular carriers are a packaging study, not a final part count or manufacturing layout. Facets around the south pole are omitted to clear the support spine. Full-globe LED dots are representative; they do not show the required 2–2.5 mm final pitch. Complete optical cells appear only in the small prototype view.</p><p>Rings and ribs represent the intended load path, but carrier brackets and shell clips are not yet modeled. The base is a 200 × 30 mm envelope; weight and stability require the finished mass. The prototype's 13 × 9 active array is nominal 39 × 27 mm at 3 mm pitch, on a 39 × 51.08 mm reference board. Chip/connector shapes and heights are approximate.</p><p>Colors distinguish components. The actual baffles should be opaque black; green boards and gray baffles would be hidden in the finished object.</p></details>
+</aside>
+</main>
+<noscript>This interactive view needs JavaScript. <a href="build-guide.html">The build guide includes a static cross-section.</a></noscript>
+<!-- APP_SCRIPT -->
+</body></html>

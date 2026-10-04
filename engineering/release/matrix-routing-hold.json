@@ -1,0 +1,44 @@
+[
+  {
+    "board": "led-tile-00.kicad_pcb",
+    "boardSHA256": "2f234e0a5b4dadb7aee5bec9b4160fc2e1d687e453fbab82f2e9987769d6c9f6",
+    "violations": 6,
+    "unconnected": 122,
+    "status": "HOLD: NOT RELEASED FOR FABRICATION"
+  },
+  {
+    "board": "led-tile-01.kicad_pcb",
+    "boardSHA256": "d40c59553a1dfb43bcce047f5a706cfc1225c468c59e128a6452a68356fa4878",
+    "violations": 4,
+    "unconnected": 128,
+    "status": "HOLD: NOT RELEASED FOR FABRICATION"
+  },
+  {
+    "board": "led-tile-02.kicad_pcb",
+    "boardSHA256": "7e55c75e0eac6f4ab2b1cf6a548d606172f1473cb3ba5c758fbdd9a11606c98d",
+    "violations": 5,
+    "unconnected": 131,
+    "status": "HOLD: NOT RELEASED FOR FABRICATION"
+  },
+  {
+    "board": "led-tile-03.kicad_pcb",
+    "boardSHA256": "0bf22d4cee4b28c197add7297bde758243245238e3d12988fa59101b9420588a",
+    "violations": 3,
+    "unconnected": 133,
+    "status": "HOLD: NOT RELEASED FOR FABRICATION"
+  },
+  {
+    "board": "led-tile-04.kicad_pcb",
+    "boardSHA256": "19d6fc9b2d1bfaaaf43b4547d2fc6929b77e63c24c827fed11ddac741800eba5",
+    "violations": 6,
+    "unconnected": 131,
+    "status": "HOLD: NOT RELEASED FOR FABRICATION"
+  },
+  {
+    "board": "led-tile-05.kicad_pcb",
+    "boardSHA256": "c1b4d285271007b8b24f54c2a42bbe0e9ba54d0f09a4c2d250f7018bd3fee75e",
+    "violations": 2,
+    "unconnected": 149,
+    "status": "HOLD: NOT RELEASED FOR FABRICATION"
+  }
+]

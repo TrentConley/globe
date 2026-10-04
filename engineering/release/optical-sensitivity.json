@@ -1,0 +1,77 @@
+{
+  "status": "UNMEASURED MATERIAL PARAMETERS; sensitivity study only",
+  "raysPerCase": 300000,
+  "seed": 30525,
+  "dieMM": [
+    1,
+    0.5
+  ],
+  "topOpeningMM": [
+    1.7,
+    1.7
+  ],
+  "directLight": [
+    {
+      "dieToApertureMM": 6,
+      "directLambertianFraction": 0.024753333333333332,
+      "monteCarlo95PercentHalfWidth": 0.0005559932593315885
+    },
+    {
+      "dieToApertureMM": 8,
+      "directLambertianFraction": 0.013926666666666667,
+      "monteCarlo95PercentHalfWidth": 0.0004193470976519288
+    },
+    {
+      "dieToApertureMM": 10,
+      "directLambertianFraction": 0.008776666666666667,
+      "monteCarlo95PercentHalfWidth": 0.0003337690053924298
+    },
+    {
+      "dieToApertureMM": 12,
+      "directLambertianFraction": 0.00614,
+      "monteCarlo95PercentHalfWidth": 0.00027953888946286764
+    }
+  ],
+  "bulkAbsorption": [
+    {
+      "assumedBulkAbsorptionPerMM": 0.05,
+      "oneMMTransmission": 0.951229424500714,
+      "fourPoint73MMTransmission": 0.7893858823019688,
+      "raisedToFlatRatio": 0.8298585619513459
+    },
+    {
+      "assumedBulkAbsorptionPerMM": 0.2,
+      "oneMMTransmission": 0.8187307530779818,
+      "fourPoint73MMTransmission": 0.3882910856058729,
+      "raisedToFlatRatio": 0.4742598029280199
+    },
+    {
+      "assumedBulkAbsorptionPerMM": 0.5,
+      "oneMMTransmission": 0.6065306597126334,
+      "fourPoint73MMTransmission": 0.09394930036847918,
+      "raisedToFlatRatio": 0.15489620988490704
+    },
+    {
+      "assumedBulkAbsorptionPerMM": 1.0,
+      "oneMMTransmission": 0.36787944117144233,
+      "fourPoint73MMTransmission": 0.008826471039726723,
+      "raisedToFlatRatio": 0.023992835836709175
+    }
+  ],
+  "finishTransmissionTestRange": [
+    0.05,
+    0.4
+  ],
+  "scatterSigmaMM": [
+    0.1,
+    0.3,
+    0.6,
+    1.0
+  ],
+  "limits": [
+    "Opaque cell walls absorb rejected rays; no wall reflections or measured LED angular data.",
+    "Square straight-axis cell approximates a local radial channel; real taper and off-axis die positions vary.",
+    "Beer\u2013Lambert sweep does not predict resin scattering, surface paint or human perception.",
+    "Absolute brightness requires a measured LED/driver/finish test. Do not treat the display rendering as optical validation."
+  ]
+}

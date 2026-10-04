@@ -1,0 +1,10 @@
+numpy==2.3.5
+scipy==1.17.0
+matplotlib==3.10.8
+cadquery==2.7.0
+manifold3d==3.3.2
+trimesh==4.8.3
+shapely==2.1.2
+python-fcl==0.7.0.8
+networkx==3.4.2
+Markdown==3.11

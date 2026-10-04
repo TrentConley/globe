@@ -1,0 +1,12 @@
+node_modules/
+dist/
+artifacts/
+.DS_Store
+__pycache__/
+*.pyc
+cad/generated/
+electronics/generated/
+logs/
+.venv/
+*.kicad_prl
+*-backups/

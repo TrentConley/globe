@@ -1,0 +1,2 @@
+(version 1)
+(rule "Bench fabrication" (constraint clearance (min 0.25mm)) (constraint track_width (min 0.15mm)) (constraint hole_size (min 0.30mm)) (constraint edge_clearance (min 0.25mm)))

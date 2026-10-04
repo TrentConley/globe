@@ -1,0 +1,1 @@
+(footprint "WirePad_1.4x2" (version 20241229) (generator "pcbnew") (layer "F.Cu") (attr smd) (pad "1" smd rect (at 0 0) (size 1.4 2) (layers "F.Cu" "F.Mask")))

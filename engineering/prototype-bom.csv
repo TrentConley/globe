@@ -1,0 +1,9 @@
+id,item,quantity,allowance_low_usd,allowance_high_usd,reference,check_before_buying
+P01,Adafruit 5201 IS31FL3741 RGB matrix,1,25,45,https://www.adafruit.com/product/5201,Reference board verified; live stock/price unverified
+P02,Adafruit 5426 QT Py ESP32-S3,1,15,30,https://www.adafruit.com/product/5426,Use correct CircuitPython/USB cable
+P03,Adafruit 757 BSS138 I2C level shifter,1,5,12,https://www.adafruit.com/product/757,Required for reference matrix at 5 V and ESP32 at 3.3 V
+P04,Enclosed regulated 5 V supply and protected connection,1 set,20,40,,Correct polarity; initial 0.5 A branch fuse/current limit; supplier certification
+P05,Leads spacers clamps and screws,1 set,15,35,,Keep power positives separate; common ground
+P06,Translucent coupon/curved-shell print batch,1 batch,50,150,,Service must approve material minimum wall supports and cure
+P07,Smoke tint matte clear diffuser samples,samples,15,35,,Confirm compatibility; retain uncoated control
+P08,Calipers multimeter contact temperature probe,borrow or buy,0,80,,Needed for geometry current and temperature measurements

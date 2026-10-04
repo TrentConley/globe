@@ -1,0 +1,26 @@
+[Unit]
+Description=Travel globe local controller
+After=network.target
+
+[Service]
+Type=simple
+User=globe
+Group=globe
+SupplementaryGroups=i2c gpio dialout
+WorkingDirectory=/opt/travel-globe
+Environment=PYTHONPATH=/opt/travel-globe/firmware
+Environment=GPIOZERO_PIN_FACTORY=lgpio
+EnvironmentFile=/etc/travel-globe.env
+ExecStart=/opt/travel-globe/.venv/bin/python -m globe_host.server --data /var/lib/travel-globe --pixel-map /opt/travel-globe/engineering/release/pixel-map.npz --manifest /opt/travel-globe/engineering/release/pixel-map.json --serial ${GLOBE_SERIAL} --host 0.0.0.0 --port 8081
+# A failed interlock needs inspection and an explicit service restart.
+Restart=no
+TimeoutStopSec=10
+UMask=0077
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/travel-globe
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

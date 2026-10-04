@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101619">
+  <link rel="icon" href="data:,">
+  <title>Travel Globe — Places, remembered.</title>
+  <!-- APP_STYLE -->
+</head>
+<body>
+  <header class="masthead"><a class="brand" href="#"><span class="brand-mark">◎</span> TRAVEL GLOBE</a><span class="edition">FORM STUDY <b>04</b></span><span class="status"><i></i> Local design simulator</span></header>
+  <main>
+    <section class="stage" aria-label="Interactive globe preview">
+      <div class="intro"><p class="eyebrow">THE PLACES THAT STAY WITH YOU</p><h1>Places,<br><em>remembered.</em></h1><p>Gold where you have been.<br>A world still waiting to be explored.</p></div>
+      <div class="view-tabs" role="group" aria-label="Preview mode"><button id="view-globe" class="active" aria-pressed="true">The globe</button><button id="view-cap" aria-pressed="false">Print section <span>↗</span></button></div>
+      <div id="scene" aria-label="Rotate with drag, zoom with scroll. Use Add on globe to place a destination."></div>
+      <div id="loading">Shaping your world…</div>
+      <div class="scene-actions"><button id="focus" title="Recenter on visited places">⌖ <span>Focus visits</span></button><button id="add-mode" aria-pressed="false">＋ <span>Add on globe</span></button></div>
+      <div class="scale-note"><span id="scale-main">Ø 305 mm</span><span id="scale-detail">12-inch nominal globe · real elevation relief</span></div>
+      <div class="gesture">DRAG TO ROTATE <span>·</span> SCROLL TO EXPLORE</div>
+      <div id="toast" role="status" aria-live="polite"></div>
+    </section>
+    <aside class="panel">
+      <div class="panel-head"><div><p class="eyebrow">A GROWING RECORD OF YOUR WORLD</p><h2>Visited places</h2></div><span class="visit-count" id="visit-count">0 places</span></div>
+      <label class="field-label" for="demo">Try a coverage example</label>
+      <div class="demo-row"><select id="demo"><option value="vancouver">Vancouver only</option><option value="west">Scattered western visits</option><option value="bay">Overlapping Bay Area visits</option><option value="europe">Scattered European visits</option></select><button id="load-demo">Load</button></div>
+      <p class="small-note" id="project-kind">Illustrative places — replace them with your own visits.</p>
+      <ul id="visits" aria-label="Visited places"></ul>
+      <form id="add-form">
+        <label class="field-label" for="place-name">Add a destination</label>
+        <input id="place-name" placeholder="Place name" maxlength="100" required>
+        <div class="coordinate-row"><label>Latitude<input id="latitude" type="number" min="-90" max="90" step="any" placeholder="37.77" required></label><label>Longitude<input id="longitude" type="number" min="-180" max="180" step="any" placeholder="−122.42" required></label></div>
+        <button class="secondary full" type="submit">＋ Add to my globe</button>
+      </form>
+      <section class="settings" aria-label="Appearance controls">
+        <div class="section-heading"><h3>Shape the glow</h3><span>01 / FINISH</span></div>
+        <label class="slider-label" for="radius">Approximate visit radius <output id="radius-value">50 mi</output></label><input type="range" id="radius" min="25" max="350" step="5" value="50">
+        <p id="width-note" class="small-note"></p>
+        <label class="slider-label" for="relief">Terrain height <output id="relief-value">25×</output></label><input type="range" id="relief" min="0" max="40" step="1" value="25">
+        <p class="small-note" id="terrain-note">Real elevation with 25× vertical exaggeration.</p>
+        <label class="slider-label" for="brightness">Amber intensity <output id="brightness-value">65%</output></label><input type="range" id="brightness" min="0" max="100" value="65">
+        <label class="check"><input id="land-only" type="checkbox" checked> Keep highlights on land</label>
+        <p class="small-note">Each place adds a soft footprint. Nearby footprints merge; places between distant visits stay dark.</p>
+      </section>
+      <section class="print-controls settings" id="print-controls" hidden>
+        <div class="section-heading"><h3>The curved prototype</h3><span>02 / SCALE</span></div>
+        <p class="small-note">A 36° section of the full-size globe. Inspect the back by rotating it.</p>
+        <div class="coordinate-row"><label>Center latitude<input id="cap-lat" type="number" min="-90" max="90" step="any" value="40"></label><label>Center longitude<input id="cap-lon" type="number" min="-180" max="180" step="any" value="-112"></label></div>
+        <button id="center-cap" class="secondary full">Center section on visits</button>
+        <label class="check"><input id="led" type="checkbox"> Show coarse 72-LED approximation</label>
+        <p class="small-note" id="led-note">This coarse layout can enlarge or shift a small footprint. Compare with the ideal visited areas before choosing LEDs; diffusion is illustrative.</p>
+        <button id="export-stl" class="primary full">↓ Export curved shell · STL</button>
+        <button id="export-carrier" class="secondary full">↓ Export LED carrier · STL</button>
+        <p class="small-note">Millimetres · 1 mm base shell · real elevation with adjustable exaggeration. Supports and print orientation need your service’s review.</p>
+      </section>
+      <div class="data-actions"><button id="export-json">Export travels ↗</button><button id="import-json">Import JSON</button><button id="clear" title="Clear all destinations">Clear</button><input id="file-input" type="file" accept=".json,application/json" hidden></div>
+      <p id="storage-note" class="small-note">Saved in this browser. Export a backup to keep or move your travel history.</p>
+      <p class="small-note"><a href="engineering.html" style="color:#d7ae70">Explore the actual CAD assembly ↗</a></p>
+      <p class="small-note"><a href="engineering-report.html" style="color:#d7ae70">Read the engineering design and test results ↗</a></p>
+      <details class="honesty"><summary>What this study represents</summary><p>Real coastlines and ETOPO-derived elevation. The coarse elevation grid shows major mountain ranges, with adjustable vertical exaggeration; individual peaks and small islands are simplified. A footprint is an approximate area around a place you visited. Country borders do not decide what lights up, and no travel lines are inferred.</p><p>Raised terrain stays fixed as your lighted areas grow. This is a visual and geometry study; the simulator is not connected to hardware. STL files contain shape only, with no color or light.</p></details>
+    </aside>
+  </main>
+  <!-- APP_SCRIPT -->
+</body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "release": "A0",
+  "dateUTC": "2026-10-04T03:30:09.806207+00:00",
+  "physicalFabricationOrTestingPerformed": false,
+  "fullGlobeFabricationReady": false,
+  "requirements": {
+    "diameterMM": 305,
+    "terrainExaggeration": 25,
+    "visitRadiusMiles": 50,
+    "budgetUSD": [
+      1500,
+      4500
+    ]
+  },
+  "checks": {
+    "geometrySoftwareTests": 16,
+    "deviceSoftwareTests": 14,
+    "browserChecks": 11,
+    "benchPCB": {
+      "drcViolations": 0,
+      "unconnectedItems": 0,
+      "assemblyComponents": 20,
+      "channelsAudited": 10,
+      "physicalTested": false,
+      "scope": "10-cell optical bench only; full globe matrix boards are not released"
+    },
+    "manufacturingMeshesChecked": 87,
+    "unintendedIntersectionsInCheckedGroupPairs": 0
+  },
+  "holds": [
+    "Full matrix PCB routing incomplete; 122\u2013149 unconnected items per type plus reported violations; no fabrication outputs released",
+    "Full-system electrical schematic/ERC, selected LED and module datasheets/pinout/current and real hardware operation unqualified",
+    "Real resin/paint light transmission, cell leakage and terrain brightness untested",
+    "Printed joint fit/retention, drilled spoke end strength, creep, full-panel warpage and base electronics retention untested",
+    "South-polar support tiles excluded; coverage redesign needed",
+    "Measured power/thermal/fault/persistence commissioning not performed",
+    "Supplier quotations not received; $4500 is an allocation, not a verified purchase price",
+    "Cage octant 04 STEP round-trip invalid; checked STL provided instead"
+  ],
+  "simulationScope": "Linear rigid-joint beams, two-node heat balance, geometric/sensitivity optics; not measured hardware certification"
+}

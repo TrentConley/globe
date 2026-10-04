@@ -1,0 +1,29 @@
+{
+  "tile": 124,
+  "type": 2,
+  "gpioPins": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "channels": [
+    8,
+    9,
+    13,
+    14,
+    43,
+    44,
+    74,
+    75,
+    104,
+    105
+  ],
+  "notes": "Ten-cell optical qualification board. All other matrix positions are intentionally unpopulated."
+}

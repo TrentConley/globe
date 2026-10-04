@@ -1,0 +1,1003 @@
+[
+  {
+    "part": "ballast-150D-6T",
+    "watertight": true,
+    "volume_mm3": 104186.81655284324,
+    "triangles": 2032,
+    "connectedSolids": 1
+  },
+  {
+    "part": "base-collar-half-+1",
+    "watertight": true,
+    "volume_mm3": 9466.829256394101,
+    "triangles": 2170,
+    "connectedSolids": 1
+  },
+  {
+    "part": "base-collar-half--1",
+    "watertight": true,
+    "volume_mm3": 9466.788543348235,
+    "triangles": 2162,
+    "connectedSolids": 1
+  },
+  {
+    "part": "base-cup",
+    "watertight": true,
+    "volume_mm3": 155538.25258569987,
+    "triangles": 18668,
+    "connectedSolids": 1
+  },
+  {
+    "part": "base-electronics-carrier",
+    "watertight": true,
+    "volume_mm3": 8331.91439759431,
+    "triangles": 2716,
+    "connectedSolids": 1
+  },
+  {
+    "part": "base-lid",
+    "watertight": true,
+    "volume_mm3": 93791.5633115036,
+    "triangles": 3392,
+    "connectedSolids": 1
+  },
+  {
+    "part": "cage-octant-01",
+    "watertight": true,
+    "volume_mm3": 36962.816616824675,
+    "triangles": 26166,
+    "connectedSolids": 1
+  },
+  {
+    "part": "cage-octant-02",
+    "watertight": true,
+    "volume_mm3": 48171.60980044463,
+    "triangles": 41126,
+    "connectedSolids": 1
+  },
+  {
+    "part": "cage-octant-03",
+    "watertight": true,
+    "volume_mm3": 46904.01678543348,
+    "triangles": 39662,
+    "connectedSolids": 1
+  },
+  {
+    "part": "cage-octant-04",
+    "watertight": true,
+    "volume_mm3": 44211.39264172577,
+    "triangles": 35472,
+    "connectedSolids": 1
+  },
+  {
+    "part": "cage-octant-05",
+    "watertight": true,
+    "volume_mm3": 47317.386840753665,
+    "triangles": 39738,
+    "connectedSolids": 1
+  },
+  {
+    "part": "cage-octant-06",
+    "watertight": true,
+    "volume_mm3": 49257.59298772961,
+    "triangles": 42742,
+    "connectedSolids": 1
+  },
+  {
+    "part": "cage-octant-07",
+    "watertight": true,
+    "volume_mm3": 52569.02451348294,
+    "triangles": 47038,
+    "connectedSolids": 1
+  },
+  {
+    "part": "cage-octant-08",
+    "watertight": true,
+    "volume_mm3": 52850.506755927556,
+    "triangles": 47598,
+    "connectedSolids": 1
+  },
+  {
+    "part": "controller-carrier-01",
+    "watertight": true,
+    "volume_mm3": 4492.986116628103,
+    "triangles": 5208,
+    "connectedSolids": 1
+  },
+  {
+    "part": "controller-carrier-02",
+    "watertight": true,
+    "volume_mm3": 4486.106243565271,
+    "triangles": 5166,
+    "connectedSolids": 1
+  },
+  {
+    "part": "controller-carrier-03",
+    "watertight": true,
+    "volume_mm3": 4591.38846574692,
+    "triangles": 5174,
+    "connectedSolids": 1
+  },
+  {
+    "part": "controller-carrier-04",
+    "watertight": true,
+    "volume_mm3": 4591.679962334611,
+    "triangles": 5168,
+    "connectedSolids": 1
+  },
+  {
+    "part": "controller-carrier-05",
+    "watertight": true,
+    "volume_mm3": 4591.397280580086,
+    "triangles": 5168,
+    "connectedSolids": 1
+  },
+  {
+    "part": "controller-carrier-06",
+    "watertight": true,
+    "volume_mm3": 4486.099671584942,
+    "triangles": 5138,
+    "connectedSolids": 1
+  },
+  {
+    "part": "controller-carrier-07",
+    "watertight": true,
+    "volume_mm3": 4591.374710032431,
+    "triangles": 5166,
+    "connectedSolids": 1
+  },
+  {
+    "part": "controller-carrier-08",
+    "watertight": true,
+    "volume_mm3": 4492.981714500974,
+    "triangles": 5196,
+    "connectedSolids": 1
+  },
+  {
+    "part": "controller-carrier-09",
+    "watertight": true,
+    "volume_mm3": 4486.092876799601,
+    "triangles": 5158,
+    "connectedSolids": 1
+  },
+  {
+    "part": "controller-carrier-10",
+    "watertight": true,
+    "volume_mm3": 4486.075999545174,
+    "triangles": 5170,
+    "connectedSolids": 1
+  },
+  {
+    "part": "controller-carrier-11",
+    "watertight": true,
+    "volume_mm3": 4492.964520932877,
+    "triangles": 5202,
+    "connectedSolids": 1
+  },
+  {
+    "part": "controller-carrier-12",
+    "watertight": true,
+    "volume_mm3": 4493.00058306572,
+    "triangles": 5204,
+    "connectedSolids": 1
+  },
+  {
+    "part": "controller-carrier-13",
+    "watertight": true,
+    "volume_mm3": 4492.997409261055,
+    "triangles": 5208,
+    "connectedSolids": 1
+  },
+  {
+    "part": "controller-carrier-14",
+    "watertight": true,
+    "volume_mm3": 4492.9665782585225,
+    "triangles": 5186,
+    "connectedSolids": 1
+  },
+  {
+    "part": "controller-carrier-15",
+    "watertight": true,
+    "volume_mm3": 4525.904627076533,
+    "triangles": 5120,
+    "connectedSolids": 1
+  },
+  {
+    "part": "controller-carrier-16",
+    "watertight": true,
+    "volume_mm3": 4486.1200971477665,
+    "triangles": 5172,
+    "connectedSolids": 1
+  },
+  {
+    "part": "controller-carrier-17",
+    "watertight": true,
+    "volume_mm3": 4486.0949829626325,
+    "triangles": 5182,
+    "connectedSolids": 1
+  },
+  {
+    "part": "controller-carrier-18",
+    "watertight": true,
+    "volume_mm3": 4486.04991600634,
+    "triangles": 5106,
+    "connectedSolids": 1
+  },
+  {
+    "part": "controller-carrier-19",
+    "watertight": true,
+    "volume_mm3": 4486.066506591499,
+    "triangles": 5160,
+    "connectedSolids": 1
+  },
+  {
+    "part": "controller-carrier-20",
+    "watertight": true,
+    "volume_mm3": 4591.356807721618,
+    "triangles": 5162,
+    "connectedSolids": 1
+  },
+  {
+    "part": "hub-+1-half-+1",
+    "watertight": true,
+    "volume_mm3": 5362.676765492753,
+    "triangles": 5080,
+    "connectedSolids": 1
+  },
+  {
+    "part": "hub-+1-half--1",
+    "watertight": true,
+    "volume_mm3": 5828.257027939704,
+    "triangles": 5904,
+    "connectedSolids": 1
+  },
+  {
+    "part": "hub--1-half-+1",
+    "watertight": true,
+    "volume_mm3": 5828.2727558842635,
+    "triangles": 5908,
+    "connectedSolids": 1
+  },
+  {
+    "part": "hub--1-half--1",
+    "watertight": true,
+    "volume_mm3": 5362.678045140749,
+    "triangles": 5066,
+    "connectedSolids": 1
+  },
+  {
+    "part": "spine-12OD-8ID-314L",
+    "watertight": true,
+    "volume_mm3": 19652.12746277183,
+    "triangles": 1156,
+    "connectedSolids": 1
+  },
+  {
+    "part": "spoke-+1-1",
+    "watertight": true,
+    "volume_mm3": 3821.140353760657,
+    "triangles": 2344,
+    "connectedSolids": 1
+  },
+  {
+    "part": "spoke-+1-2",
+    "watertight": true,
+    "volume_mm3": 3821.135250832145,
+    "triangles": 2472,
+    "connectedSolids": 1
+  },
+  {
+    "part": "spoke-+1-3",
+    "watertight": true,
+    "volume_mm3": 3821.1385587079894,
+    "triangles": 2396,
+    "connectedSolids": 1
+  },
+  {
+    "part": "spoke-+1-4",
+    "watertight": true,
+    "volume_mm3": 3821.1267229710097,
+    "triangles": 2400,
+    "connectedSolids": 1
+  },
+  {
+    "part": "spoke-+1-5",
+    "watertight": true,
+    "volume_mm3": 3821.1344654161953,
+    "triangles": 2384,
+    "connectedSolids": 1
+  },
+  {
+    "part": "spoke--1-1",
+    "watertight": true,
+    "volume_mm3": 3821.1343706702537,
+    "triangles": 2384,
+    "connectedSolids": 1
+  },
+  {
+    "part": "spoke--1-2",
+    "watertight": true,
+    "volume_mm3": 3821.126685428026,
+    "triangles": 2400,
+    "connectedSolids": 1
+  },
+  {
+    "part": "spoke--1-3",
+    "watertight": true,
+    "volume_mm3": 3821.138568105506,
+    "triangles": 2396,
+    "connectedSolids": 1
+  },
+  {
+    "part": "spoke--1-4",
+    "watertight": true,
+    "volume_mm3": 3821.1351838423047,
+    "triangles": 2472,
+    "connectedSolids": 1
+  },
+  {
+    "part": "spoke--1-5",
+    "watertight": true,
+    "volume_mm3": 3821.1403034963864,
+    "triangles": 2344,
+    "connectedSolids": 1
+  },
+  {
+    "part": "terrain-shell-01-25x",
+    "watertight": true,
+    "volume_mm3": 23016.997369212364,
+    "triangles": 34772,
+    "connectedSolids": 1
+  },
+  {
+    "part": "terrain-shell-02-25x",
+    "watertight": true,
+    "volume_mm3": 17179.827504962395,
+    "triangles": 34772,
+    "connectedSolids": 1
+  },
+  {
+    "part": "terrain-shell-03-25x",
+    "watertight": true,
+    "volume_mm3": 15320.159472569632,
+    "triangles": 34772,
+    "connectedSolids": 1
+  },
+  {
+    "part": "terrain-shell-04-25x",
+    "watertight": true,
+    "volume_mm3": 14929.144490740831,
+    "triangles": 34772,
+    "connectedSolids": 1
+  },
+  {
+    "part": "terrain-shell-05-25x",
+    "watertight": true,
+    "volume_mm3": 16718.421373971127,
+    "triangles": 34772,
+    "connectedSolids": 1
+  },
+  {
+    "part": "terrain-shell-06-25x",
+    "watertight": true,
+    "volume_mm3": 18837.464279682215,
+    "triangles": 34772,
+    "connectedSolids": 1
+  },
+  {
+    "part": "terrain-shell-07-25x",
+    "watertight": true,
+    "volume_mm3": 16027.183531128781,
+    "triangles": 34772,
+    "connectedSolids": 1
+  },
+  {
+    "part": "terrain-shell-08-25x",
+    "watertight": true,
+    "volume_mm3": 16919.226074774884,
+    "triangles": 34772,
+    "connectedSolids": 1
+  },
+  {
+    "part": "terrain-shell-09-25x",
+    "watertight": true,
+    "volume_mm3": 14645.936157151096,
+    "triangles": 34772,
+    "connectedSolids": 1
+  },
+  {
+    "part": "terrain-shell-10-25x",
+    "watertight": true,
+    "volume_mm3": 18329.548854329674,
+    "triangles": 34760,
+    "connectedSolids": 1
+  },
+  {
+    "part": "terrain-shell-11-25x",
+    "watertight": true,
+    "volume_mm3": 15996.28869758026,
+    "triangles": 34772,
+    "connectedSolids": 1
+  },
+  {
+    "part": "terrain-shell-12-25x",
+    "watertight": true,
+    "volume_mm3": 16779.454872210274,
+    "triangles": 34772,
+    "connectedSolids": 1
+  },
+  {
+    "part": "terrain-shell-13-25x",
+    "watertight": true,
+    "volume_mm3": 14641.986547518012,
+    "triangles": 34772,
+    "connectedSolids": 1
+  },
+  {
+    "part": "terrain-shell-14-25x",
+    "watertight": true,
+    "volume_mm3": 15404.430569045537,
+    "triangles": 34760,
+    "connectedSolids": 1
+  },
+  {
+    "part": "terrain-shell-15-25x",
+    "watertight": true,
+    "volume_mm3": 15921.794582406757,
+    "triangles": 34758,
+    "connectedSolids": 1
+  },
+  {
+    "part": "terrain-shell-16-25x",
+    "watertight": true,
+    "volume_mm3": 16682.90473870054,
+    "triangles": 34772,
+    "connectedSolids": 1
+  },
+  {
+    "part": "terrain-shell-17-25x",
+    "watertight": true,
+    "volume_mm3": 17307.262739777823,
+    "triangles": 34772,
+    "connectedSolids": 1
+  },
+  {
+    "part": "terrain-shell-18-25x",
+    "watertight": true,
+    "volume_mm3": 14610.816631727233,
+    "triangles": 34772,
+    "connectedSolids": 1
+  },
+  {
+    "part": "terrain-shell-19-25x",
+    "watertight": true,
+    "volume_mm3": 15403.629336067495,
+    "triangles": 34764,
+    "connectedSolids": 1
+  },
+  {
+    "part": "terrain-shell-20-25x",
+    "watertight": true,
+    "volume_mm3": 17644.119701094605,
+    "triangles": 34760,
+    "connectedSolids": 1
+  },
+  {
+    "part": "baffle-type-00",
+    "watertight": true,
+    "volume_mm3": 1583.728338333931,
+    "triangles": 4436,
+    "connectedSolids": 1
+  },
+  {
+    "part": "pcb-head-spacer-M2",
+    "watertight": true,
+    "volume_mm3": 5.804662228528592,
+    "triangles": 288,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-0-C1",
+    "watertight": true,
+    "volume_mm3": 2.29500000000002,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-0-J2",
+    "watertight": true,
+    "volume_mm3": 112.75199999999995,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-0-J1",
+    "watertight": true,
+    "volume_mm3": 112.75199999999995,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-0-R1",
+    "watertight": true,
+    "volume_mm3": 2.3587499999999957,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-0-C5",
+    "watertight": true,
+    "volume_mm3": 4.252499999999993,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-0-R2",
+    "watertight": true,
+    "volume_mm3": 2.358749999999977,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-0-C3",
+    "watertight": true,
+    "volume_mm3": 4.252500000000007,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-0-C2",
+    "watertight": true,
+    "volume_mm3": 2.294999999999998,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-0-U1",
+    "watertight": true,
+    "volume_mm3": 53.900000000000006,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-0-C4",
+    "watertight": true,
+    "volume_mm3": 4.252500000000006,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "baffle-type-01",
+    "watertight": true,
+    "volume_mm3": 2227.002365623072,
+    "triangles": 5642,
+    "connectedSolids": 1
+  },
+  {
+    "part": "magnet-seat-M2-4mm",
+    "watertight": true,
+    "volume_mm3": 100.66177222234118,
+    "triangles": 944,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-1-J1",
+    "watertight": true,
+    "volume_mm3": 112.75199999999995,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-1-C5",
+    "watertight": true,
+    "volume_mm3": 4.252499999999993,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-1-R1",
+    "watertight": true,
+    "volume_mm3": 2.3587499999999957,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-1-U1",
+    "watertight": true,
+    "volume_mm3": 53.900000000000006,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-1-C1",
+    "watertight": true,
+    "volume_mm3": 2.29500000000002,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-1-C2",
+    "watertight": true,
+    "volume_mm3": 2.294999999999998,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-1-R2",
+    "watertight": true,
+    "volume_mm3": 2.358749999999977,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-1-J2",
+    "watertight": true,
+    "volume_mm3": 112.75199999999995,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-1-C3",
+    "watertight": true,
+    "volume_mm3": 4.252500000000007,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-1-C4",
+    "watertight": true,
+    "volume_mm3": 4.252500000000006,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "baffle-type-02",
+    "watertight": true,
+    "volume_mm3": 2380.745281181023,
+    "triangles": 5730,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-2-J2",
+    "watertight": true,
+    "volume_mm3": 112.75199999999995,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-2-C1",
+    "watertight": true,
+    "volume_mm3": 2.29500000000002,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-2-C5",
+    "watertight": true,
+    "volume_mm3": 4.252499999999993,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-2-C3",
+    "watertight": true,
+    "volume_mm3": 4.252500000000007,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-2-U1",
+    "watertight": true,
+    "volume_mm3": 53.900000000000006,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-2-R1",
+    "watertight": true,
+    "volume_mm3": 2.3587499999999957,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-2-C2",
+    "watertight": true,
+    "volume_mm3": 2.294999999999998,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-2-R2",
+    "watertight": true,
+    "volume_mm3": 2.358749999999977,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-2-J1",
+    "watertight": true,
+    "volume_mm3": 112.75199999999995,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-2-C4",
+    "watertight": true,
+    "volume_mm3": 4.252500000000006,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "baffle-type-03",
+    "watertight": true,
+    "volume_mm3": 2775.030750197635,
+    "triangles": 6522,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-3-C3",
+    "watertight": true,
+    "volume_mm3": 4.252500000000007,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-3-R2",
+    "watertight": true,
+    "volume_mm3": 2.358749999999977,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-3-R1",
+    "watertight": true,
+    "volume_mm3": 2.3587499999999957,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-3-C5",
+    "watertight": true,
+    "volume_mm3": 4.252499999999993,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-3-C1",
+    "watertight": true,
+    "volume_mm3": 2.29500000000002,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-3-U1",
+    "watertight": true,
+    "volume_mm3": 53.900000000000006,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-3-C4",
+    "watertight": true,
+    "volume_mm3": 4.252500000000006,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-3-J1",
+    "watertight": true,
+    "volume_mm3": 112.75199999999995,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-3-C2",
+    "watertight": true,
+    "volume_mm3": 2.294999999999998,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-3-J2",
+    "watertight": true,
+    "volume_mm3": 112.75199999999995,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "baffle-type-04",
+    "watertight": true,
+    "volume_mm3": 2380.551356782331,
+    "triangles": 5734,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-4-C4",
+    "watertight": true,
+    "volume_mm3": 4.252500000000006,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-4-R2",
+    "watertight": true,
+    "volume_mm3": 2.358749999999977,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-4-U1",
+    "watertight": true,
+    "volume_mm3": 53.900000000000006,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-4-R1",
+    "watertight": true,
+    "volume_mm3": 2.3587499999999957,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-4-J1",
+    "watertight": true,
+    "volume_mm3": 112.75199999999995,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-4-C1",
+    "watertight": true,
+    "volume_mm3": 2.29500000000002,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-4-C5",
+    "watertight": true,
+    "volume_mm3": 4.252499999999993,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-4-C3",
+    "watertight": true,
+    "volume_mm3": 4.252500000000007,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-4-C2",
+    "watertight": true,
+    "volume_mm3": 2.294999999999998,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-4-J2",
+    "watertight": true,
+    "volume_mm3": 112.75199999999995,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "baffle-type-05",
+    "watertight": true,
+    "volume_mm3": 2766.904196337678,
+    "triangles": 7334,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-5-R2",
+    "watertight": true,
+    "volume_mm3": 2.358749999999977,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-5-C5",
+    "watertight": true,
+    "volume_mm3": 4.252499999999993,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-5-U1",
+    "watertight": true,
+    "volume_mm3": 53.900000000000006,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-5-C4",
+    "watertight": true,
+    "volume_mm3": 4.252500000000006,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-5-C1",
+    "watertight": true,
+    "volume_mm3": 2.29500000000002,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-5-R1",
+    "watertight": true,
+    "volume_mm3": 2.3587499999999957,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-5-C2",
+    "watertight": true,
+    "volume_mm3": 2.294999999999998,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-5-J2",
+    "watertight": true,
+    "volume_mm3": 112.75199999999995,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-5-J1",
+    "watertight": true,
+    "volume_mm3": 112.75199999999995,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "envelope-5-C3",
+    "watertight": true,
+    "volume_mm3": 4.252500000000007,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "sector-board",
+    "watertight": true,
+    "volume_mm3": 3840.0,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "pico",
+    "watertight": true,
+    "volume_mm3": 5355.0,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "buck",
+    "watertight": true,
+    "volume_mm3": 4180.0,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "mux",
+    "watertight": true,
+    "volume_mm3": 4200.0,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "rs485",
+    "watertight": true,
+    "volume_mm3": 2093.0,
+    "triangles": 12,
+    "connectedSolids": 1
+  },
+  {
+    "part": "purchased-magnet-4x2",
+    "watertight": true,
+    "volume_mm3": 24.97156121806442,
+    "triangles": 128,
+    "connectedSolids": 1
+  }
+]

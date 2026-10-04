@@ -1,0 +1,3 @@
+references,quantity,value,package,candidate_MPN,qualification
+D1-D10,10,amber/yellow 590 nm,1005 metric / 0402 imperial,Kingbright APHHS1005SYCK,Supplier must confirm dimensions and pad 1 cathode against current datasheet; candidate not bench-tested
+R1-R10,10,1 kohm 1% >=0.063W,1608 metric / 0603 imperial,Yageo RC0603FR-071KL,Ordinary 1% 0603 equivalent acceptable

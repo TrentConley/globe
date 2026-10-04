@@ -1,0 +1,39 @@
+item,quantity,specification,release_note
+Matrix tile assemblies,226,6 shapes; 33406 amber 1005 LEDs total; IS31FL3741 each,HOLD: routing incomplete
+Pico sector controllers,20,RP2040 Pico; headers/USB access,Envelope / hardware qualification
+I2C multiplexers,20,TCA9548A at 0x70; Adafruit 2717-class candidate,Verify module size and installed pull-ups
+RS485 transceivers,20,3.3 V MAX3485/SP3485; no automatic direction required,Verify pinout and A/B convention
+Sector regulators,20,"12 V in, regulated 3.3 V; D24V10F3-class candidate","Verify output ripple, envelope and heat"
+Sector temperature sensors,20,"DS18B20, 3-wire powered mode",Known-source parts; placement by thermal test
+Sector PTCs,20,350 mA nominal hold at specified ambient; >=16 V,Choose trip curve and derating
+Pico isolation diodes,20,"SS14-class Schottky, 1 A 40 V",Check drop and power-source isolation
+Sector perfboards,20,60 × 40 mm; four mounts at ±28/±18,Double-sided assembly with insulation
+I2C pull-up resistors,200,2.2 kohm; up to 5 pairs/sector,Subtract installed breakout pull-ups
+DS18 pull-up resistors,20,4.7 kohm,One per sector
+Reset pull-up resistors,20,10 kohm,Check breakout reset network
+SDB / DE pull-down resistors,100,10 kohm; 5 per sector,Required during reset
+RS485 terminators,2,120 ohm,Only physical chain ends
+Master idle-bias resistors,2,330 ohm,One A pull-up and one B pull-down; verify logic
+Pi controller,1,Raspberry Pi Zero 2 W; endurance microSD >=16GB,"64-bit OS, headers and USB OTG"
+USB RS485 adapter,1,Linux serial; documented 3.3 V bus / bias behavior,Disable duplicate termination/bias
+FRAM breakout,1,"MB85RC256V 32KB, 3.3 V, 0x50",Qualify interrupted writes
+Branch current sensor,1,"INA260, 3.3 V I2C 0x40; 12 V bus sense",Install before relay
+Base regulator,1,"12 V to 5 V, >=2 A candidate",Measure ripple/thermal; powers Pi+coil
+Relay,1,"G5Q-1A4-DC5-class SPST-NO, DC load rating","Candidate envelope, not certified assembly"
+Relay driver,1,"2N2222-class NPN, 1k base, 100k base-ground, 1N4007 flyback",Verify transistor pinout and coil current
+External adapter,1,"Certified enclosed 12 V 36 W, compatible connector",No exposed mains build
+Main fuse / holder,1,2 A at 12 V DC; suited fuse characteristics,Coordinate with supply/current limits
+Branch fuses / holders,2,750 mA at 12 V DC,Coordinate inrush and fault clearing
+M8 bulkhead DC inlet,1,Fits diameter 8.2 mm wall opening; insulated,Verify mating adapter / current / polarity
+Magnets,120,Neodymium diameter 4 × 2 mm,60 matched pairs; retention/polarity test
+PCB screws/nuts,695,M2 × 14 countersunk and M2 nuts,Fit trial; ordinary sites use head spacers
+Cage seam bolts,12,M2 × 16 with nuts/washers,Verify actual grip and accessible assembly
+Spoke retaining pins/bolts,20,M2 through diameter 2.2 holes; nominal 16 mm with nuts,Adjust to measured socket grip
+Hub/collar clamp bolts,6,"M3, nominal 40 mm with nuts/washers",Confirm grip and free ends
+Collar flange bolts,4,M3 × 12 with nuts/washers,Fit trial
+Base lid screws,4,M3 × 12 into trapped M3 nuts,Fit trial
+Controller carrier ties,60,2.5 mm nylon cable ties,3 open saddles per carrier
+Controller board screws,80,"M2, select length after perfboard and spacer trial",No electrical contact with traces
+Non-slip feet,4,"Adhesive rubber, under base near R94","Retention, floor friction and tip test"
+Wire and connectors,1,"AWG24 power, twisted RS485 pair, precrimp 6-pin JST-SH tile leads",Quantities/lengths from harness schedules; add strain relief
+Bench qualification components,1,See dedicated bench BOM and prototype table,Separate from full-globe quantities
