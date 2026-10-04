@@ -12,7 +12,7 @@ This release adds a bolted cage, spine, spokes, shell panels, optical baffles, f
 
 **The full globe is not fabrication-ready.** Its six dense matrix board types remain incompletely routed, the south-polar coverage needs revision, and real optics, joint strength, temperatures, supplier fit and hardware operation have not been tested. The 3D assembly uses actual checked meshes; its materials do not predict measured light output. The $4,500 allocation is an unquoted budget ceiling.
 
-Start with the small Vancouver optical prototype in the report. The previous [structural concept](https://trentconley.github.io/globe/structure.html) and [early test guide](https://trentconley.github.io/globe/build-guide.html) remain available as historical studies; their counts and mechanics are superseded by A0.
+Start with the [sample manufacturing plan](https://trentconley.github.io/globe/sample-plan.html), with separate printer/PCB quote packs and clear-versus-tinted controls. The previous [structural concept](https://trentconley.github.io/globe/structure.html) and [early test guide](https://trentconley.github.io/globe/build-guide.html) remain available as historical studies; their counts and mechanics are superseded by A0.
 
 ## Open and use
 
