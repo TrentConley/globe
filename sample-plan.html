@@ -1,0 +1,153 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Travel globe — manufacture the first sample</title><style>*{box-sizing:border-box}html{color-scheme:dark}body{margin:0;background:#111719;color:#e5e6dc;font:16px/1.8 system-ui,sans-serif}header{padding:18px 28px;border-bottom:1px solid #ffffff22;display:flex;gap:25px;flex-wrap:wrap}main{max-width:1130px;padding:28px 30px 100px;margin:auto}a{color:#e8bd77;text-underline-offset:3px}h1{font:normal clamp(36px,5vw,60px)/1.15 Georgia,serif;max-width:950px;margin:20px 0 30px}h2{font:normal 30px/1.3 Georgia,serif;color:#e8bd77;margin:65px 0 20px;scroll-margin-top:20px}h3{margin-top:30px}img{display:block;max-width:100%;height:auto;margin:30px auto;border-radius:10px}.table-scroll{overflow-x:auto;border:1px solid #ffffff22;border-radius:8px;margin:25px 0}table{border-collapse:collapse;width:100%;min-width:590px;font-size:14px;line-height:1.6}th,td{text-align:left;vertical-align:top;padding:13px;border-bottom:1px solid #ffffff1a}th{background:#273133;color:#efd3a4}tr:nth-child(even){background:#ffffff03}code{font-size:.88em;background:#ffffff0b;padding:2px 4px;overflow-wrap:anywhere}pre{overflow-x:auto}.toc{background:#1b2427;border:1px solid #ffffff15;border-radius:10px;padding:10px 28px}.toc ul{padding-left:20px}.toc a{color:#c7d0c7}li{margin:8px 0}strong{color:#f3e9d8}footer{margin-top:60px;color:#acb7b1;border-top:1px solid #ffffff22;padding-top:20px;font-size:13px}@media(max-width:600px){main{padding:24px 18px 70px}h2{font-size:26px}header{gap:16px;padding:16px 18px}body{font-size:15px}}@page{size:A4;margin:15mm}@media print{html{color-scheme:light}body{background:white;color:#171717;font-size:9.5pt;line-height:1.55}main{max-width:none;padding:0}header,.toc{display:none}a,h1,h2,h3,strong{color:#171717}h1{font-size:28pt}h2{font-size:18pt;margin-top:28px;break-after:avoid}p,li{orphans:3;widows:3}img{max-height:240mm;object-fit:contain;break-inside:avoid}table{min-width:0;font-size:8pt}th,td{padding:5px;border-color:#bbb}th,tr:nth-child(even){background:#eee;color:#111}.table-scroll{overflow:visible;border-color:#bbb}tr{break-inside:avoid}footer{color:#555}a{text-decoration:none}code{background:#eee}}</style></head><body><header><a href="index.html">Travel simulator</a><a href="engineering.html">Actual CAD</a><a href="engineering-report.html">Engineering report</a><a href="sample-test-plan.pdf">Sample plan PDF</a></header><main><h1>Manufacture the first globe sample</h1>
+<p>Build one interchangeable curved optical fixture at the final globe's scale. Keep the 305 mm diameter, 25× terrain and 50-mile patterns. This sample tests light transmission, unwanted glow, finish, print detail and fit. It does not establish complete-globe strength, power consumption, longevity or matrix-driver operation.</p>
+<p><a href="sample-print-request.zip">Print-shop request ZIP</a> · <a href="sample-pcb-request.zip">PCB-assembly request ZIP</a> · <a href="sample-test-plan.pdf">Test plan PDF</a> · <a href="engineering.html">Inspect the fixture in 3D</a></p>
+<p><img alt="Exploded curved sample using the actual CAD" src="engineering-assets/engineering-prototype.png" /></p>
+<h2>What to order</h2>
+<p>Use two service requests: one for the printed parts and one for the assembled circuit board. Ask each service to review its files and quote before fabrication. No supplier has been selected, contacted or paid, and these files have not yet been physically qualified.</p>
+<p>Examples of services to request quotes from are PCBWay, or JLC3DP for printing and JLCPCB for assembly. These are candidates, not qualified suppliers for these particular files. Their review must confirm the thin walls, clear resin and chosen LED before you place an order.</p>
+<h3>Printed parts</h3>
+<p>The fixture footprint is approximately 56 × 48 mm. Everything is in millimetres at 100% scale. These are the same checked A0 manufacturing meshes; this plan increases sample quantities to preserve uncoated controls.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>File in the print request</th>
+<th style="text-align: right;">Quantity</th>
+<th>Requested material/process</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>prototype-shell-vancouver-25x.stl</code></td>
+<td style="text-align: right;">2</td>
+<td>Clear, untinted SLA/DLP resin; same batch</td>
+<td>Keep one clear; tint the other</td>
+</tr>
+<tr>
+<td><code>prototype-shell-himalaya-25x.stl</code></td>
+<td style="text-align: right;">2</td>
+<td>Same clear resin/process</td>
+<td>Thicker-terrain comparison; one clear and one tinted</td>
+</tr>
+<tr>
+<td><code>baffle-type-02.stl</code></td>
+<td style="text-align: right;">2</td>
+<td>Opaque black SLA/DLP resin</td>
+<td>One working cell grid and one spare</td>
+</tr>
+<tr>
+<td><code>prototype-cradle-type-02.stl</code></td>
+<td style="text-align: right;">1</td>
+<td>SLS/MJF PA12 preferred</td>
+<td>Bench fixture; a rigid alternative can be quoted separately</td>
+</tr>
+<tr>
+<td><code>magnet-seat-M2-4mm.stl</code></td>
+<td style="text-align: right;">3</td>
+<td>PA12, matched to the fit coupon</td>
+<td>Magnetic shell seats</td>
+</tr>
+<tr>
+<td><code>magnet-fit-coupon.stl</code></td>
+<td style="text-align: right;">1</td>
+<td>Same material/process as the seats</td>
+<td>Check magnet-pocket fit before assembly</td>
+</tr>
+</tbody>
+</table></div>
+<p>Ask the printer to confirm the <strong>0.4 mm baffle walls</strong>, approximately 1.6 mm cell openings, 1 mm minimum shell wall and magnet pockets. Layer height alone does not establish dimensional accuracy. Request the actual resin product, print process, orientation, post-cure process and expected dimensional tolerance. Ask about optical clarity, yellowing/UV stability and compatibility with a transparent tint and matte clear coat.</p>
+<p>Do not permit automatic scaling, thickening, hollowing or geometry repair that changes these features. Ask the service to flag a feature it cannot print. Agree support placement before printing: protect the smooth inner optical surface, shell seating faces, magnet pockets and baffle openings. Deliver washed and fully cured parts, with every cell cleaned, unpainted and undyed. Keep post-processing identical between the clear controls and finish samples; avoid sanding or polishing the optical surfaces without recording it.</p>
+<p>Black appearance alone does not prove a 0.4 mm wall blocks amber light. That is part of this sample's test. Do not silently substitute ordinary opaque white resin for the shell or a thicker coarse grid for the baffle.</p>
+<h3>Assembled optical PCB</h3>
+<p>Request the board service's minimum economical bare-board quantity, with <strong>two boards assembled</strong> if the quote is acceptable. One is the working board; the other helps distinguish an assembly fault from an optical problem. Do not buy a quantity of full-globe matrix boards.</p>
+<p>The PCB request contains the routed <code>optical-bench-10</code> board, Gerbers, separate plated/nonplated drills, BOM, component placement CSV, project/library files and its saved-file validation. Specify <strong>two layers, 1.0 mm FR4, nominal 35 µm copper, black soldermask preferred</strong>. The ten 1005-metric/0402-imperial LEDs are on the front; ten 1 kohm 0603 resistors are on the back. Wire pads are not components to assemble.</p>
+<p>For an automatic PCB quote, upload the enclosed <code>fabrication-gerbers.zip</code>. Upload <code>bom.csv</code> and <code>placement.csv</code> separately for assembly, and send <code>START-HERE-RFQ.txt</code> with the order-review request. For printing, upload each STL under its specified material and quantity from <code>print-order.csv</code>.</p>
+<p>The BOM's Kingbright APHHS1005SYCK LED is a <strong>candidate</strong>, not a qualified final choice. Require the assembler to check the current manufacturer datasheet against the footprint, cathode/pad-1 assignment, package size, placement rotation and amber/yellow color. Ask them to identify any substitute for review before fitting it. Require continuity/short inspection and an individual LED test through the fitted resistors; an automated optical inspection alone does not prove correct light output. Keep the datasheet and inspection result with the sample.</p>
+<p>The tiny LED/resistor assembly is outsourced. Your soldering is the eleven accessible wires between the finished board and a Pico.</p>
+<h3>Other items</h3>
+<p>Buy one Raspberry Pi Pico <strong>with headers</strong>, a data-capable USB cable, fine insulated wire and ordinary soldering supplies. Use a small screw-terminal/header adapter if it makes Pico wiring easier. Also obtain:</p>
+<ul>
+<li>Twenty 4 mm diameter × 2 mm magnets: fifteen are used for the three seats and four shells, leaving five spare.</li>
+<li>Three M2 × 22 countersunk screws, three M2 nuts, and four adhesive rubber feet at least 2 mm thick. Confirm the screw-head fit and engagement on the printed parts.</li>
+<li>A removable magnet-retention material compatible with the chosen resin; qualify it on the fit coupon. Keep the seat screws serviceable.</li>
+<li>A caliper, basic multimeter and contact thermometer if available.</li>
+<li>A small amount of <strong>transparent smoke/charcoal tint</strong>, compatible with the cured resin, plus a compatible matte clear finish for a separate comparison. Follow the product's application/curing instructions. Ordinary opaque black paint is not the starting finish.</li>
+</ul>
+<p>Use <strong>$250 as the first-round target</strong>, and a <strong>$500 stop-and-review ceiling</strong> within the overall globe budget. These are suggested spending limits, not supplier prices. Quote printing, assembly, materials and shipping separately; manufacturing minimums may dominate the cost.</p>
+<h2>Assembly and first power</h2>
+<ol>
+<li>Photograph and label every part: Vancouver clear/tint, Himalaya clear/tint, baffle A/B. Record resin and batch. Measure the magnet coupon and inspect all optical cells under a light. Do not force a magnet or a warped shell into place.</li>
+<li>With the circuit unpowered, inspect polarity, solder joints and shorts. Confirm each numbered wire pad reaches one LED anode through its 1 kohm resistor and that the cathodes share ground.</li>
+<li>Solder board pads <strong>0–9 to Pico GP0–GP9</strong>, respectively, and board GND to Pico GND. GPIO names are not physical header-pin numbers; <code>firmware/wiring.csv</code> gives the exact header-pin mapping. Add wire strain relief at the cradle. This is a USB-powered logic-level circuit: <strong>never apply the full globe's 12 V supply</strong>.</li>
+<li>Install RP2040 MicroPython with Thonny. Copy <code>firmware/main.py</code> and <code>firmware/patterns.json</code> from the PCB request to the Pico's root. These are the existing ten-cell bench firmware files. On the first boot the LEDs are off; after a pattern is saved, it returns on restart.</li>
+<li>In Thonny's Shell run <code>import main</code>, then <code>main.show('walk-0', 0.1)</code>. Repeat through <code>walk-9</code>. Confirm ten separate emitters before adding optical parts. The resistors stay fitted for every test.</li>
+<li>Install the nuts, board and three magnet seats in the cradle using the M2 × 22 screws. Fit the rubber feet. Fit the baffle without stressing the board or blocking cells; small removable retention dots at the outer edge are acceptable. Keep adhesive out of the light paths.</li>
+<li>Pair and mark magnet polarities. Each shell uses three magnets and shares the fixture's three mating magnets. The seating rim at local Z=5.0 mm sets shell position; the fixture magnet face is recessed at Z=4.8 mm. The baffle must not support or push the shell outward. Test retention and removability gently.</li>
+<li>Test <strong>both clear shells before applying any finish</strong>. If the clear shell is already too dim or creates a broad haze, investigate that before adding tint.</li>
+</ol>
+<h2>A controlled finish experiment</h2>
+<p>Keep one shell of each terrain uncoated throughout. On the other pair, test a thin transparent tint first; photograph and record it after full cure. Add another coat only if necessary, recording the change. Apply matte clear only after evaluating the tint itself, then repeat the comparison. This separates the effects of resin thickness, pigment and surface finish.</p>
+<p>Use the same PCB, baffle, LED pattern, viewing distance, room lighting and PWM setting for paired comparisons. Do not change the 50-mile pattern or enlarge the illuminated patch to make a poor material result look better. If you decide to enlarge footprints, record it as a deliberate design tradeoff.</p>
+<p>Try these commands:</p>
+<pre><code class="language-python">main.show('walk-0', 0.1)  # one emitter; repeat walk-1 through walk-9
+main.show('vancouver', 0.1)
+main.show('seattle', 0.1)
+main.show('both', 0.1)
+main.show('all', 0.1)
+main.show('off', 0)
+</code></pre>
+<p>Repeat the comparisons at PWM scales 0.1, 0.3 and 1.0 as needed; <strong>1.0 means full PWM, not 1 amp or a calibrated brightness</strong>. Keep the 1 kohm resistors in place. For an individual LED at full PWM, measuring voltage across its resistor gives current approximately as <code>I = V / 1000 ohms</code>. Record the result rather than assuming the bench matches the eventual scanned matrix driver.</p>
+<p>Photograph unlit and lit samples in normal room lighting, then in dim conditions. Check the object by eye at approximately 25 cm and 1 m. Lock camera exposure, focus and white balance; turn off HDR/night-mode processing and avoid saturated highlights. An ordinary phone JPEG is useful for visual comparison but <strong>not a calibrated light measurement</strong>. Use RAW/linear image data or suitable optical instrumentation for quantitative brightness ratios, and subtract the LEDs-off background.</p>
+<h2>What would constitute a useful pass?</h2>
+<p>These are proposed acceptance targets, not measured results or guarantees.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Evidence to record</th>
+<th>Starting decision rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Finish when off</td>
+<td>Clear/tinted pair under normal room light</td>
+<td>Tinted shell looks acceptably charcoal while preserving visible terrain</td>
+</tr>
+<tr>
+<td>Local light</td>
+<td>One-cell walk and the 50-mile city patterns</td>
+<td>Warm, localized patches; no broad glow through the whole shell</td>
+</tr>
+<tr>
+<td>Neighbor leakage</td>
+<td>Single commanded cell with off-frame background removed</td>
+<td>Target brightest adjacent uncommanded cell below 15% of the lit cell, using a linear measurement</td>
+</tr>
+<tr>
+<td>Thick terrain</td>
+<td>Swap Vancouver/Himalaya shells on the same board, comparing the same emitter at unchanged settings</td>
+<td>Target at least 40% of the reference-region light; investigate dim ridges before considering compensation</td>
+</tr>
+<tr>
+<td>Two destinations</td>
+<td>Vancouver, Seattle, then both</td>
+<td>Their relative positions and separation remain understandable; use a geographic reference for context</td>
+</tr>
+<tr>
+<td>Fit and service</td>
+<td>Photograph seated gaps; remove/refit at least 20 times</td>
+<td>No flexing, sticking, cracked walls or migrating magnets; shell seats consistently</td>
+</tr>
+<tr>
+<td>Stability of the sample</td>
+<td>Run selected pattern for one hour; record current and contact temperature</td>
+<td>No visible finish change, loosening or unexpected heating; this does not qualify the full globe's thermal limits</td>
+</tr>
+</tbody>
+</table></div>
+<p>The small triangular sample and its ten selected emitters cannot establish whole-globe geographic recognizability. Assess the size of the local marks now, then use a larger populated panel for that decision. The high-relief coupon samples thicker terrain; it does not necessarily put the globe's maximum 4.73 mm thickness over every tested emitter.</p>
+<p>If the optical result only works in a dark room at the bench board's highest output, treat it as marginal until a final-driver test establishes sufficient light within the power budget. If tint blocks mountains or clear resin spreads too much light, change the material/finish or shell construction and repeat this inexpensive sample before ordering a full globe.</p>
+<h2>The next sample after this passes</h2>
+<p>The next release should combine <strong>one completed final-driver LED tile</strong> with the winning shell/baffle material, plus <strong>one full-size terrain panel and representative cage/spoke joints</strong>. The matrix tile still needs completed routing and electrical review before it can be manufactured. That stage checks real scanned-drive brightness, current and shutdown; panel warpage and seams; retention; and joint fit/load behavior. A later populated sector checks geographic recognition, cabling and heat.</p>
+<p>Keep the successful material/process recipe, uncoated controls, photographs, current readings and test log. Passing the small optical fixture is a decision to proceed to those tests, not approval to order all 226 matrix boards or all twenty terrain panels.</p><footer>Prepared from the checked A0 digital design. No supplier order or physical test has been performed.</footer></main></body></html>

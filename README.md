@@ -4,6 +4,7 @@
 - [Actual CAD assembly](https://trentconley.github.io/globe/engineering.html)
 - [Engineering report](https://trentconley.github.io/globe/engineering-report.html)
 - [CAD/source package](https://trentconley.github.io/globe/engineering-package.zip)
+- [Manufacture the first sample — quote packs and test plan](https://trentconley.github.io/globe/sample-plan.html)
 - [Small optical prototype package](https://trentconley.github.io/globe/optical-prototype-A0.zip)
 - [Engineering source](https://github.com/TrentConley/globe/tree/master)
 
