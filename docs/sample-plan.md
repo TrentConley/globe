@@ -4,7 +4,7 @@ Build one interchangeable curved optical fixture at the final globe's scale. Kee
 
 [Print-shop request ZIP](sample-print-request.zip) · [PCB-assembly request ZIP](sample-pcb-request.zip) · [Test plan PDF](sample-test-plan.pdf) · [Inspect the fixture in 3D](engineering.html)
 
-**Current sample revision: A1.** This includes a revised grid, new finish/thickness coupons and checked bench firmware. [Read the specific component/material choices and outstanding reviews](sample-qualification.html). The packages are ready for supplier review; LED datasheet approval, printer confirmation and physical finish qualification remain open. No supplier response has been received.
+**Current sample revision: A1.** This includes a revised grid, new finish/thickness coupons and checked bench firmware. [Read the specific component/material choices and outstanding reviews](sample-qualification.html). The packages are ready for supplier review, **not fabrication**. LED datasheet approval, printer confirmation and physical finish qualification remain open. An added solder-envelope check also found a potentially inadequate grid clearance: review assembled LED/solder dimensions and add relief if needed before ordering the grid. No supplier response has been received.
 
 ![Exploded curved sample using the actual CAD](engineering-assets/engineering-prototype.png)
 

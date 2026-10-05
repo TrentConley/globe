@@ -1,6 +1,6 @@
 # Sample A1: component and material review
 
-**Status: prepared for supplier review and a physical experiment; not released for an unconditional fabrication order.** The LED manufacturer drawing, current stock, printer capability and finish compatibility are still open. No supplier has confirmed them. This document records the exact proposed choices and the evidence needed to close each item.
+**Status: prepared for supplier review and a physical experiment; not released for fabrication.** The LED manufacturer drawing, current stock, printer capability and finish compatibility are still open. There is also a solder-to-grid clearance hold described below. No supplier has confirmed these items. This document records the exact proposed choices and the evidence needed to close each item.
 
 [Sample instructions](sample-plan.html) · [Printer request](sample-print-request.zip) · [PCB request](sample-pcb-request.zip)
 
@@ -50,6 +50,8 @@ The saved board is electrically routed, but its LED footprint is a **generic KiC
 
 The assembler must return the package maximum dimensions, recommended land pattern, cathode marking/drawing, emission direction, wavelength/color bin, current rating, forward-voltage range, reflow profile and an in-stock sourcing option. Record PDF revision and distributor/date in `supplier-review.csv`. Do not populate an unreviewed substitute. If the land pattern differs, revise and recheck the board before ordering.
 
+**Solder clearance hold:** the grid starts 0.10 mm above the nominal PCB face. An additional check extruded each entire LED copper pad to an **assumed 0.20 mm solder height**; the smallest side clearance to the grid was just **0.0127 mm**. That allowance is not a measured solder fillet, but it shows why the much larger LED-body clearance cannot establish manufacturability. Obtain the actual package underside/terminal drawing, assembled height, paste/fillet envelope and board/grid positioning tolerances. If solder occupies this allowance, add local underside relief to the grid and recheck the geometry and optical leakage before printing. Do not rely on a printer holding a 0.013 mm side gap or force the grid down onto solder joints. **The current sample grid remains on hold for this review/redesign.**
+
 The resistor candidate is **Yageo RC0603FR-071KL**, 1 kohm, 1%, 0603 imperial, ten rear-side parts. Confirm its current data sheet and minimum 0.063 W rating or approve an equivalent. At an **assumed** maximum logic output of 3.465 V and minimum 990 ohms, even a shorted LED would draw at most about **3.50 mA per channel**, 35 mA for ten, and dissipate about **12.2 mW in each resistor**. This conservative resistor calculation does not verify Pico per-pin/aggregate output ratings, actual LED current, brightness, or the final matrix driver's operating point. Check the original RP2040 Pico documentation as part of the electrical review.
 
 ## Printer reply needed
@@ -64,6 +66,7 @@ Boss apertures are now 7.6 mm around nominal 6.6 mm bosses. Verify they remain o
 
 - New baffle and stepped coupon: saved STLs each form one closed, consistently oriented solid with positive volume.
 - Both curved shells: no unexpected surface intersections with the nominal assembly; independent solid intersections show no baffle overlap with other parts. Minimum modeled shell/grid gap is **0.349 mm**; the ten assumed LED bodies have at least **0.270 mm** to the grid.
+- Added solder-envelope check: minimum **0.0127 mm** side gap for an assumed 0.20 mm-high envelope over each full LED copper pad. This is a **fabrication hold**, not a passed tolerance check; actual assembled dimensions are required.
 - Existing passive PCB: zero saved DRC violations and zero unconnected nets; routing unchanged.
 - Revised firmware: **11 behavioral cases passed in CPython and MicroPython v1.26.0 Unix**, including all ten channels, invalid pattern rejection, damaged saved settings, interrupted writes, GPIO/storage errors and an interrupted walk. GPIO and timing were mocked; the filesystem was the host's. This is not a Pico execution or flash power-cut test.
 

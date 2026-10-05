@@ -18,6 +18,7 @@ REPORT = ROOT / 'engineering/release'
 tile = json.loads((CAD / 'layout.json').read_text())['tiles'][124]
 parts = {}
 files = {}
+solder_envelopes = {}
 
 
 def add(name, filename=None, mesh=None, xyz=None):
@@ -52,6 +53,17 @@ for item in parse(pcb.read_text()):
     m.apply_transform(trimesh.transformations.rotation_matrix(-rot, [0, 0, 1]))
     m.apply_translation([x - 60, 60 - y, size[2] / 2 if ref[0] == 'D' else -1 - size[2] / 2])
     add(ref, mesh=m)
+    if ref.startswith('D'):
+        for pad in [p for p in item if isinstance(p, list) and p[0] == 'pad']:
+            at = next(p[1:] for p in pad if isinstance(p, list) and p[0] == 'at')
+            size = next(p[1:] for p in pad if isinstance(p, list) and p[0] == 'size')
+            # Deliberately conservative, unverified solder-height allowance over
+            # each entire copper land. Not a claim about the actual fillet shape.
+            envelope = trimesh.creation.box([float(size[0]), float(size[1]), 0.2])
+            envelope.apply_translation([float(at[0]), -float(at[1]), 0.1])
+            envelope.apply_transform(trimesh.transformations.rotation_matrix(-rot, [0, 0, 1]))
+            envelope.apply_translation([x - 60, 60 - y, 0])
+            solder_envelopes[ref + '-pad-' + str(pad[1])] = envelope
 
 
 def solid(mesh):
@@ -82,13 +94,18 @@ for region in ['vancouver', 'himalaya']:
             for name in ['shell', 'cradle'] + ['D' + str(i) for i in range(1, 11)]}
     assert gaps['shell'] >= 0.3
     assert min(gaps['D' + str(i)] for i in range(1, 11)) > 0.15
+    solder_gaps = {name: float(grid_collision.min_distance_single(mesh))
+                   for name, mesh in solder_envelopes.items()}
     reports.append({'shell': region, 'unexpectedSurfaceIntersections': [],
                     'matingSurfaceContacts': sorted(pairs),
-                    'baffleIntersectionVolumesMM3': overlap, 'baffleMinimumGapsMM': gaps})
+                    'baffleIntersectionVolumesMM3': overlap, 'baffleMinimumGapsMM': gaps,
+                    'assumedSolderPadEnvelopeGapsMM': solder_gaps})
 
 record = {'revision': 'sample-A1', 'physicalTested': False,
           'scope': 'Nominal saved meshes; assumed component envelopes; no print variation, wires or adhesives',
           'ledEnvelopeMM': [1, 0.5, 0.5], 'resistorEnvelopeMM': [1.6, 0.8, 0.6],
+          'assumedSolderHeightOverEntireCopperPadMM': 0.2,
+          'fabricationHold': 'LED body clearance does not qualify solder fit. Minimum assumed solder-pad gap is only about 0.013 mm; obtain assembled package/fillet envelope and tolerance, then relieve the grid if required before fabrication.',
           'pcbSHA256': hashlib.sha256(pcb.read_bytes()).hexdigest(),
           'meshSHA256': files, 'checks': reports}
 (REPORT / 'sample-fit-checks.json').write_text(json.dumps(record, indent=2) + '\n')
@@ -109,4 +126,6 @@ for name, mesh in parts.items():
 scene.export(ROOT / 'artifacts/assembly/prototype.glb')
 print(json.dumps({'checks': len(reports), 'unexpectedIntersections': 0,
                   'shellGapsMM': [r['baffleMinimumGapsMM']['shell'] for r in reports],
-                  'minLEDtoGridMM': min(reports[0]['baffleMinimumGapsMM']['D' + str(i)] for i in range(1, 11))}, indent=2))
+                  'minLEDtoGridMM': min(reports[0]['baffleMinimumGapsMM']['D' + str(i)] for i in range(1, 11)),
+                  'minAssumedSolderPadGapMM': min(reports[0]['assumedSolderPadEnvelopeGapsMM'].values()),
+                  'fabricationHold': record['fabricationHold']}, indent=2))

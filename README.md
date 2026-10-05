@@ -16,6 +16,8 @@ Start with the [sample manufacturing plan](https://trentconley.github.io/globe/s
 
 The current **sample A1** adds grid mounting clearance, 1–4.75 mm finish coupons and hardened bench firmware. Its [component/material review](https://trentconley.github.io/globe/sample-qualification.html) lists specific proposed resin/finish products and the unresolved LED/printer approvals. These are review packs, not confirmed supplier orders. The older full-globe A0 package is unchanged.
 
+**Sample fabrication hold:** a conservative 0.20 mm solder envelope over the LED pads leaves only 0.0127 mm to the grid. Obtain actual assembled package/fillet dimensions and tolerances, then relieve the grid if required before fabrication. The passing LED-body clearance check does not qualify solder fit.
+
 ## Open and use
 
 Open [the public simulator](https://trentconley.github.io/globe/) in a modern browser, or use `dist/globe.html` locally. The renderer, coastline, and elevation data are bundled into this self-contained file. Some phone file viewers block HTML; the local-server option below is an alternative.
