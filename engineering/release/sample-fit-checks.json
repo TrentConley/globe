@@ -1,0 +1,338 @@
+{
+  "revision": "sample-A1",
+  "physicalTested": false,
+  "scope": "Nominal saved meshes; assumed component envelopes; no print variation, wires or adhesives",
+  "ledEnvelopeMM": [
+    1,
+    0.5,
+    0.5
+  ],
+  "resistorEnvelopeMM": [
+    1.6,
+    0.8,
+    0.6
+  ],
+  "pcbSHA256": "6c7b43a5a33f2e8ab9701e9b1dbc6517c685f1988b2281b9ac858e78450d66f2",
+  "meshSHA256": {
+    "prototype-cradle-type-02.stl": "a0339e59f3dd06ab832889a8b90fcde06ba04ecdac36d783b485f98e69a3240d",
+    "pcb-type-02.stl": "b074be38b6ad11664a5e8c7bdb8dfb44678976aa470082cb049f338371296a75",
+    "sample-baffle-type-02-clearance.stl": "3148156295680529b759e70f7cc99bf2e45536c6a24a45577e19bc55b516f3c4",
+    "magnet-seat-M2-4mm.stl": "0e5d8dbed31463221b63d0d1f943b4e7cb6f8b76812c542756405d287ab390ee",
+    "prototype-shell-vancouver-25x.stl": "2deeb07b2ccd225ad8c3e81c8a3a7c6efa3376c226623aae39f1689fc2da92a5",
+    "prototype-shell-himalaya-25x.stl": "0c1e2250b286423e64dbf58b6f5d47cbfea509c63f93adf7d5eff07148e26f07"
+  },
+  "checks": [
+    {
+      "shell": "vancouver",
+      "unexpectedSurfaceIntersections": [],
+      "matingSurfaceContacts": [
+        [
+          "D1",
+          "pcb"
+        ],
+        [
+          "D10",
+          "pcb"
+        ],
+        [
+          "D2",
+          "pcb"
+        ],
+        [
+          "D3",
+          "pcb"
+        ],
+        [
+          "D4",
+          "pcb"
+        ],
+        [
+          "D5",
+          "pcb"
+        ],
+        [
+          "D6",
+          "pcb"
+        ],
+        [
+          "D7",
+          "pcb"
+        ],
+        [
+          "D8",
+          "pcb"
+        ],
+        [
+          "D9",
+          "pcb"
+        ],
+        [
+          "R1",
+          "pcb"
+        ],
+        [
+          "R10",
+          "pcb"
+        ],
+        [
+          "R2",
+          "pcb"
+        ],
+        [
+          "R3",
+          "pcb"
+        ],
+        [
+          "R4",
+          "pcb"
+        ],
+        [
+          "R5",
+          "pcb"
+        ],
+        [
+          "R6",
+          "pcb"
+        ],
+        [
+          "R7",
+          "pcb"
+        ],
+        [
+          "R8",
+          "pcb"
+        ],
+        [
+          "R9",
+          "pcb"
+        ],
+        [
+          "cradle",
+          "pcb"
+        ],
+        [
+          "pcb",
+          "seat-0"
+        ],
+        [
+          "pcb",
+          "seat-1"
+        ],
+        [
+          "pcb",
+          "seat-2"
+        ],
+        [
+          "seat-0",
+          "shell"
+        ],
+        [
+          "seat-1",
+          "shell"
+        ],
+        [
+          "seat-2",
+          "shell"
+        ]
+      ],
+      "baffleIntersectionVolumesMM3": {
+        "cradle": 0.0,
+        "pcb": 0.0,
+        "seat-0": 0.0,
+        "seat-1": 0.0,
+        "seat-2": 0.0,
+        "D4": 0.0,
+        "D3": 0.0,
+        "D9": 0.0,
+        "D5": 0.0,
+        "D2": 0.0,
+        "D8": 0.0,
+        "D1": 0.0,
+        "D10": 0.0,
+        "D6": 0.0,
+        "D7": 0.0,
+        "R1": 0.0,
+        "R5": 0.0,
+        "R2": 0.0,
+        "R3": 0.0,
+        "R9": 0.0,
+        "R7": 0.0,
+        "R4": 0.0,
+        "R10": 0.0,
+        "R6": 0.0,
+        "R8": 0.0,
+        "shell": 0.0
+      },
+      "baffleMinimumGapsMM": {
+        "shell": 0.3494257556111841,
+        "cradle": 1.2074788485201755,
+        "D1": 0.2943103304322441,
+        "D2": 0.2999585288078118,
+        "D3": 0.28177861054688935,
+        "D4": 0.2759649542169054,
+        "D5": 0.28177861262620996,
+        "D6": 0.27596497825645866,
+        "D7": 0.2759649903585193,
+        "D8": 0.2701069075381895,
+        "D9": 0.2759649959927072,
+        "D10": 0.2701068603573749
+      }
+    },
+    {
+      "shell": "himalaya",
+      "unexpectedSurfaceIntersections": [],
+      "matingSurfaceContacts": [
+        [
+          "D1",
+          "pcb"
+        ],
+        [
+          "D10",
+          "pcb"
+        ],
+        [
+          "D2",
+          "pcb"
+        ],
+        [
+          "D3",
+          "pcb"
+        ],
+        [
+          "D4",
+          "pcb"
+        ],
+        [
+          "D5",
+          "pcb"
+        ],
+        [
+          "D6",
+          "pcb"
+        ],
+        [
+          "D7",
+          "pcb"
+        ],
+        [
+          "D8",
+          "pcb"
+        ],
+        [
+          "D9",
+          "pcb"
+        ],
+        [
+          "R1",
+          "pcb"
+        ],
+        [
+          "R10",
+          "pcb"
+        ],
+        [
+          "R2",
+          "pcb"
+        ],
+        [
+          "R3",
+          "pcb"
+        ],
+        [
+          "R4",
+          "pcb"
+        ],
+        [
+          "R5",
+          "pcb"
+        ],
+        [
+          "R6",
+          "pcb"
+        ],
+        [
+          "R7",
+          "pcb"
+        ],
+        [
+          "R8",
+          "pcb"
+        ],
+        [
+          "R9",
+          "pcb"
+        ],
+        [
+          "cradle",
+          "pcb"
+        ],
+        [
+          "pcb",
+          "seat-0"
+        ],
+        [
+          "pcb",
+          "seat-1"
+        ],
+        [
+          "pcb",
+          "seat-2"
+        ],
+        [
+          "seat-0",
+          "shell"
+        ],
+        [
+          "seat-1",
+          "shell"
+        ],
+        [
+          "seat-2",
+          "shell"
+        ]
+      ],
+      "baffleIntersectionVolumesMM3": {
+        "cradle": 0.0,
+        "pcb": 0.0,
+        "seat-0": 0.0,
+        "seat-1": 0.0,
+        "seat-2": 0.0,
+        "D4": 0.0,
+        "D3": 0.0,
+        "D9": 0.0,
+        "D5": 0.0,
+        "D2": 0.0,
+        "D8": 0.0,
+        "D1": 0.0,
+        "D10": 0.0,
+        "D6": 0.0,
+        "D7": 0.0,
+        "R1": 0.0,
+        "R5": 0.0,
+        "R2": 0.0,
+        "R3": 0.0,
+        "R9": 0.0,
+        "R7": 0.0,
+        "R4": 0.0,
+        "R10": 0.0,
+        "R6": 0.0,
+        "R8": 0.0,
+        "shell": 0.0
+      },
+      "baffleMinimumGapsMM": {
+        "shell": 0.3494257556111841,
+        "cradle": 1.2074788485201755,
+        "D1": 0.2943103304322441,
+        "D2": 0.2999585288078118,
+        "D3": 0.28177861054688935,
+        "D4": 0.2759649542169054,
+        "D5": 0.28177861262620996,
+        "D6": 0.27596497825645866,
+        "D7": 0.2759649903585193,
+        "D8": 0.2701069075381895,
+        "D9": 0.2759649959927072,
+        "D10": 0.2701068603573749
+      }
+    }
+  ]
+}

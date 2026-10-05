@@ -14,6 +14,8 @@ This release adds a bolted cage, spine, spokes, shell panels, optical baffles, f
 
 Start with the [sample manufacturing plan](https://trentconley.github.io/globe/sample-plan.html), with separate printer/PCB quote packs and clear-versus-tinted controls. The previous [structural concept](https://trentconley.github.io/globe/structure.html) and [early test guide](https://trentconley.github.io/globe/build-guide.html) remain available as historical studies; their counts and mechanics are superseded by A0.
 
+The current **sample A1** adds grid mounting clearance, 1–4.75 mm finish coupons and hardened bench firmware. Its [component/material review](https://trentconley.github.io/globe/sample-qualification.html) lists specific proposed resin/finish products and the unresolved LED/printer approvals. These are review packs, not confirmed supplier orders. The older full-globe A0 package is unchanged.
+
 ## Open and use
 
 Open [the public simulator](https://trentconley.github.io/globe/) in a modern browser, or use `dist/globe.html` locally. The renderer, coastline, and elevation data are bundled into this self-contained file. Some phone file viewers block HTML; the local-server option below is an alternative.
@@ -67,3 +69,5 @@ Read [cloud/local setup](docs/cloud-setup.md). `tools/build-design.sh` regenerat
 `npm test` covers the appearance/terrain geometry. `python3 -m unittest discover -s tests -p 'test_firmware.py' -v` covers persistence, protocols and simulated controllers. [Pi installation](firmware/install/README.md) includes a desktop simulation and the proposed hardware provisioning flow.
 
 Generated large CAD/build outputs are excluded from source Git; the public package contains the checked release artifacts. Full matrix candidates are explicitly held, and full-globe Gerbers are not supplied. Hardware/data license notices are in [third-party notices](docs/third-party/hardware-and-data.md).
+
+To reproduce sample A1 after the saved A0 CAD is available: run `python3 cad/sample-readiness.py`, then `python3 tools/check-sample-fit.py`. The latter exports the revised sample viewer mesh and checks both shells against the actual passive-board placement. Run `python3 tools/check-bench-runtime.py --micropython /path/to/micropython` using MicroPython v1.26.0 Unix; the GPIO/timing are mocked. See `engineering/release/sample-*-checks.json` for hashes, assumptions and results. Generate the review packs with `python3 tools/prepare-sample-order.py`, render their combined PDF with `node tools/render-sample-plan.cjs`, then run the pack script again to include the current PDF. Copy `artifacts/assembly/prototype.glb` into `dist/assembly/` after a general A0 assembly build, which otherwise restores the old prototype viewer mesh.

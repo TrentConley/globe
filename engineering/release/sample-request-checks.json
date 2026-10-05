@@ -1,7 +1,9 @@
 {
-  "sourceRelease": "A0",
-  "scope": "Ordering and test plan; manufacturing geometry and electronics unchanged",
+  "sourceRelease": "sample-A1; full globe A0 unchanged",
+  "scope": "Revised sample baffle clearance, new finish coupon, hardened bench firmware; PCB unchanged",
   "physicalTested": false,
+  "supplierConfirmed": false,
+  "procurementStatus": "Review required: LED data sheet, stock, printer capability/material and finish compatibility remain open",
   "meshChecks": [
     {
       "file": "prototype-shell-vancouver-25x.stl",
@@ -14,8 +16,13 @@
       "quantity": 2
     },
     {
-      "file": "baffle-type-02.stl",
-      "sha256": "a8081685ab665cd5e26e9c5d540b7a6b9e8eba488aea2a59a91135273d810aab",
+      "file": "sample-baffle-type-02-clearance.stl",
+      "sha256": "3148156295680529b759e70f7cc99bf2e45536c6a24a45577e19bc55b516f3c4",
+      "quantity": 2
+    },
+    {
+      "file": "sample-finish-thickness-coupon.stl",
+      "sha256": "dd4bd0510ba30ae2458e922aeedcf423e91659160624efcf4eea7b0e180ff9ce",
       "quantity": 2
     },
     {
@@ -37,16 +44,17 @@
   "benchPCBsha256": "6c7b43a5a33f2e8ab9701e9b1dbc6517c685f1988b2281b9ac858e78450d66f2",
   "drcViolations": 0,
   "unconnected": 0,
+  "firmwareSHA256": "24b635d152e78caa90e6990dac23666f6c2fdf2f987005bc26de1e67ba3ae6e3",
   "downloads": [
     {
       "file": "sample-print-request.zip",
-      "bytes": 915903,
-      "sha256": "894bcfb7e9d23e2be537513a543e5ba00c37dfecb3be7408cfc49717eab70b10"
+      "bytes": 969573,
+      "sha256": "046e72af35413ca5e884081acab9ac639b25f58aa098ba6a739e2e016cbb820e"
     },
     {
       "file": "sample-pcb-request.zip",
-      "bytes": 428384,
-      "sha256": "0f515251638ca3704e61fa16fbba4f06048c26c5f9cec716557e9069c5bd5203"
+      "bytes": 476794,
+      "sha256": "56a153e0217dd52ce896893f5fb5db990eaa0bc7279a786b66c2c4ebd6848c4d"
     }
   ]
 }

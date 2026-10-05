@@ -1,0 +1,56 @@
+{
+  "revision": "sample-A1",
+  "physicalTested": false,
+  "sourceBaffleSHA256": "a8081685ab665cd5e26e9c5d540b7a6b9e8eba488aea2a59a91135273d810aab",
+  "mountApertureDiameterMM": 7.6,
+  "bossDiameterMM": 6.6,
+  "nominalBossRadialClearanceMM": 0.5,
+  "couponStripThicknessMM": [
+    1,
+    2,
+    3,
+    4.75
+  ],
+  "meshChecks": [
+    {
+      "file": "sample-baffle-type-02-clearance.stl",
+      "sha256": "3148156295680529b759e70f7cc99bf2e45536c6a24a45577e19bc55b516f3c4",
+      "watertight": true,
+      "windingConsistent": true,
+      "connectedSolids": 1,
+      "volumeMM3": 2348.5496238626715,
+      "boundsMM": [
+        [
+          -18.598215103149414,
+          -12.152472496032715,
+          0.10000000149011612
+        ],
+        [
+          18.46904182434082,
+          18.400833129882812,
+          8.868087768554688
+        ]
+      ]
+    },
+    {
+      "file": "sample-finish-thickness-coupon.stl",
+      "sha256": "dd4bd0510ba30ae2458e922aeedcf423e91659160624efcf4eea7b0e180ff9ce",
+      "watertight": true,
+      "windingConsistent": true,
+      "connectedSolids": 1,
+      "volumeMM3": 2064.0,
+      "boundsMM": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          32.0,
+          24.0,
+          4.75
+        ]
+      ]
+    }
+  ]
+}

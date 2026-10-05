@@ -4,6 +4,8 @@ Build one interchangeable curved optical fixture at the final globe's scale. Kee
 
 [Print-shop request ZIP](sample-print-request.zip) · [PCB-assembly request ZIP](sample-pcb-request.zip) · [Test plan PDF](sample-test-plan.pdf) · [Inspect the fixture in 3D](engineering.html)
 
+**Current sample revision: A1.** This includes a revised grid, new finish/thickness coupons and checked bench firmware. [Read the specific component/material choices and outstanding reviews](sample-qualification.html). The packages are ready for supplier review; LED datasheet approval, printer confirmation and physical finish qualification remain open. No supplier response has been received.
+
 ![Exploded curved sample using the actual CAD](engineering-assets/engineering-prototype.png)
 
 ## What to order
@@ -14,18 +16,21 @@ Examples of services to request quotes from are PCBWay, or JLC3DP for printing a
 
 ### Printed parts
 
-The fixture footprint is approximately 56 × 48 mm. Everything is in millimetres at 100% scale. These are the same checked A0 manufacturing meshes; this plan increases sample quantities to preserve uncoated controls.
+The fixture footprint is approximately 56 × 48 mm. Everything is in millimetres at 100% scale. A1 enlarges only the sample grid's boss openings and adds a stepped material coupon. The full-globe A0 design is unchanged. Use these current request packs; the older `optical-prototype-A0.zip` does not contain these revisions.
 
 | File in the print request | Quantity | Requested material/process | Purpose |
 |---|---:|---|---|
-| `prototype-shell-vancouver-25x.stl` | 2 | Clear, untinted SLA/DLP resin; same batch | Keep one clear; tint the other |
+| `prototype-shell-vancouver-25x.stl` | 2 | Request Formlabs Clear Resin V5; same batch | Keep one clear; tint the other |
 | `prototype-shell-himalaya-25x.stl` | 2 | Same clear resin/process | Thicker-terrain comparison; one clear and one tinted |
-| `baffle-type-02.stl` | 2 | Opaque black SLA/DLP resin | One working cell grid and one spare |
+| `sample-baffle-type-02-clearance.stl` | 2 | Request Formlabs Black Resin V5 | Revised boss clearance; working grid and spare |
+| `sample-finish-thickness-coupon.stl` | 2 | Same clear resin as the shells | One uncoated control; one finish trial at 1, 2, 3 and 4.75 mm thickness |
 | `prototype-cradle-type-02.stl` | 1 | SLS/MJF PA12 preferred | Bench fixture; a rigid alternative can be quoted separately |
 | `magnet-seat-M2-4mm.stl` | 3 | PA12, matched to the fit coupon | Magnetic shell seats |
 | `magnet-fit-coupon.stl` | 1 | Same material/process as the seats | Check magnet-pocket fit before assembly |
 
 Ask the printer to confirm the **0.4 mm baffle walls**, approximately 1.6 mm cell openings, 1 mm minimum shell wall and magnet pockets. Layer height alone does not establish dimensional accuracy. Request the actual resin product, print process, orientation, post-cure process and expected dimensional tolerance. Ask about optical clarity, yellowing/UV stability and compatibility with a transparent tint and matte clear coat.
+
+The named resins are first-choice quote requests, not confirmed products offered by these services. Ask for the exact alternative product if unavailable. The [qualification sheet](sample-qualification.html) specifies the tolerance request and a supplier response form is inside each ZIP.
 
 Do not permit automatic scaling, thickening, hollowing or geometry repair that changes these features. Ask the service to flag a feature it cannot print. Agree support placement before printing: protect the smooth inner optical surface, shell seating faces, magnet pockets and baffle openings. Deliver washed and fully cured parts, with every cell cleaned, unpainted and undyed. Keep post-processing identical between the clear controls and finish samples; avoid sanding or polishing the optical surfaces without recording it.
 
@@ -51,7 +56,7 @@ Buy one Raspberry Pi Pico **with headers**, a data-capable USB cable, fine insul
 - Three M2 × 22 countersunk screws, three M2 nuts, and four adhesive rubber feet at least 2 mm thick. Confirm the screw-head fit and engagement on the printed parts.
 - A removable magnet-retention material compatible with the chosen resin; qualify it on the fit coupon. Keep the seat screws serviceable.
 - A caliper, basic multimeter and contact thermometer if available.
-- A small amount of **transparent smoke/charcoal tint**, compatible with the cured resin, plus a compatible matte clear finish for a separate comparison. Follow the product's application/curing instructions. Ordinary opaque black paint is not the starting finish.
+- For the coupon experiment: **Tamiya X-19 Smoke**, optional **X-20A** acrylic thinner, and **XF-86 Flat Clear**. These are proposed products; resin compatibility and current application instructions still need review. Test on the new coupon before coating terrain, using the [documented sequence](sample-qualification.html).
 
 Use **$250 as the first-round target**, and a **$500 stop-and-review ceiling** within the overall globe budget. These are suggested spending limits, not supplier prices. Quote printing, assembly, materials and shipping separately; manufacturing minimums may dominate the cost.
 
@@ -60,8 +65,8 @@ Use **$250 as the first-round target**, and a **$500 stop-and-review ceiling** w
 1. Photograph and label every part: Vancouver clear/tint, Himalaya clear/tint, baffle A/B. Record resin and batch. Measure the magnet coupon and inspect all optical cells under a light. Do not force a magnet or a warped shell into place.
 2. With the circuit unpowered, inspect polarity, solder joints and shorts. Confirm each numbered wire pad reaches one LED anode through its 1 kohm resistor and that the cathodes share ground.
 3. Solder board pads **0–9 to Pico GP0–GP9**, respectively, and board GND to Pico GND. GPIO names are not physical header-pin numbers; `firmware/wiring.csv` gives the exact header-pin mapping. Add wire strain relief at the cradle. This is a USB-powered logic-level circuit: **never apply the full globe's 12 V supply**.
-4. Install RP2040 MicroPython with Thonny. Copy `firmware/main.py` and `firmware/patterns.json` from the PCB request to the Pico's root. These are the existing ten-cell bench firmware files. On the first boot the LEDs are off; after a pattern is saved, it returns on restart.
-5. In Thonny's Shell run `import main`, then `main.show('walk-0', 0.1)`. Repeat through `walk-9`. Confirm ten separate emitters before adding optical parts. The resistors stay fitted for every test.
+4. Install [Thonny](https://thonny.org/) and the **original RP2040 Pico** build of [MicroPython](https://micropython.org/download/RPI_PICO/). Select v1.26.0 where available to match the tested language runtime; a different build needs the same checks on hardware. Copy `firmware/main.py` and `firmware/patterns.json` from the PCB request to the Pico's root. On the first boot the LEDs are off; after a valid pattern is saved, it returns on restart. Invalid saved settings boot dark. No CAD software or KiCad is required to run the physical optical test.
+5. In Thonny's Shell run `import main`, then `main.walk(0.1, 1000)`. Confirm ten separate emitters illuminate in numbered order for one second each, then go dark. For a steady single emitter use `main.show('walk-0', 0.1)` through `walk-9`. The resistors stay fitted for every test.
 6. Install the nuts, board and three magnet seats in the cradle using the M2 × 22 screws. Fit the rubber feet. Fit the baffle without stressing the board or blocking cells; small removable retention dots at the outer edge are acceptable. Keep adhesive out of the light paths.
 7. Pair and mark magnet polarities. Each shell uses three magnets and shares the fixture's three mating magnets. The seating rim at local Z=5.0 mm sets shell position; the fixture magnet face is recessed at Z=4.8 mm. The baffle must not support or push the shell outward. Test retention and removability gently.
 8. Test **both clear shells before applying any finish**. If the clear shell is already too dim or creates a broad haze, investigate that before adding tint.
@@ -69,6 +74,8 @@ Use **$250 as the first-round target**, and a **$500 stop-and-review ceiling** w
 ## A controlled finish experiment
 
 Keep one shell of each terrain uncoated throughout. On the other pair, test a thin transparent tint first; photograph and record it after full cure. Add another coat only if necessary, recording the change. Apply matte clear only after evaluating the tint itself, then repeat the comparison. This separates the effects of resin thickness, pigment and surface finish.
+
+First qualify the coating on the two stepped witness coupons using the [specific finish experiment](sample-qualification.html). Keep the underside uncoated. Record the resulting recipe rather than assuming the named paint/resin combination works.
 
 Use the same PCB, baffle, LED pattern, viewing distance, room lighting and PWM setting for paired comparisons. Do not change the 50-mile pattern or enlarge the illuminated patch to make a poor material result look better. If you decide to enlarge footprints, record it as a deliberate design tradeoff.
 
@@ -83,6 +90,8 @@ main.show('all', 0.1)
 main.show('off', 0)
 ```
 
+`show()` saves by default. Pass `False` as a third argument for temporary measurements, e.g. `main.show('all', 0.1, False)`, to avoid unnecessary flash writes. `walk()` never saves and ends dark; it leaves the last saved pattern unchanged. After normal shutdown, unplug/replug USB and verify the last deliberately saved pattern returns. A failed write blanks outputs and reports an error; report and resolve it before continuing. Host runtime tests do not establish power-loss durability of Pico flash.
+
 Repeat the comparisons at PWM scales 0.1, 0.3 and 1.0 as needed; **1.0 means full PWM, not 1 amp or a calibrated brightness**. Keep the 1 kohm resistors in place. For an individual LED at full PWM, measuring voltage across its resistor gives current approximately as `I = V / 1000 ohms`. Record the result rather than assuming the bench matches the eventual scanned matrix driver.
 
 Photograph unlit and lit samples in normal room lighting, then in dim conditions. Check the object by eye at approximately 25 cm and 1 m. Lock camera exposure, focus and white balance; turn off HDR/night-mode processing and avoid saturated highlights. An ordinary phone JPEG is useful for visual comparison but **not a calibrated light measurement**. Use RAW/linear image data or suitable optical instrumentation for quantitative brightness ratios, and subtract the LEDs-off background.
@@ -90,6 +99,8 @@ Photograph unlit and lit samples in normal room lighting, then in dim conditions
 ## What would constitute a useful pass?
 
 These are proposed acceptance targets, not measured results or guarantees.
+
+Use `sample-results.csv` in either request pack to record results, conditions and photo filenames. Leave a failed or unperformed test visibly marked; do not fill it with a simulated result.
 
 | Test | Evidence to record | Starting decision rule |
 |---|---|---|

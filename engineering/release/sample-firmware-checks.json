@@ -1,0 +1,45 @@
+{
+  "revision": "sample-A1",
+  "physicalTested": false,
+  "scope": "Runtime behavior with mocked machine.Pin/PWM; host filesystem, no physical Pico or flash power-cut test",
+  "firmwareSHA256": "24b635d152e78caa90e6990dac23666f6c2fdf2f987005bc26de1e67ba3ae6e3",
+  "patternsSHA256": "bf585e6f8b89d164368b6ffc39d1c112edc1e2a4140d79119ba3b9eae1f08272",
+  "microPythonSource": "https://github.com/micropython/micropython/tree/4ce2dd2cdab6e57f3982fc899f15a2103d71b0be",
+  "microPythonBuild": "Unix standard; SSL, BTREE, FFI, FAT, LFS1, LFS2 and frozen manifest disabled",
+  "results": [
+    {
+      "runtime": "CPython",
+      "version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+      "passed": [
+        "first_boot",
+        "channels_and_dimming",
+        "invalid_requests_do_not_mutate",
+        "persistence_and_restore",
+        "corrupt_state_fails_dark",
+        "corrupt_patterns_fail_dark",
+        "interrupted_write_uses_previous_state",
+        "storage_failure_blanks",
+        "gpio_failure_blanks",
+        "walk_finishes_dark_without_saving",
+        "interrupted_walk_finishes_dark"
+      ]
+    },
+    {
+      "runtime": "MicroPython Unix",
+      "version": "3.4.0; MicroPython v1.26.0 on 2026-10-05",
+      "passed": [
+        "first_boot",
+        "channels_and_dimming",
+        "invalid_requests_do_not_mutate",
+        "persistence_and_restore",
+        "corrupt_state_fails_dark",
+        "corrupt_patterns_fail_dark",
+        "interrupted_write_uses_previous_state",
+        "storage_failure_blanks",
+        "gpio_failure_blanks",
+        "walk_finishes_dark_without_saving",
+        "interrupted_walk_finishes_dark"
+      ]
+    }
+  ]
+}

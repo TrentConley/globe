@@ -37,3 +37,17 @@ python3 -m unittest discover -s tests -p 'test_firmware.py' -v
 They start a loopback HTTP server, so the cloud sandbox may require a network-capable command execution. `node tools/check-engineering.cjs` uses Playwright and `/usr/bin/chromium`, with the local server already running. The CAD viewer also needs `artifacts/assembly/*` copied into `dist/assembly/`.
 
 The physical Pi should use Raspberry Pi OS Lite **64-bit**, an endurance SD card, and the host requirements in `firmware/requirements-host.txt`. Install GPIO/I²C support from Raspberry Pi OS, enable I²C, and use the service example in `firmware/install/`. The cloud tests mocked hardware; installing packages does not constitute a Pi hardware test.
+
+## Sample A1 runtime checks
+
+The optical bench has its own behavioral tests. To build the tested MicroPython Unix interpreter with GCC and Make, use the official v1.26.0 source (commit `4ce2dd2cdab6e57f3982fc899f15a2103d71b0be`):
+
+```sh
+git clone --depth 1 --branch v1.26.0 https://github.com/micropython/micropython.git /tmp/globe-micropython-v1.26.0
+make -C /tmp/globe-micropython-v1.26.0/ports/unix -j4 MICROPY_PY_SSL=0 MICROPY_PY_BTREE=0 MICROPY_PY_FFI=0 MICROPY_VFS_FAT=0 MICROPY_VFS_LFS1=0 MICROPY_VFS_LFS2=0 FROZEN_MANIFEST=
+python3 tools/check-bench-runtime.py --micropython /tmp/globe-micropython-v1.26.0/ports/unix/build-standard/micropython
+```
+
+This runs the same 11 cases under CPython and MicroPython. GPIO, delays and sync are mocked; ordinary file reads/writes/rename use temporary host directories. It does not emulate RP2040 electrical behavior or flash power-loss semantics. Test those on the physical sample using the saved worksheet.
+
+The component/material review needs manufacturer and printer sites outside this environment's current package-manager allowlist. A network configuration draft has been saved for the needed destinations; a draft does not change runtime access. Apply it through Environment settings and recheck the actual sources before marking LED/material selections verified. No manufacturer data sheet or supplier acceptance was obtained through the currently blocked destinations.
