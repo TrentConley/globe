@@ -3,7 +3,8 @@
   "scope": "Revised sample baffle clearance, new finish coupon, hardened bench firmware; PCB unchanged",
   "physicalTested": false,
   "supplierConfirmed": false,
-  "procurementStatus": "Review required: LED data sheet, stock, printer capability/material and finish compatibility remain open",
+  "procurementStatus": "Fabrication hold: solder/grid clearance, LED data sheet, stock, printer capability/material and finish compatibility remain open",
+  "solderFitHold": "LED body clearance does not qualify solder fit. Minimum assumed solder-pad gap is only about 0.013 mm; obtain assembled package/fillet envelope and tolerance, then relieve the grid if required before fabrication.",
   "meshChecks": [
     {
       "file": "prototype-shell-vancouver-25x.stl",
@@ -48,13 +49,13 @@
   "downloads": [
     {
       "file": "sample-print-request.zip",
-      "bytes": 969573,
-      "sha256": "046e72af35413ca5e884081acab9ac639b25f58aa098ba6a739e2e016cbb820e"
+      "bytes": 974638,
+      "sha256": "3ca46ae35eaef60ef53ebfb1812fab0bc84ae666b6afb1977b8c0d3eb2b5c86d"
     },
     {
       "file": "sample-pcb-request.zip",
-      "bytes": 476794,
-      "sha256": "56a153e0217dd52ce896893f5fb5db990eaa0bc7279a786b66c2c4ebd6848c4d"
+      "bytes": 481845,
+      "sha256": "9807c7f706b81a9bef5421537e9e4df392cf824c64842e3b64c4d1196d0ee083"
     }
   ]
 }
