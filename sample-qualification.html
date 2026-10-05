@@ -1,0 +1,113 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Travel globe — Component and material review</title><style>*{box-sizing:border-box}html{color-scheme:dark}body{margin:0;background:#111719;color:#e5e6dc;font:16px/1.8 system-ui,sans-serif}header{padding:18px 28px;border-bottom:1px solid #ffffff22;display:flex;gap:25px;flex-wrap:wrap}main{max-width:1130px;padding:28px 30px 100px;margin:auto}a{color:#e8bd77;text-underline-offset:3px}h1{font:normal clamp(36px,5vw,60px)/1.15 Georgia,serif;max-width:950px;margin:20px 0 30px}h2{font:normal 30px/1.3 Georgia,serif;color:#e8bd77;margin:65px 0 20px;scroll-margin-top:20px}h3{margin-top:30px}img{display:block;max-width:100%;height:auto;margin:30px auto;border-radius:10px}.table-scroll{overflow-x:auto;border:1px solid #ffffff22;border-radius:8px;margin:25px 0}table{border-collapse:collapse;width:100%;min-width:590px;font-size:14px;line-height:1.6}th,td{text-align:left;vertical-align:top;padding:13px;border-bottom:1px solid #ffffff1a}th{background:#273133;color:#efd3a4}tr:nth-child(even){background:#ffffff03}code{font-size:.88em;background:#ffffff0b;padding:2px 4px;overflow-wrap:anywhere}pre{overflow-x:auto}.toc{background:#1b2427;border:1px solid #ffffff15;border-radius:10px;padding:10px 28px}.toc ul{padding-left:20px}.toc a{color:#c7d0c7}li{margin:8px 0}strong{color:#f3e9d8}footer{margin-top:60px;color:#acb7b1;border-top:1px solid #ffffff22;padding-top:20px;font-size:13px}@media(max-width:600px){main{padding:24px 18px 70px}h2{font-size:26px}header{gap:16px;padding:16px 18px}body{font-size:15px}}@page{size:A4;margin:15mm}@media print{html{color-scheme:light}body{background:white;color:#171717;font-size:9.5pt;line-height:1.55}main{max-width:none;padding:0}header,.toc{display:none}a,h1,h2,h3,strong{color:#171717}h1{font-size:28pt}h2{font-size:18pt;margin-top:28px;break-after:avoid}p,li{orphans:3;widows:3}img{max-height:240mm;object-fit:contain;break-inside:avoid}table{min-width:0;font-size:8pt}th,td{padding:5px;border-color:#bbb}th,tr:nth-child(even){background:#eee;color:#111}.table-scroll{overflow:visible;border-color:#bbb}tr{break-inside:avoid}footer{color:#555}a{text-decoration:none}code{background:#eee}}</style></head><body><header><a href="index.html">Travel simulator</a><a href="engineering.html">Actual CAD</a><a href="sample-plan.html">Sample plan</a><a href="sample-qualification.html">Material review</a><a href="sample-test-plan.pdf">Sample plan PDF</a></header><main><h1>Sample A1: component and material review</h1>
+<p><strong>Status: prepared for supplier review and a physical experiment; not released for an unconditional fabrication order.</strong> The LED manufacturer drawing, current stock, printer capability and finish compatibility are still open. No supplier has confirmed them. This document records the exact proposed choices and the evidence needed to close each item.</p>
+<p><a href="sample-plan.html">Sample instructions</a> · <a href="sample-print-request.zip">Printer request</a> · <a href="sample-pcb-request.zip">PCB request</a></p>
+<h2>Proposed materials and finish</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Part</th>
+<th>First-choice quote request</th>
+<th>What must be confirmed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Four curved shells and two thickness coupons</td>
+<td><strong>Formlabs Clear Resin V5</strong>, untinted, fully washed/cured, same resin lot and post-processing</td>
+<td>Printer actually uses this product; 1 mm minimum shell wall; support strategy; cure; dimensional tolerance; clarity and UV/yellowing information</td>
+</tr>
+<tr>
+<td>Two cell grids</td>
+<td><strong>Formlabs Black Resin V5</strong>, fully washed/cured</td>
+<td>Unsupported 0.4 mm walls and approximately 1.6 mm open cells survive printing and cleaning; optical opacity is a subsequent sample test</td>
+</tr>
+<tr>
+<td>Cradle, three seats, magnet fit coupon</td>
+<td><strong>PA12</strong>, SLS or MJF; use the same process for seats and fit coupon</td>
+<td>State powder product/process and dimensional tolerance; no paint or infiltration that changes fits</td>
+</tr>
+<tr>
+<td>Transparent darkening experiment</td>
+<td><strong>Tamiya X-19 Smoke</strong> acrylic model paint</td>
+<td>Current product instructions and supplier advice for the particular fully cured resin; physical coupon adhesion/transmission test</td>
+</tr>
+<tr>
+<td>Thinner, only if needed</td>
+<td><strong>Tamiya X-20A</strong> acrylic thinner</td>
+<td>Use only the product's stated method; record actual dilution; no improvised solvent substitution</td>
+</tr>
+<tr>
+<td>Separate matte topcoat experiment</td>
+<td><strong>Tamiya XF-86 Flat Clear</strong> acrylic</td>
+<td>Qualify over cured X-19 on the witness coupon before a terrain shell</td>
+</tr>
+</tbody>
+</table></div>
+<p>These are specific <strong>experimental candidates</strong>, not verified resin/paint combinations or claims that PCBWay/JLC3DP stock them. If the service cannot supply the named resin, request its exact alternative product and technical data sheet as a separate option. Keep control and coated parts on the same alternative resin and batch. Do not buy a litre of resin for this outsourced test.</p>
+<p>Product identities, supplier availability and current application instructions still need primary-source review. The websites to use are <a href="https://formlabs.com/">Formlabs</a>, <a href="https://support.formlabs.com/">Formlabs support</a>, and <a href="https://www.tamiyausa.com/">Tamiya USA</a>. They are reference destinations, not evidence of a completed review.</p>
+<h3>Finish trial before coating terrain</h3>
+<p>The new 32 × 24 mm coupon has four 8 mm strips, <strong>1, 2, 3 and 4.75 mm thick</strong>, with a flat underside. Order two in the same clear resin batch as the shells. Keep coupon C0 completely uncoated. On coupon C1, divide its 24 mm length into three 8 mm lanes running across all four thicknesses; label only its edge or a separate card.</p>
+<ol>
+<li>Photograph both coupons unlit and backlit before coating. Reject oily, tacky, cracked or visibly under-cured surfaces to the printer. Use the coating maker's preparation and curing instructions; do not invent an abrasive or solvent treatment.</li>
+<li>Brush one thin, even X-19 coat on C1, leaving its underside clear. Record brush, dilution, coat count, temperature and cure time. After the stated cure, photograph it at the same LED setting and exposure as C0.</li>
+<li>Add one further thin X-19 coat to lanes B and C only; cure and compare. Then apply one thin XF-86 coat to lane C only, following its instructions. The three lanes now compare one smoke coat, two smoke coats, and two smoke coats plus matte clear.</li>
+<li>Place the same coupon strip over the same light source at unchanged distance for each comparison. Use an opaque card mask to isolate one strip at a time; this is a material transmission comparison, not the curved fixture's leakage test.</li>
+<li>After the stated cure and again after seven days, inspect for tack, clouding, cracks, delamination and handling marks. On the coupon edge only, try a gentle thumbnail rub and a repeatable low-tack tape lift. Record tape and method. This is a practical screening test, not an ASTM adhesion certification or a longevity prediction.</li>
+<li>Choose the least coating that looks acceptably charcoal when off while leaving the thick strip visibly lit. Transfer that recorded recipe to one Vancouver and one Himalaya shell, exterior only. Keep the two other shells clear. Repeat the curved fixture tests before accepting the recipe.</li>
+</ol>
+<p>If no lane passes both appearance and transmission, stop and change the resin/finish; a thicker opaque paint coat cannot solve that tradeoff. The witness coupon checks the worst nominal wall thickness independently of where the ten sample LEDs happen to sit under mountains.</p>
+<h2>LED and resistor review</h2>
+<p>The first candidate remains <strong>Kingbright APHHS1005SYCK</strong>, ten front-side LEDs per board. Request its current manufacturer PDF from <a href="https://www.kingbrightusa.com/">Kingbright USA</a>, plus distributor stock/lead time from <a href="https://www.digikey.com/">DigiKey</a> or <a href="https://www.mouser.com/">Mouser</a>. A catalog description saying “0402” is insufficient.</p>
+<p>The saved board is electrically routed, but its LED footprint is a <strong>generic KiCad 1005-metric LED footprint</strong>, not proof of fit to that Kingbright part. These facts can be checked from the supplied board:</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Board fact</th>
+<th>Value to compare against the manufacturer drawing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fabrication body rectangle</td>
+<td>1.0 × 0.5 mm</td>
+</tr>
+<tr>
+<td>Fit-audit body allowance</td>
+<td>1.0 × 0.5 × 0.5 mm; assumed, not a verified package maximum</td>
+</tr>
+<tr>
+<td>Copper pad size</td>
+<td>0.59 × 0.64 mm each</td>
+</tr>
+<tr>
+<td>Pad centers</td>
+<td>X = −0.485 and +0.485 mm in footprint coordinates</td>
+</tr>
+<tr>
+<td>Copper inner gap / total span</td>
+<td>0.38 / 1.56 mm</td>
+</tr>
+<tr>
+<td>Electrical convention</td>
+<td>Pad 1 = cathode/common GND; pad 2 = anode through its channel resistor</td>
+</tr>
+<tr>
+<td>Placement</td>
+<td>D1–D10 on front, rotations in <code>placement.csv</code>; manufacturer cathode mark and tape orientation must be reconciled with these rotations</td>
+</tr>
+</tbody>
+</table></div>
+<p>The assembler must return the package maximum dimensions, recommended land pattern, cathode marking/drawing, emission direction, wavelength/color bin, current rating, forward-voltage range, reflow profile and an in-stock sourcing option. Record PDF revision and distributor/date in <code>supplier-review.csv</code>. Do not populate an unreviewed substitute. If the land pattern differs, revise and recheck the board before ordering.</p>
+<p>The resistor candidate is <strong>Yageo RC0603FR-071KL</strong>, 1 kohm, 1%, 0603 imperial, ten rear-side parts. Confirm its current data sheet and minimum 0.063 W rating or approve an equivalent. At an <strong>assumed</strong> maximum logic output of 3.465 V and minimum 990 ohms, even a shorted LED would draw at most about <strong>3.50 mA per channel</strong>, 35 mA for ten, and dissipate about <strong>12.2 mW in each resistor</strong>. This conservative resistor calculation does not verify Pico per-pin/aggregate output ratings, actual LED current, brightness, or the final matrix driver's operating point. Check the original RP2040 Pico documentation as part of the electrical review.</p>
+<h2>Printer reply needed</h2>
+<p>Use <a href="https://www.pcbway.com/rapid-prototyping/3d-printing/">PCBWay 3D printing</a> or <a href="https://jlc3dp.com/">JLC3DP</a> for a capability/quote request. Use <a href="https://www.pcbway.com/pcb-assembly.html">PCBWay assembly</a> or <a href="https://jlcpcb.com/">JLCPCB</a> for the passive board. These are candidate services; no account submission, quote, availability check or order has occurred.</p>
+<p>Ask for a written reply to all rows of <code>supplier-review.csv</code>, including exact material products, support placement, cleaning, cure and dimensional tolerances. <strong>Request ±0.10 mm or better on the mating optical faces as a proposed target, not an established process capability.</strong> The revised grid's nominal minimum shell gap is 0.349 mm. Two surfaces each displaced 0.10 mm toward each other would leave about 0.149 mm; warpage, accumulated mounting errors and resin swelling are additional. If the service cannot meet the target, return its tolerance estimate for a clearance redesign instead of forcing the fit.</p>
+<p>Boss apertures are now 7.6 mm around nominal 6.6 mm bosses. Verify they remain open after support removal. Preserve all 0.4 mm walls and clean every cell. Magnet fit must still be checked against the supplied pocket coupon and actual magnets; nominal magnet diameter is not a press-fit specification.</p>
+<h2>Evidence already obtained</h2>
+<ul>
+<li>New baffle and stepped coupon: saved STLs each form one closed, consistently oriented solid with positive volume.</li>
+<li>Both curved shells: no unexpected surface intersections with the nominal assembly; independent solid intersections show no baffle overlap with other parts. Minimum modeled shell/grid gap is <strong>0.349 mm</strong>; the ten assumed LED bodies have at least <strong>0.270 mm</strong> to the grid.</li>
+<li>Existing passive PCB: zero saved DRC violations and zero unconnected nets; routing unchanged.</li>
+<li>Revised firmware: <strong>11 behavioral cases passed in CPython and MicroPython v1.26.0 Unix</strong>, including all ten channels, invalid pattern rejection, damaged saved settings, interrupted writes, GPIO/storage errors and an interrupted walk. GPIO and timing were mocked; the filesystem was the host's. This is not a Pico execution or flash power-cut test.</li>
+</ul>
+<p>The JSON evidence is supplied in both request packs. Pending items are deliberately left blank in the supplier review sheet. A written printer reply, approved LED data sheet and material coupon results are required before describing the corresponding choices as qualified.</p><footer>Sample A1 digital review. No supplier order or physical test has been performed.</footer></main></body></html>
